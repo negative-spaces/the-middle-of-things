@@ -1,0 +1,97 @@
+
+/* paragraph text */
+p {
+    /* flex: 55%; */
+    padding: 5px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-size: 13pt;
+    font-weight: lighter;
+    line-height: 2.2;
+    text-align: justify;
+    letter-spacing: .16mm;
+    text-justify: inter-word; 
+  }
+
+/*text styling for NARROW phone screen*/
+@media screen and (max-width: 600px) {
+    p {
+      font-size: 11pt;
+      font-weight: 300;
+       line-height: 1.5;
+       text-align: left;      
+    }
+  }
+
+
+
+/* block quote */
+.quote {
+    display: block;
+    margin-left: 20%;
+    line-height: 1.4;
+  }
+
+
+/*RESPONSIVE PAGE ARCHITECTURE*/
+* {
+    box-sizing: border-box;
+  }
+  
+  .row {
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    padding: 0 2px;
+  }
+
+/*main column takes full page width for NARROW display*/
+@media screen and (max-width: 800px) {
+    div.column1 {
+      -ms-flex: 100%; 
+          flex: 100%;
+          max-width: 100%;
+          padding: 0 2px;
+          margin: auto;
+    }
+  }
+  
+  /*text blocks paragraph margins on computer WIDE screen*/
+  /*changed max-width to adjust page margins; using page margin properties in div column object broke sticky contents side nav*/
+  @media screen and (min-width: 801px) {
+    div.column1 {
+      -ms-flex: 100%; 
+          flex: 100%;
+          max-width: 60%;
+          padding: 0 20px;
+          margin: auto;
+    }
+  }
+
+
+
+  /* FOR ACCORDIAN */ 
+  .accordion {
+    background-color: none;
+    color: #020202;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: true;
+    text-align: center;
+    outline: #000000;
+    font-size: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: none; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #efefef95;
+    overflow: hidden;
+  }
