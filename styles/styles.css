@@ -95,3 +95,32 @@ p {
     background-color: #efefef95;
     overflow: hidden;
   }
+
+
+/*code */
+  code {
+    background: #d9f2fb54;
+    padding: .1rem .2rem;
+    border-radius: .2rem;
+    font-size: 10pt
+  }
+
+
+  /* links and hover */
+a:link {
+
+    color: slategray;
+    text-decoration: none;
+  }
+  a:link,
+  a:visited,
+  a:active {
+  
+    color: rgb(109, 110, 110);
+    text-decoration: none;
+  }
+  a:hover {
+    color: rgb(230, 65, 0);
+    text-decoration: none;
+  }
+  
