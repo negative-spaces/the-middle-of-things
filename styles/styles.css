@@ -1,7 +1,6 @@
 
 /* paragraph text */
 p {
-    /* flex: 55%; */
     padding: 5px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     font-size: 13pt;
@@ -23,7 +22,6 @@ p {
   }
 
 
-
 /* block quote */
 .quote {
     display: block;
@@ -31,6 +29,14 @@ p {
     line-height: 1.4;
   }
 
+/*commonplace quote*/
+/* block quote */
+.commquote {
+    display: block;
+    margin-left: 2%;
+    margin-right: 6%;
+    line-height: 1.4;
+  }
 
 /*RESPONSIVE PAGE ARCHITECTURE*/
 * {
@@ -45,8 +51,32 @@ p {
     padding: 0 2px;
   }
 
+
+  /*text blocks paragraph margins on computer WIDE screen*/
+  /*changed max-width to adjust page margins; using page margin properties in div column object broke sticky contents side nav*/
+  @media screen and (min-width: 1001px) {
+    div.column1 {
+      -ms-flex: 55%; 
+          flex: 55%;
+          max-width: 55%;
+          padding: 0 10px;
+          margin-left: 6%;
+    }
+  }
+
+    /*main column takes full page width for NARROW display*/
+@media screen and (max-width: 1000px) {
+    div.column1 {
+      -ms-flex: 70%; 
+          flex: 70%;
+          max-width: 70%;
+          padding: 0 2px;
+          margin: auto;
+    }
+  }
+  
 /*main column takes full page width for NARROW display*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
     div.column1 {
       -ms-flex: 100%; 
           flex: 100%;
@@ -56,19 +86,57 @@ p {
     }
   }
   
-  /*text blocks paragraph margins on computer WIDE screen*/
-  /*changed max-width to adjust page margins; using page margin properties in div column object broke sticky contents side nav*/
+
+
+  /*for two column layout | WIDE SCREEN*/
   @media screen and (min-width: 801px) {
-    div.column1 {
+    div.column2 {
+      -ms-flex: 50%; 
+          flex: 50%;
+          max-width: 50%;
+          padding: 0 40px;
+          margin: auto;
+    }
+  }
+
+    /*for two column layout | NARROW SCREEN*/
+  @media screen and (max-width: 800px) {
+    div.column2 {
       -ms-flex: 100%; 
           flex: 100%;
-          max-width: 60%;
-          padding: 0 20px;
+          max-width: 100%;
+          padding: 0 2px;
           margin: auto;
     }
   }
 
 
+
+  /*for page contents*/
+div.column0 {
+    -ms-flex: 20%; 
+    flex: 20%;
+    max-width: 20%;
+    padding: 0 0px;
+    }
+
+/*page contents menu disappears for NARROW screen  display*/
+@media screen and (max-width: 700px) {
+    div.column0 {
+     visibility:hidden;
+     -ms-flex: 20%; 
+          flex: 20%;
+          max-width: 0%;
+          padding: 0 0px;
+    }
+  }
+ 
+  div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 1px;
+  }
 
   /* FOR ACCORDIAN */ 
   .accordion {
@@ -106,7 +174,7 @@ p {
   }
 
 
-  /* links and hover */
+/* links and hover */
 a:link {
 
     color: slategray;
@@ -124,3 +192,56 @@ a:link {
     text-decoration: none;
   }
   
+
+/*for top menu*/
+/*navigate elsewhere table of contents menu */
+/* CSS for disappearing menu navigation */
+body {
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  .sidenav {
+    height: 400pt;
+    width: 0;
+    font-family: "Courier New", Courier, monospace;
+    position: fixed;
+    background-color: #f0f0f0;
+    opacity: .9;
+    overflow-x: scroll;
+    transition: 0.5s;
+  }
+  
+  /* important not to use padding for margins and spacing bc it will make links  clickable only over part of the words */
+  .sidenav a {
+    line-height:1.8;
+    margin-right: 40px;
+    font-size: 16px;
+    color: #242424;
+    display: block;
+    text-align:right;
+    font-family: "Courier New", Courier, monospace;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #eb4d09;
+  }
+  
+  .sidenav .closebtn {
+    position: sticky;
+    font-size: 30px;
+  }
+  
+  #main {
+    transition: 0.3s;
+   height:fit-content;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 10px;
+    }
+  }
