@@ -31,12 +31,47 @@ p {
 </head>
 
 <body>
-    <a href="./index.html" target="_blank">..index</a>
+
+    <!--NAVIGATE ELSEWHERE-->
+<div>
+    <div id="mySidenav" class="sidenav">
+     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+     <a href="./what-the-work-can-do.html">what the work can do</a>
+     <a href="./iterative-proposals.html">iterative proposals</a>
+     <br>
+     <a href="./index.html">index</a>
+     <a href="https://github.com/negative-spaces/the-middle-of-things/blob/main/questions.html" target="_blank">CODE_SIDE </a>
+   </div>
+   <div id="main">
+     <span style="font-size:17px;cursor:alias; padding: 2px; background-color:blueviolet; color:rgb(235, 241, 242)" onclick="openNav()">&#9776; navigate elsewhere>></span>
+   </div>
+   <script>
+   function openNav() {
+     document.getElementById("mySidenav").style.width = "250px";
+     document.getElementById("main").style.marginLeft = "250px";
+   }
+   function closeNav() {
+     document.getElementById("mySidenav").style.width = "0";
+     document.getElementById("main").style.marginLeft= "0";
+   }
+
+   window.onscroll = function closeNav() {
+     document.getElementById("mySidenav").style.width = "0";
+     document.getElementById("main").style.marginLeft= "0";
+   }
+   </script>
+
+
+</div>
+
+
     <br>
-    <div class="column1">
-        <p style="background-color:#ccede8;">
+    
+    <div class="column1" style="margin:auto;">
+        <p style="background-color:blueviolet; color:rgb(235, 241, 242); font-weight:400;">
             Questions driving the experimentation of my MA research-creation forward:
         </p>
+   
         <p>
             What could it mean to think with place? To feel the city? 
         </p>
@@ -55,7 +90,7 @@ p {
 
         <br>
  
-        <p style="background-color:#ccede8;">
+        <p style="background-color:rgb(226, 43, 223); color:rgb(235, 241, 242); font-weight:400;">
             Questions articulated in the course of my MA research-creation:
         </p>
 
@@ -76,7 +111,7 @@ p {
 
         <br>
 
-        <p style="background-color:#ccede8;">
+        <p style="background-color:rgb(48, 30, 211); color:rgb(235, 241, 242); font-weight:400;">
             Questions emerging from my studies and practices the first term of my PhD: 
         </p>
         <p>
