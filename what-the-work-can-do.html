@@ -6,35 +6,162 @@
 </head>
 
 <body>
+    <a name="top" id="top"></a>
+
+<!--NAVIGATE ELSEWHERE-->
+<div>
+    <div id="mySidenav" class="sidenav">
+     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+     <a href="./questions.html">questions</a>
+     <a href="./iterative-proposals.html">iterative proposals</a>
+     <br>
+     <a href="./index.html">index</a>
+     <a href="https://github.com/negative-spaces/the-middle-of-things/blob/main/what-the-work-can-do.html" target="_blank">CODE_SIDE </a>
+   </div>
+   <div id="main">
+     <span style="font-size:17px;cursor:alias; padding: 2px; background-color:blueviolet; color:rgb(235, 241, 242)" onclick="openNav()">&#9776; navigate elsewhere>></span>
+   </div>
+   <script>
+   function openNav() {
+     document.getElementById("mySidenav").style.width = "250px";
+     document.getElementById("main").style.marginLeft = "250px";
+   }
+   function closeNav() {
+     document.getElementById("mySidenav").style.width = "0";
+     document.getElementById("main").style.marginLeft= "0";
+   }
+
+   window.onscroll = function closeNav() {
+     document.getElementById("mySidenav").style.width = "0";
+     document.getElementById("main").style.marginLeft= "0";
+   }
+   </script>
+
+
+</div>
+
+<!--BANNER IMAGE-->
+<img src="./sitations/20241217_105737.jpg" style="width:100%">
     <br>
-    <div class="column1">
-        
+
+ <!--PAGE CONTENTS-->
+<div class="row">
+
+<!--page outline-->
+<div class="column0">
+
+
+    <div class="sticky">
+      
+      <button onclick="myOutline()" style="font-family: 'Courier New', Courier, monospace; font-size:10pt; border-color:#e2dfdf">Show/Hide Page Outline</button>
+
+      <div id="outline">
+      <span style="font-family: 'Courier New', Courier, monospace; font-size: 10.5pt;  line-height: 1.3; opacity: 0.8;">
+        <br>
+      <a href="#intro">intro</a><br>
+      <a href="#section-2">section 2</a><br>
+      <a href="#materiality">materiality</a><br>
+      <a href="#thinking-with">thinking-with</a><br>
+      <a href="#making-practices">making practices</a><br>
+       <br><br>
+      <a href="#top">&#9650 return to top</a><br>
+      <a href="#what-the-work-can-do-bibliography">&#9660 bibliography</a><br>
+      
+    </span>
+    </div>
+
+      <!--script to show/hide outline -->
+     <script>
+    function myOutline() {
+    var x = document.getElementById("outline");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+    }
+        </script>
+
+    </div>
+   
+</div>
+
+
+<!--text-->
+<div class="column1">
+    
+    <!--introduction-->
+    <div>
+    <a name="intro" id="intro"></a>
+  <p>
+    <span style="font-weight:700">WHAT THE WORK CAN DO</span><br>
     <p class="quote">The work continues to move you beyond its staged iteration—you can't say exactly why but it haunts you, it occupies you, evolving beyond its form-taking to create resonances that incite you to want to experience it again. It's not the <i>form</i> of the work that stays with you, it's the how of its capacity to dislodge the you that you thought you were. (Manning 2013, 102, emphasis in original). 
     </p>
     
     <p>
-        This is how I feel about my MA research-creation thesis, <code><a href="https://dx.doi.org/10.14288/1.0445244" target="_blank"><i>Making space for deep mapping: rendering theory as praxis</i></a></code>. I am perpetually moved by negative-spaces which works in excess of the zip folder submitted to cIRcle. The sense of a work outdoing itself is what I wish to carry forward into my PhD. Without knowing yet what form the staged dissertation will take, I am thinking about what makes any work of mine <i>work</i>—in other words, I am considering "the question of how an artwork evolves to exceed its form, to create from its force-of-form a more-than that can be felt, if not easily described" (Manning 2013, 101). Reading process philosophy alongside J.K. Gibson-Graham and then tabling my artwork this term have urged me to think about how research-creation complicates commodities, interfering with hegemonic discourses of value and evaluation. Research-creation performatively reconfigures boundaries, and those defining the economies in which research and creation operate/participate are no exception. This iteration on an output will reflect on my work over the past term (the first term of my PhD program) and articulate some questions both old and new that continue to drive my experimentation forwards.
+        This is precisely how I feel about my MA research-creation thesis, <a href="https://dx.doi.org/10.14288/1.0445244" target="_blank"><i>Making space for deep mapping: rendering theory as praxis</i></a>. I am perpetually moved by negative-spaces as it works in excess of the zip folder submitted to cIRcle. The sense of a work outdoing itself is what I wish to carry forward into my PhD. Without knowing yet what form the staged dissertation will take, I am thinking about what makes any work of mine <i>work</i>—in other words, I am considering "the question of how an artwork evolves to exceed its form, to create from its force-of-form a more-than that can be felt, if not easily described" (Manning 2013, 101). Research-creation is about this more-than. 
     </p>
+    <p>
+        Reading process philosophy alongside J.K. Gibson-Graham and then tabling my artwork this term have urged me to think about how research-creation complicates commodities, interfering with hegemonic discourses of value and evaluation. Research-creation performatively reconfigures boundaries, and those defining the economies in which research and creation operate/participate are no exception. While the research-creation of my MA thesis was in conversation with Natalie Loveless' manifesto, since July of this year (2024) I've been moved by the language of Erin Manning:
+        <br>
+        <span class="quote">
+         
+            Research-creation…understood not as an academic field but as practice, operative in the interstices of making and thinking can, at its uncertain limit, connect to study [a term from Harney and Moten's <i>The Undercommons</i>]. It can be a mode of inquiry that asks what (other) forms learning can take. It can refuse to privilege the materiality of language over other forms of expression while at the same [sic] recognizing thinking as a creative practice in its own right. When practiced this way, research-creation creates the conditions to ask how the theory-practice split continues to give knowledge production a certain linguistic overtone, understanding practice more as that which needs to be studied than as study itself… when the work becomes the practice, when the practice invents its own language, research-creation deeply threatens the power/knowledge that holds the academy in place.  (Manning 2020, 221)
+            <br><br>
+            research-creation as a mode of activity all its own, occurring at the constitutive level of both art practice and theoretical research, at a point before research and creation diverge into the institutional structures that capture and contain their productivity and judge them by conventional criteria for added value. At that prebifurcation level, making would already be thinking-in-action, and conceptualization a practice in its own right. The two, we proposed, would intersect in technique, technique understood here as an engagement with the modalities of expression a practice invents for itself… Experimental practice embodies technique toward catalyzing an event of emergence whose exact lineaments cannot be foreseen…Technique is therefore processual: it reinvents itself in the evolution of a practice.  (Manning and Massumi 2014, 89)
+        </span>
+        <Br>
+        It is the "uncertain limit" of making and thinking, making as thinking-in-action, and "thinking as a creative practice in its own right" that most interest me. The purpose of a Directed Reading (and doing) which spans the first two terms of my PhD is to articulate what the work—taken as the multi-year endeavor of my PhD—can <i>do</i>. The aims and objectives of this directed reading apply the practical knowledged gained from my master's process-oriented research-creation. My aim is to cultivate a research ethos that will guide my exploration and response to questions coming out of MA and those developed in the first year (or so) of my PhD. As always, I practice diffractive inquiry by thinking through practice and reading diffractively. Diffractive reading is about reading <i>through</i> rather than against: interference rather than opposition, diffraction rather than reflection. "Diffractive readings bring inventive provocations;" says Barad in an interview, "they are good to think with" (van der Tuin and Dolphijn 2012). Drawing from Barad and Haraway, Murris and Bozalek (2019) develop propositions to guide diffractive readings of literature. They caution:
+        <br>
+        <span class="quote">
+            The challenge in adopting diffraction as a methodology is not to <i>theorise</i> the diffraction pattern (a logic of representation), but to put it into <i>practice</i>, thereby disrupting the theory/practice binary. The idea is to read theory <i>with</i> practice diffractively guided by, for example, key questions that move the experiment forward. (Murris and Bozalek 2019, 1505, emphasis in original)
+        </span>
+        <br>
+        Reading theory through practice, theorizing practice through practice, reading theories through one another, and doing all this with attention to how questions xyz is a skill I developed over the course of my MA. This iteration on an output will reflect on my creative practices over the past term (the first term of my PhD program), what my work is doing, and articulate some questions both old and new that continue to drive my experimentation forwards. 
+    </p>
+    </div>
     
+    <!--section 2-->
+    <div>
+        <a name="section-2" id="section-2"></a>
     <p>
-        This term I primarily read process philosophy in tandem with class readings for Economic Geography. Although I found the class content rather dull, I did enjoy writing the final paper. It gave me a chance to work through questions lingering in my thesis <code><a href="https://negative-spaces.github.io/tactics.html" target="_blank">tactics.html</a></code> page, which asked: How does my participation (as both academic and urban inhabitant) in unruly material and semiotic flows interfere with regulated forms of exchange from within the dominant system? In emphasizing the ways in which my everyday practices poached capitalism from within, constituting a "proliferating illegitimacy" that "elude[d] discipline without being outside the field in which it is exercised…" (de Certeau 1984, 96), I struggled not to render capitalism omnipotent. Indeed, Trevor wondered whether I hadn't rendered "the economy" a hegemony of its own. I therefore approached my Economic Geography term paper as an opportunity to further explore the perhaps generative interrelation of capitalist and noncapitalist practices, with specific attention to how my research-creation might participate me in diverse economies. To this end, my paper critically assessed the contributions of J.K. Gibson-Graham across three books: <i>The End of Capitalism (As We Knew It)</i> (1996), <i>A Postcapitalist Politics</i> (2006), and <i>Take Back the Economy</i> (2013). (You can see the whole paper <code><a href="https://docs.google.com/document/d/1gIFsEV5G_UmRtkco1avWLJyG7mSyLwvQrrMRsRi3d0s/edit?usp=sharing" target="_blank">here</a></code>.) Exercise in faith → trusting that ideas i wanted to think would articulate through the course of writing paper. my job was to make space for them to take shape. 
+        <span style="font-weight:700">section 2</span><br>
+
+        This term I primarily read process philosophy in tandem with class readings for Economic Geography. Although I found the class content rather dull, I did enjoy writing the final paper. It gave me a chance to work through questions lingering in my thesis <code><a href="https://negative-spaces.github.io/tactics.html" target="_blank">tactics.html</a></code> page, which asked: How does my participation (as both academic and urban inhabitant) in unruly material and semiotic flows interfere with regulated forms of exchange from within the dominant system? In emphasizing the ways in which my everyday creative/spatial practices poached capitalism from within, constituting a "proliferating illegitimacy" that "elude[d] discipline without being outside the field in which it is exercised…" (de Certeau 1984, 96), I struggled not to render capitalism omnipotent. Indeed, Trevor wondered whether I hadn't rendered "the economy" a hegemony of its own. I therefore approached my Economic Geography term paper as an opportunity to further explore the perhaps generative interrelation of capitalist and noncapitalist practices, with specific attention to how my research-creation might participate me in diverse economies. To this end, my paper critically assessed the contributions of J.K. Gibson-Graham across three books: <i>The End of Capitalism (As We Knew It)</i> (1996), <i>A Postcapitalist Politics</i> (2006), and <i>Take Back the Economy</i> (2013). (You can see the whole paper <code><a href="https://docs.google.com/document/d/1gIFsEV5G_UmRtkco1avWLJyG7mSyLwvQrrMRsRi3d0s/edit?usp=sharing" target="_blank">here</a></code>.) Exercise in faith → trusting that ideas i wanted to think would articulate through the course of writing paper. my job was to make space for them to take shape.  
     </p>
+
     <p>
-        In sum, while I learned a lot from J.K. Gibson-Graham about capitolocentrism and diverse economies, I didn't find their framework helpful in terms of probing the generative interrelation of capitalism and noncapitalism. The boundaries of different kinds of economic practices were, in my opinion, all too tidy. Two main areas of dissatisfaction emerged for me. First, in constructing and enacting a language of diverse economies, J.K. Gibson-Graham center discourse as both site and instrument for subverting hegemonic fixations of meaning. Discussion of materiality remains wholly unaddressed. Second, the more-than-human and the nonhuman are conspicuously absent across all three books. In a later paper, J.K. Gibson-Graham <i>do</i> consider the "interdependencies,[sic] between humans, environments and non-human entities… displac[ing] humans as the sole agents of ethical decision-making" (Roelvink and J.K. Gibson-Graham 2009, 151). However, their discussion remains focused on the ecological in terms of non-human nature; in thinking "the overdetermined process of production in a commodity economy" (Roelvink and J.K. Gibson-Graham 2009, 152), physical geography and nonhuman species are what comes to matter, not the nonhuman others of equipment and infrastructure. Is not a printer, left in an alleyway constituent of an urban ecology? What might a postcapitalist politics look like that doesn't presuppose the boundary between human and nonhuman? How might materiality be repoliticized within a diverse economy? My exploration of this last question connects back to J.K. Gibson-Graham's insufficient (nonexistent) attention to how materiality influences discourse. Karen Barad, whose posthumanist performativity extends both Butler and Foucault by attending to how matter itself comes to matter, views "materiality as an agentive and productive factor in its own right" (2007, 134). They ask: "Is there any sense in which materiality might be said to constrain discourses? If so, how? Do material reconfiguring have discursive consequences?" (Barad 2007, 225). I find these questions infinitely generative to think with—intercessors, even, for research-creation in its attempt to fruitfully engage with J.K. Gibson-Graham's contribution to feminist political economy. 
+        In sum, while I learned a lot from J.K. Gibson-Graham about capitolocentrism and diverse economies, I didn't find their framework helpful in terms of probing the generative interrelation of capitalism and noncapitalism. The boundaries of diverse economic practices were, in my opinion, all too tidy. Two main areas of dissatisfaction emerged for me. First, in constructing and enacting a language of diverse economies, J.K. Gibson-Graham center discourse as both site and instrument for subverting hegemonic fixations of meaning. Discussion of materiality remains wholly unaddressed. Second, the more-than-human and the nonhuman are conspicuously absent across all three books. In a later paper, J.K. Gibson-Graham <i>do</i> consider the "interdependencies,[sic] between humans, environments and non-human entities… displac[ing] humans as the sole agents of ethical decision-making" (Roelvink and J.K. Gibson-Graham 2009, 151). However, their discussion remains focused on the ecological in terms of non-human nature; in thinking "the overdetermined process of production in a commodity economy" (Roelvink and J.K. Gibson-Graham 2009, 152), physical geography and nonhuman species are what comes to matter, not the nonhuman others of equipment and infrastructure. Is not a printer, left in an alleyway constituent of an urban ecology? What might a postcapitalist politics look like that doesn't presuppose the boundary between human and nonhuman? How might materiality be repoliticized within a diverse economy? My exploration of this last question connects back to J.K. Gibson-Graham's insufficient (nonexistent) attention to how materiality influences discourse. Karen Barad, whose posthumanist performativity extends both Butler and Foucault by attending to how matter itself comes to matter, views "materiality as an agentive and productive factor in its own right" (2007, 134). They ask: "Is there any sense in which materiality might be said to constrain discourses? If so, how? Do material reconfiguring have discursive consequences?" (Barad 2007, 225). I find these questions infinitely generative to think with—intercessors, even, for research-creation in its attempt to fruitfully engage with J.K. Gibson-Graham's contribution to feminist political economy.
     </p>
+    </div>
+
+    <!--materiality-->
+    <div>
+        <a name="materiality" id="materiality"></a>
     <p>
-        Writing my term paper for Economic Geography piqued my interest in what the designation of gifts and commodities does to things, as well as processes of gifting and commodification themselves. "Remember that commodities are just goods and services produced for a market, and that not all commodities are produced in capitalist enterprises" (Gibson-Graham 2006, 68). In <i>The End of Capitalism (As We Knew It)</i>, Gibson-Graham write: "What haunts the capitalist commodity is not only noncommodity production…but noncapitalist commodity production…" (1996, 245). Take household appliances for example. The materiality of a household appliance is rendered differentially intelligible by capitalocentric discourse and the discursive language of diverse economies. Read through capitalism, household appliances are capitalist commodities for consumption; they are goods purchased by families in order to be used for social reproduction, i.e. reproduction of the capitalist workforce through unpaid labor. Read through the framework of diverse economies, however, household appliances come to matter as technologies of noncapitalist commodity production (Gibson-Graham 1996, 31). This reframing, minor though it may seem, challenges the impulse to immediately identify both labor and material by their relation to capitalism. What happens, however, when gifted materials intermingle with so-called commodities? What would it mean for a feminist political economy to recognize, as Barad(s) (2007) does, that "Knowing is a distributed practice that includes the larger material arrangement" (342) "(i.e., the full set of practices) that is a part of the phenomenon investigated or produced" (390)? How might we account for hauntings materials inherit as they are discursively refigured?  
-    </p>
-    <p>
-        One way to think about materiality is by considering how the way things are made participates them in at once material and discursive economies (or physical and conceptual). I offer a speculative reading of what it might mean to account for the hauntings materials inherit as they undergo discursive refigurings. I'll focus on a significant intra-locutor of mine with whom I've been collaborating closely as of late: an Epson WorkForce Pro 4740 printer I gleaned in a Dunbar alleyway soon after I moved to Vancouver. My printer serves two major functions. First, it enables me to print hard-copies of class readings. I require hard-copies to read for many reasons which can most legibly be summarized as "due to disability." Well, most legibly to the reader, not to the institution. Although I am registered with UBC's Center for Accessibility, when I asked to be accommodated with hard-copy readings for class I was told this request was not an accessibility need. My Epson WorkForce Pro 4740 printer has therefore served as a tactic of self-accommodation in the face of UBC's disabling subjectivation. Second, I use my printer to craft cards, stickers, iron-on transfers, prints, bookmarks, zines, and more which I gift freely and barter, as well as exchange at local art markets. The clothing I print on is material I've salvaged for free from the fabric recycling dumpster in the basement of my building, as well as from alleyway free boxes. I also make stickers of graffiti I follow around the city, re-siting these unruly material-semiotics in perpetuation of a "proliferating illegitimacy" (de Certeau 1984, 96).
+        <span style="font-weight:700">materiality</span><br>
+        One way to think (about) materiality is by considering how the way things are made participates them in at once material and discursive economies. I offer a speculative reading of what it might mean to account for the hauntings materials inherit as they undergo discursive refigurings. I'll focus on a significant intra-locutor of mine with whom I've been collaborating closely as of late: an Epson WorkForce Pro 4740 printer I gleaned in a Dunbar alleyway soon after I moved to Vancouver. My printer serves two major functions. First, it enables me to print hard-copies of class readings. I require hard-copies to read for many reasons which can most legibly be summarized as "due to disability." Well, most legibly to the reader, not to the institution. Although I am registered with UBC's Center for Accessibility, when I asked to be accommodated with hard-copy readings for class I was told this request was not an accessibility need. My Epson WorkForce Pro 4740 printer has therefore served as a tactic of self-accommodation in the face of UBC's disabling subjectivation. Second, I use my printer to craft cards, stickers, iron-on transfers, prints, bookmarks, zines, and more which I gift freely and barter, as well as exchange at local art markets. The clothing I print on is material I've salvaged for free from the fabric recycling dumpster in the basement of my building, as well as from alleyway free boxes. I also make stickers of graffiti I follow around the city, re-siting these unruly material-semiotics in perpetuation of a "proliferating illegitimacy" (de Certeau 1984, 96).
     </p>
     <p>sitations</p>
     <p>
-        In the first case, that of assistive technology, my printer is figured as a <i>commodity</i> in service of knowledge production under (academic) capitalism. In the second case, that of creative practice, my printer may be figured as a <i>means of production</i> for gift and barter economies, as well as for informal markets of alternate and reciprocal exchange. In both cases, I make use of ink and supplies obtained through appropriating institutional grants intended for "fieldwork" and "research materials". In the instance of both assistive technology and creative practice (for the boundary between the two disintegrated over the course of my inquiry), knowledge is distributively produced through the very process (enterprise) of making (laboring) and distributing (transacting) my outputs.
+        In the first case, that of assistive technology, my printer can by figured as a <i>commodity</i> in service of knowledge production under (academic) capitalism. In the second case, that of creative practice, my printer may be figured as a <i>means of production</i> for gift and barter economies, as well as for informal markets of alternate and reciprocal exchange. In both cases, I make use of ink and supplies obtained through appropriating institutional grants intended for "fieldwork" and "research materials". In the instance of both assistive technology and creative practice (for the boundary between the two disintegrated over the course of my inquiry), knowledge is distributively produced through the very process (enterprise) of making (laboring) and distributing (transacting) my outputs.
     </p>
-    <p>The interference I want to make here is this: drawing from posthumanist performativity, I suggest there is another way to configure appliances, one which gets us out of the capitalism/noncapitalism binary. What if, say, my printer was never wholly interpellated as <i>either</i> a commodity for reproducing capitalism <i>or</i> as a means of noncapititalist commodity production, but was instead s/cited as an intellecting other in its own right. Acknowledged as such, my printer could be recognized as continually gifting its capabilities in exchange for ink and paper. Material outputs are therefore imbricated with mainstream capitalist, alternative capitalist, and noncapitalist economies by virtue of input materials being bought in-store, appropriated from institutional grants, as well as salvaged, poached, and gleaned. Although J.K. Gibson-Graham acknowledge "The market is not all or only capitalist, commodities are not all or only products of capitalism" (1996, 144), discussion of the intertwining nature of capitalist and noncapitalist markets with capitalist and noncapitalist commodities—and noncapitalist noncommodities for that matter—is limited to a single paragraph in <i>A Postcapitalist Politics</i> (2006, 150). Gibson-Graham thus fail to consider things which are produced for market and nonmarket transactions simultaneously. The creative artifacts of research-creation therefore complicate the easy delineation of commodities as goods and services produced for markets. Whether the material outputs of research-creation are figured as gifts (and therefore enrolled in nonmarket transactions) or bartered/traded/sold locally (enrolling them in alternative market transactions) is less important to the project than what the physical-conceptual (or material-discursive, if you prefer) work is <i>doing</i> and how boundaries are being refigured in the process. Therefore, "research-creation participates in both the gift alter-economy and the dominant quantitative economy" (Manning and Massumi 2014, 130). I found the framework of diverse economies ill-equipped to consider this generative interrelation. In finally recognizing that "non-human others and non-labouring others are also implicated in the production and appropriation of <i>surplus</i>", Roelvink and Gibson-Graham (2009) give the example of farmland whose "'gifts'" are repaid in "unremunerated exploitation and degradation" (153, emphasis in original). My reading of so-called assistive technology offers something different, I think, in that my ethics of care is concerned with practices of receiving and acknowledging giftings of things irreducible to commodities. Moreover, simply recognizing my printer as gifting sites its materiality not within commodity capitalism but in the gift economy of alleyways. Operating on urban denizens’ tacit knowledge of the city, matters deemed no longer fit for manufactured purpose are offered up as open-ended invitations for recirculation by passersby. By "urban denizens tacit knowledge of the city" I mean practical knowledge of the way things work; a box of odds and ends put out on the curb or the edge of a lawn means passersby are welcome to take what they want. Though this could be considered a gift economy, it's also entwined with consumer excess under commodity capitalism (once found a giant TV with a note: santa brought a bigger one). Alleyways and free boxes become sites where use and value are refigured. My printer is more than an assistive technology or office appliance—it is an intra-locutor, an intellection other with whom I collaborate in physical-conceptual knowledge production.</p>
+
     <p>
-        Engaging my printer as intra-locutor is a way of making explicit practices of thinking with nonhuman others. I am reminded of Erin Manning's reading of Bracha Ettinger, an Israeli-French artist and psychoanalyst whose Autistwork series works with found images and a scanner. Writes Erin Manning: "the photocopy machine is itself a way of seeing-with, a collaborator in the processual fielding that is the autistwork" (2013, 182). Ettinger's Autistwork series
+        The interference I want to make here is this: drawing from posthumanist performativity, I suggest there is another way to configure appliances, one which gets us out of the capitalism/noncapitalism binary. What if, say, my printer was never wholly interpellated as <i>either</i> a commodity for reproducing (academic) capitalism <i>or</i> as a means of noncapititalist commodity production, but was instead s/cited as an intellecting other in its own right. Acknowledged as such, my printer could be recognized as continually gifting its capabilities in exchange for ink and paper. Material outputs are therefore imbricated with mainstream capitalist, alternative capitalist, and noncapitalist economies by virtue of input materials being bought in-store, appropriated from institutional grants, as well as salvaged, poached, and gleaned. Although J.K. Gibson-Graham acknowledge "The market is not all or only capitalist, commodities are not all or only products of capitalism" (1996, 144), discussion of the intertwining nature of capitalist and noncapitalist markets with capitalist and noncapitalist commodities—and noncapitalist noncommodities for that matter—is limited to a single paragraph in <i>A Postcapitalist Politics</i> (2006, 150). Gibson-Graham thus fail to consider things which are produced for market and nonmarket transactions simultaneously.
+    </p>
+
+    <p>
+        The creative artifacts of research-creation complicate the easy delineation of commodities as goods and services produced for markets. Whether the material outputs of research-creation are figured as gifts (and therefore enrolled in nonmarket transactions) or bartered/traded/sold locally (enrolling them in alternative market transactions) is less important to the project than what the physical-conceptual (or material-discursive, if you prefer) work is <i>doing</i> and how boundaries are being refigured in the process. Therefore, "research-creation participates in both the gift alter-economy and the dominant quantitative economy" (Manning and Massumi 2014, 130). I found the framework of diverse economies ill-equipped to consider practices and materialities that support capitalist production and reproduction while simultaneously subverting xyz. In finally recognizing that "non-human others and non-labouring others are also implicated in the production and appropriation of <i>surplus</i>", Roelvink and Gibson-Graham (2009) give the example of farmland whose "'gifts'" are repaid in "unremunerated exploitation and degradation" (153, emphasis in original). My reading of so-called assistive technology offers something different, I think, in that my ethics of care is concerned with practices of receiving and acknowledging giftings of things irreducible to commodities. Moreover, recognizing my printer as actively gifting discursively?performatively? sites its materiality not within commodity capitalism but in the gift economy of alleyways. Operating on urban denizens’ tacit knowledge of the city, matters deemed no longer fit for manufactured purpose are offered up as open-ended invitations for recirculation by passersby. By "urban denizens tacit knowledge of the city" I mean practical knowledge of the way things work; a box of odds and ends put out on the curb or the edge of a lawn means passersby are welcome to take what they want. The gift economy of alleyways is therefore also entwined with consumer excess under commodity capitalism. (I once encountered a giant TV with a note: santa brought a bigger one.) Alleyways, curbsides, and free boxes become sites where use and value are refigured. My printer is more than an assistive technology or office appliance—it is an intra-locutor, an intellection other with whom I collaborate in physical-conceptual knowledge production. 
+    </p>
+    </div>
+
+    <!--thinking with-->
+    <div>
+    <a name="thinking-with" id="thinking-with"></a>
+<p>
+    <span style="font-weight:700">thinking with</span><br>
+        Engaging my printer as intra-locutor is a way of making explicit practices of thinking with nonhuman others. I am reminded of Erin Manning's reading of Bracha Ettinger, an Israeli-French artist and psychoanalyst whose Autistwork series works with found images and a scanner. Writes Erin Manning: "the photocopy machine is itself a way of seeing-with, a collaborator in the processual fielding that is the autistwork" (2013, 182). Ettinger's Autistwork series 
         <br>
         <span class="quote">
             demonstrates that the <i>how</i> of knowing much exceeds the <i>what</i> (and the who) of knowing…It makes seen the constitutive difference between knowing-with and a more generalized knowing—knowing as categorization, organization, representation. It reminds us that to know is to participate in a folding that will remain an intensity too multiple, too ineffable and too indefinite to articulate without composing-with. To know is to know-with—to participate in the creation of worlds, words churning with the exquisite singular-infinity of eternal objects [conceptualized elsewhere as xyz], seeings-in-the-feeling that continuously reinvent what perception (and knowing) can do. (Manning 2013, 181)
@@ -43,9 +170,32 @@
 
     </p>
 
+    </div>
 
+
+    <!--making practices-->
+    <div>
+        <a name="making-practices" id="making-practices"></a>
+    <p>
+        <span style="font-weight:700">making practices</span><br>
+
+    </p>
+
+    </div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+<br><br>
     <!--DIVERSE ECONOMIES ACCORDIAN-->
-    <!-- <div>
+<div style="width:60%; margin:auto;">
+ <div>
         <button class="accordion">on diverse economies</button>
         <div class="panel">
         <p>A diverse economy is one wherein a multitude of economic practices and relations abound, only some of which are capitalist. While <i>The End of Capitalism (As We Knew It)</i> aimed to situate noncapitalist practices as always already within so-called capitalist economies, the language of diverse economies makes explicit the inherent diversity of transactions, labor relations, and enterprises that make up any one economy. J.K. Gibson-Graham offer the following figure to convey some examples:
@@ -73,10 +223,41 @@
       });
     }
         </script>
-    </div> -->
-
-
+    </div> 
 </div>
+
+
+<br><br>
+
+
+    <!--bibliography-->
+    <div style="width:60%; margin:auto;">
+        <div>
+               <button class="accordion">References (click to expand)</button>
+               <div class="panel">
+               asdfasfd
+               </div>
+       
+               <script>
+           var acc = document.getElementsByClassName("accordion");
+           var i;
+           
+           for (i = 0; i < acc.length; i++) {
+             acc[i].addEventListener("click", function() {
+               this.classList.toggle("active");
+               var panel = this.nextElementSibling;
+               if (panel.style.display === "block") {
+                 panel.style.display = "none";
+               } else {
+                 panel.style.display = "block";
+               }
+             });
+           }
+               </script>
+           </div> 
+       </div>
+
+
 
 </body>
 
