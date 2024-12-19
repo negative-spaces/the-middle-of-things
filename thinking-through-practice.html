@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<head>
+    <title>thinking through practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <!--for tabs-->
+    <style>
+        .tab {
+            overflow: hidden;
+                /* border: 1px solid #ccc;*/
+                /* background-color: #f7f5fc;*/
+        }
+
+        .tab button {
+  background-color: inherit;
+  float: auto;
+  border: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 12px;
+  transition: 0s;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+font-weight: lighter;
+        }
+
+        .tab button:hover {
+        background-color: #dcdae3;
+        }
+
+        .tab button.active {
+        background-color: #ccc;
+        }
+
+        .tabcontent {
+        display: none;
+        padding: 3px 3px;
+        }
+
+    </style>
+
+     <!--styling for sitation decks-->
+     <style>
+  
+        img {
+          vertical-align: middle;
+        }
+    
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+          position: relative;
+        }
+    
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+          cursor: arrow;
+        }
+    
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.1s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+    
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+    
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+    
+        /* Fading animation */
+        .fade {
+          animation-name: none;
+          /* animation-duration: 1.5s; */
+        }
+    
+        @keyframes fade {
+          from {
+            opacity: .4
+          }
+    
+          to {
+            opacity: 1
+          }
+        }
+    
+        /* Caption text */
+        .capt-text {
+          color: #3a3330;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-size: 15px;
+          padding: 2px 2px;
+          position: absolute;
+          bottom: 1px;
+          width: 100%;
+          text-align: center;
+        }
+    
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+    
+    
+        /* EACH SUBSEQUENT SLIDE DECK MUST BE DECLARED A NEW VARIABLE, AND SLIDE INDEX RENAMED AS WELL.  */
+        .mySlides1 {
+          display: none;
+        }
+    
+        .mySlides2 {
+          display: none;
+        }
+        
+    
+        .slideshow-container1 {
+          max-width: 100%;
+          position: relative;
+          margin: auto;
+        }
+    
+        .slideshow-container2 {
+          max-width: 100%;
+          position: relative;
+          margin: auto;
+        }
+    
+        /* The dots/bullets/indicators */
+        /* create new unique dot for each new sitation deck */
+        .dot1 {
+          cursor: pointer;
+          height: 7px;
+          width: 7px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 10%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+    
+        .dot2 {
+          cursor: pointer;
+          height: 7px;
+          width: 7px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 10%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+    
+        .active,
+        .dot1:hover {
+          background-color: #717171;
+        }
+        
+        .active,
+        .dot2:hover {
+          background-color: #717171;
+        }
+       
+        </style>
+</head>
+
+<body>
+
+        <!--NAVIGATE ELSEWHERE-->
+<div>
+    <div id="mySidenav" class="sidenav">
+     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+     <a href="./what-the-work-can-do.html">what the work can do</a>
+     <a href="./iterative-proposals.html">iterative proposals</a>
+     <a href="./questions.html">research questions</a>
+     <br>
+     <a href="./index.html">index</a>
+     <a href="https://github.com/negative-spaces/the-middle-of-things/blob/main/thinking-through-practice.html" target="_blank">CODE_SIDE </a>
+   </div>
+   <div id="main">
+     <span style="font-size:17px;cursor:alias; padding: 2px; background-color:blueviolet; color:rgb(235, 241, 242)" onclick="openNav()">&#9776; navigate elsewhere>></span>
+   </div>
+   <script>
+   function openNav() {
+     document.getElementById("mySidenav").style.width = "250px";
+     document.getElementById("main").style.marginLeft = "250px";
+   }
+   function closeNav() {
+     document.getElementById("mySidenav").style.width = "0";
+     document.getElementById("main").style.marginLeft= "0";
+   }
+
+   window.onscroll = function closeNav() {
+     document.getElementById("mySidenav").style.width = "0";
+     document.getElementById("main").style.marginLeft= "0";
+   }
+   </script>
+
+
+</div>
+
+
+
+<br><br>
+
+<div class="column1">
+    <p>
+        <span class="quote">
+            "In an account that foregrounds practice, the question is always how to create conditions for the tuning of experience to what most generatively runs through it, and how to recognize that these ecologies of practice are not ours to orient so much as ours to participate in as co-composers in the refashioning of modes of existence that make up our body-world constellations." (Manning 2020, 36). 
+        
+        </span>
+    </p>
+</div>
+
+<br><br><br>
+
+<!--menu-->
+<div class="tab" style="text-align:center;">
+    <button class="tablinks" onclick="openPractice(event, 'haircut')">giving a haircut</button>
+    <button class="tablinks" onclick="openPractice(event, 'sewing')">hand sewing</button>
+  </div>
+
+
+
+<br>
+<br>
+
+<!--giving a haircut-->
+<div id="haircut" class="tabcontent">
+    <div class="column1" style="margin:auto;">
+ 
+
+<div class="vignette">
+
+    <!--audio-->
+    <div>
+    <audio controls >
+        <source src="./sitations/recordings/giving-a-haircut.mp3" type="audio/mpeg" >
+        giving a haircut
+    </audio>
+        <br>
+    <audio controls >
+        <source src="./sitations/recordings/reorienting-conditions-of-event.mp3" type="audio/mpeg" >
+        reorienting the conditions of an event
+    </audio>
+        <br>
+    <audio controls >
+        <source src="./sitations/recordings/more-than-a-haircut.mp3" type="audio/mpeg" >
+        more than a haircut
+    </audio>
+        <br>
+    <audio controls >
+        <source src="./sitations/recordings/haircut-as-lure.mp3" type="audio/mpeg" >
+        haircut as lure
+      </audio>
+    </div>
+
+    <img src="./sitations/recordings/20241012_outlet0.jpg" style="width:48%">
+    <img src="./sitations/recordings/20241012_outlet1.jpg" style="width:48%">
+    <br><br>
+    <img src="./sitations/recordings/20241012_outlet2.jpg" style="width:48%">
+    <img src="./sitations/recordings/20241012_outlet3.jpg" style="width:48%">
+
+    <br><br>
+</div>
+
+         
+</div>
+</div>
+
+<!--hand sewing-->
+<div id="sewing" class="tabcontent">
+    <div class="column1" style="margin:auto;">
+
+
+        <br><br><br>
+        <!--sitation deck PURPLE DRESS-->
+        <div>
+            <div>
+                <div class="slideshow-container1">
+                  <div class="mySlides1 fade" style="display: none;">
+                    <div class="numbertext">1 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-5.JPG" style="width:100%">
+                    <!--<div class="capt-text">Caption Text</div>-->
+                  </div>
+          
+                  <div class="mySlides1 fade">
+                    <div class="numbertext">2 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-3.JPG" style="width:100%">
+                  </div>
+          
+    
+                  <div class="mySlides1 fade">
+                    <div class="numbertext">3 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-6.JPG" style="width:100%">
+                  </div>
+    
+                  <div class="mySlides1 fade">
+                    <div class="numbertext">4 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-4.JPG" style="width:100%">
+                  </div>
+                  
+                  <div class="mySlides1 fade">
+                    <div class="numbertext">5 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-1.JPG" style="width:100%">
+                  </div>
+          
+    
+                  <div class="mySlides1 fade">
+                    <div class="numbertext">6 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-2.JPG" style="width:100%">
+                  </div>
+    
+                  <!-- <div class="mySlides1 fade">
+                    <div class="numbertext">7 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-7.JPG" style="width:100%">
+                  </div> -->
+    
+                  <div class="mySlides1 fade">
+                    <div class="numbertext">8 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-8.JPG" style="width:100%">
+                  </div>
+    
+                  <div class="mySlides1 fade">
+                    <div class="numbertext">9 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-9.JPG" style="width:100%">
+                  </div>
+    
+                  <div class="mySlides1 fade">
+                    <div class="numbertext">10 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-10.JPG" style="width:100%">
+                  </div>
+    
+                  <div class="mySlides1 fade">
+                    <div class="numbertext">11 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-11.JPG" style="width:100%">
+                  </div>
+    
+                  <div class="mySlides1 fade">
+                    <div class="numbertext">12 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-12.JPG" style="width:100%">
+                  </div>
+    
+                  <div class="mySlides1 fade">
+                    <div class="numbertext">13 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-13.JPG" style="width:100%">
+                  </div>
+    
+                  <div class="mySlides1 fade">
+                    <div class="numbertext">14 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-14.JPG" style="width:100%">
+                  </div>
+    
+                  <div class="mySlides1 fade">
+                    <div class="numbertext">15 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-15.JPG" style="width:100%">
+                  </div>
+    
+                  <div class="mySlides1 fade">
+                    <div class="numbertext">16 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-16.JPG" style="width:100%">
+                  </div>
+    
+                  <div class="mySlides1 fade">
+                    <div class="numbertext">17 / 17</div>
+                    <img src="./sitations/dressing/purple-dress-17.JPG" style="width:100%">
+                  </div>
+    
+                  <!--remember to update function name here-->
+                  <a class="prev" onclick="plusSlides1(-1)">❮</a>
+                  <a class="next" onclick="plusSlides1(1)">❯</a>
+          
+                </div>
+                <br>
+          
+                <!--dots must be unique class well in css head style for each deck-->
+                <div style="text-align:center">
+                  <span class="dot1" onclick="currentSlide(1)"></span>
+                  <span class="dot1" onclick="currentSlide(2)"></span>
+                  <span class="dot1" onclick="currentSlide(3)"></span>
+                  <span class="dot1" onclick="currentSlide(4)"></span>
+                  <span class="dot1" onclick="currentSlide(5)"></span>
+                  <span class="dot1" onclick="currentSlide(6)"></span>
+                  <span class="dot1" onclick="currentSlide(7)"></span>
+                  <span class="dot1" onclick="currentSlide(8)"></span>
+                  <span class="dot1" onclick="currentSlide(9)"></span>
+                  <span class="dot1" onclick="currentSlide(10)"></span>
+                  <span class="dot1" onclick="currentSlide(11)"></span>
+                  <span class="dot1" onclick="currentSlide(12)"></span>
+                  <span class="dot1" onclick="currentSlide(13)"></span>
+                  <span class="dot1" onclick="currentSlide(14)"></span>
+                  <span class="dot1" onclick="currentSlide(15)"></span>
+                  <span class="dot1" onclick="currentSlide(16)"></span>
+                  <span class="dot1" onclick="currentSlide(17)"></span>
+    
+                </div>
+          
+          
+                <!--script for purple dress sitation deck-->
+                <!--function names and slidindex variables must be unique-->
+                <script>
+                  let slideIndex1 = 1;
+                  showSlides1(slideIndex1);
+          
+                  function plusSlides1(n) {
+                    showSlides1(slideIndex1 += n);
+                  }
+          
+                  function currentSlide(n) {
+                    showSlides1(slideIndex1 = n);
+                  }
+          
+                  function showSlides1(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides1");
+                    let dots = document.getElementsByClassName("dot1");
+                    if (n > slides.length) { slideIndex1 = 1 }
+                    if (n < 1) { slideIndex1 = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex1 - 1].style.display = "block";
+                    dots[slideIndex1 - 1].className += " active";
+                  }
+                </script>
+          
+              </div>      
+    
+        </div>
+    
+            <br><br><br><br>
+          <!--sitation deck PINK EARS-->
+          <div>
+            <div>
+                <div class="slideshow-container2">
+                  <div class="mySlides2 fade" style="display: none;">
+                    <div class="numbertext">1 / 7</div>
+                    <img src="./sitations/dressing/pink-ears-1.JPG" style="width:100%">
+                    <!--<div class="capt-text">Caption Text</div>-->
+                  </div>
+                 
+    
+                  <div class="mySlides2 fade" style="display: none;">
+                    <div class="numbertext">2 / 7</div>
+                    <img src="./sitations/dressing/pink-ears-2.JPG" style="width:100%">
+                    <!--<div class="capt-text">Caption Text</div>-->
+                  </div>
+    
+                  <div class="mySlides2 fade" style="display: none;">
+                    <div class="numbertext">3 / 7</div>
+                    <img src="./sitations/dressing/pink-ears-3.JPG" style="width:100%">
+                    <!--<div class="capt-text">Caption Text</div>-->
+                  </div>
+    
+                  <div class="mySlides2 fade" style="display: none;">
+                    <div class="numbertext">4 / 7</div>
+                    <img src="./sitations/dressing/pink-ears-4.JPG" style="width:100%">
+                    <!--<div class="capt-text">Caption Text</div>-->
+                  </div>
+    
+                  <div class="mySlides2 fade" style="display: none;">
+                    <div class="numbertext">5 / 7</div>
+                    <img src="./sitations/dressing/pink-ears-5.JPG" style="width:100%">
+                    <!--<div class="capt-text">Caption Text</div>-->
+                  </div>
+    
+                  <div class="mySlides2 fade" style="display: none;">
+                    <div class="numbertext">6 / 7</div>
+                    <img src="./sitations/dressing/pink-ears-6.JPG" style="width:100%">
+                    <!--<div class="capt-text">Caption Text</div>-->
+                  </div>
+    
+                  <div class="mySlides2 fade" style="display: none;">
+                    <div class="numbertext">7 / 7</div>
+                    <img src="./sitations/dressing/pink-ears-7.JPG" style="width:100%">
+                    <!--<div class="capt-text">Caption Text</div>-->
+                  </div>
+    
+    
+                  <!--remember to update function name here-->
+                  <a class="prev" onclick="plusSlides2(-1)">❮</a>
+                  <a class="next" onclick="plusSlides2(1)">❯</a>
+          
+                </div>
+                <br>
+          
+                <!--dots must be unique class well in css head style for each deck-->
+                <div style="text-align:center">
+                  <span class="dot2" onclick="currentSlide(1)"></span>
+                  <span class="dot2" onclick="currentSlide(2)"></span>
+                  <span class="dot2" onclick="currentSlide(3)"></span>
+                  <span class="dot2" onclick="currentSlide(4)"></span>
+                  <span class="dot2" onclick="currentSlide(5)"></span>
+                  <span class="dot2" onclick="currentSlide(6)"></span>
+                  <span class="dot2" onclick="currentSlide(7)"></span>
+                </div>
+          
+          
+                <!--script for purple dress sitation deck-->
+                <!--function names and slidindex variables must be unique-->
+                <script>
+                  let slideIndex2 = 1;
+                  showSlides2(slideIndex2);
+          
+                  function plusSlides2(n) {
+                    showSlides2(slideIndex2 += n);
+                  }
+          
+                  function currentSlide(n) {
+                    showSlides2(slideIndex2 = n);
+                  }
+          
+                  function showSlides2(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides2");
+                    let dots = document.getElementsByClassName("dot2");
+                    if (n > slides.length) { slideIndex2 = 1 }
+                    if (n < 1) { slideIndex2 = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex2 - 1].style.display = "block";
+                    dots[slideIndex2 - 1].className += " active";
+                  }
+                </script>
+          
+              </div>      
+    
+        </div>
+
+    </div>
+
+</div>
+
+<!--script-->
+<script>
+    function openPractice(evt, practiceName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(practiceName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+</script>
+
+
+</body>
+</html>
