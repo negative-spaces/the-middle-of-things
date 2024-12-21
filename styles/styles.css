@@ -275,3 +275,113 @@ body {
     }
   }
 
+
+
+/* BOTTOM side nav */
+.sidenav2 {
+    height: 330px;
+    width: 0;
+    font-family: "Courier New", Courier, monospace;
+    position: bottom;
+    background-color: #f0f0f0c5;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top:20px;
+  }
+  
+  .sidenav2 a {
+    padding: 8px 40px 6px 6px;
+    text-decoration: none;
+    line-height: .8;
+    font-size: 16px;
+    color: #242424;
+    display: block;
+    font-family: "Courier New", Courier, monospace;
+    transition: 0.3s;
+  }
+  
+  .sidenav2 a:hover {
+    color: #eb4d09;
+  }
+  
+  .sidenav2 .closebtn {
+    position: sticky;
+    top: 0;
+    right: 20px;
+    font-size: 30px;
+  
+  }
+  
+  #main2 {
+    transition: 0.3s;
+    padding: 5px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  /* MENUS AND BUTTONS */
+  /* Directory Items */
+  .nav {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 9.5pt;
+  }
+  
+  /* links and hover */
+  a.text:link {
+
+    color: slategray;
+    text-decoration: none;
+  }
+  a.text:link,
+  a.text:visited,
+  a.text:active {
+  
+    color: rgb(109, 110, 110);
+    text-decoration: none;
+  }
+  a.text:hover {
+    color: rgb(230, 65, 0);
+    text-decoration: none;
+  }
+
+   /*white text for header*/
+a.header:link{
+    color:aliceblue;
+
+    text-decoration: none;
+}
+a.header:link,
+  a.header:visited,
+  a.header:active {
+  
+    color:aliceblue;
+    text-decoration: none;
+    
+  }
+  a.header:hover {
+    color: rgb(230, 65, 0);
+    text-decoration: none;
+  }
+
+
+/*header */
+.header {
+    height: 26px;
+    background: #ee43eb;
+    color: #f1f1f1;
+  }
+
+
+  /* footer */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    /* width: 99.5%; */
+    /* background-color: #82ffd562; */
+    color: black;
+    text-align: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 9pt;
+    font-weight: 200;
+  
+  }
