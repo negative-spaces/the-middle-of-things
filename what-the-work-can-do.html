@@ -145,16 +145,21 @@
     }
    
     </style>
+    <style>
+       
+
+    </style>
 </head>
 
 <body>
 <a name="top" id="top"></a>
 
 <!--NAVIGATE ELSEWHERE-->
-<div>
+<!-- <div>
     <div id="mySidenav" class="sidenav">
      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-     <a href="./questions.html">questions</a>
+     <a href="./questions.html">questions</a><br>
+     <a href="./thinking-through-practice.html">thinking-through-practice</a><br>
      <a href="./iterative-proposals.html">iterative proposals</a>
      <br>
      <a href="./index.html">index</a>
@@ -180,7 +185,39 @@
    </script>
 
 
-</div>
+</div> -->
+
+
+<!--header nav-->
+<div class="header" id="myHeader" >
+    <a class="header">navigate elsewhere>></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a class="header" href="./questions.html">questions</a> 
+    &nbsp&nbsp&nbsp
+    <a class="header" href="./thinking-through-practice.html">thinking-through-practice</a>&nbsp&nbsp&nbsp&nbsp
+    <a class="header" href="./iterative-proposals.html">iterative proposals</a>
+    &nbsp&nbsp&nbsp&nbsp
+    <a class="header"  href="./index.html">index</a>
+    &nbsp&nbsp&nbsp&nbsp
+    <a class="header" href="https://github.com/negative-spaces/the-middle-of-things/blob/main/what-the-work-can-do.html" target="_blank">CODE_SIDE </a>
+  </div>
+
+  <!--script for sticky header-->
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    </script>
+
+
 
 <!--BANNER IMAGE-->
 <img src="./sitations/20241217_105737.jpg" style="width:100%">
@@ -193,7 +230,7 @@
 <div class="column0">
 
     <div class="sticky">
-      
+        <br><br>
       <button onclick="myOutline()" style="font-family: 'Courier New', Courier, monospace; font-size:10pt; border-color:#e2dfdf">Show/Hide Page Outline</button>
 
       <div id="outline">
@@ -232,13 +269,18 @@
 <!--text-->
 <div class="column1">
     
-    <!--introduction-->
+    <!--INTRODUCTION-->
     <div>
     <a name="intro" id="intro"></a>
   <p>
     <span style="font-weight:700; font-size:17px;cursor:alias; padding: 2px; background-color:blueviolet; color:rgb(235, 241, 242)">WHAT THE WORK CAN DO</span><br>
-    <p class="quote">The work continues to move you beyond its staged iteration—you can't say exactly why but it haunts you, it occupies you, evolving beyond its form-taking to create resonances that incite you to want to experience it again. It's not the <i>form</i> of the work that stays with you, it's the how of its capacity to dislodge the you that you thought you were. (Manning 2013, 102, emphasis in original). 
-    </p>
+    <!-- <p class="quote">The work continues to move you beyond its staged iteration—you can't say exactly why but it haunts you, it occupies you, evolving beyond its form-taking to create resonances that incite you to want to experience it again. It's not the <i>form</i> of the work that stays with you, it's the how of its capacity to dislodge the you that you thought you were. (Manning 2013, 102, emphasis in original). 
+    </p> -->
+
+    <!--what the work can do sitation-->
+    <div class="quote">
+        <img src="./sitations/readings/Manning2013_102.png" style="width:100%">
+    </div>
     
     <p>
         This is precisely how I feel about my MA research-creation thesis, <a href="https://dx.doi.org/10.14288/1.0445244" target="_blank"><i>Making space for deep mapping: rendering theory as praxis</i></a>. I am perpetually moved by negative-spaces as it works in excess of the zip folder submitted to cIRcle. The sense of a work outdoing itself is what I wish to carry forward into my PhD. Without knowing yet what form the staged dissertation will take, I am thinking about what makes any work of mine <i>work</i>—in other words, I am considering "the question of how an artwork evolves to exceed its form, to create from its force-of-form a more-than that can be felt, if not easily described" (Manning 2013, 101). Research-creation is about this more-than.
@@ -253,6 +295,19 @@
             research-creation as a mode of activity all its own, occurring at the constitutive level of both art practice and theoretical research, at a point before research and creation diverge into the institutional structures that capture and contain their productivity and judge them by conventional criteria for added value. At that prebifurcation level, making would already be thinking-in-action, and conceptualization a practice in its own right. The two, we proposed, would intersect in technique, technique understood here as an engagement with the modalities of expression a practice invents for itself… Experimental practice embodies technique toward catalyzing an event of emergence whose exact lineaments cannot be foreseen…Technique is therefore processual: it reinvents itself in the evolution of a practice.  (Manning and Massumi 2014, 89)
         </span>
         <span class="brmedium"></span>
+</p>
+
+        <!--research-creation sitations-->    
+        <div class="vignette" style="height:330px; overflow:scroll;">
+            <img src="./sitations/readings/Manning2020_221.jpg" style="width:100%">
+            Erin Manning in <i>For a pragmatics of the useless</i> (2020)
+            <br><br>
+            <img src="./sitations/readings/ManningMassumi2014_88-89.jpg" style="width:100%">
+            Erin Manning and Brian Massumi in <i>Thought in the act</i> (2014)
+            <br><br>
+        </div>
+
+<p>
         It is the "uncertain limit" of making and thinking, making as thinking-in-action, and "thinking as a creative practice in its own right" that most interest me. The purpose of a Directed Reading (and doing) which spans the first two terms of my PhD is to articulate what the work—taken as the multi-year endeavor of my PhD—can <i>do</i>. The aims and objectives of this directed reading apply the practical knowledged gained from my master's process-oriented research-creation. My aim is to cultivate a research ethos that will guide my exploration and response to questions coming out of MA and those developed in the first year (or so) of my PhD. As always, I practice diffractive inquiry by thinking through practice and reading diffractively. Diffractive reading is about reading <i>through</i> rather than against: interference rather than opposition, diffraction rather than reflection. "Diffractive readings bring inventive provocations;" says Barad in an interview, "they are good to think with" (van der Tuin and Dolphijn 2012). Drawing from Barad and Haraway, Murris and Bozalek (2019) develop propositions to guide diffractive readings of literature. They caution:
         <span class="brmedium"></span>
         <span class="quote">
@@ -267,7 +322,7 @@
     
     <br>
 
-    <!--what matters not-->
+    <!--WHAT MATTERS NOT-->
     <div>
         <a name="what-matters-not" id="what-matters-not"></a>
     <p>
@@ -319,41 +374,114 @@
     <p>
         I found J.K. Gibson-Graham's framework of diverse economies ill-equipped to consider practices and materialities that support capitalist production and reproduction while simultaneously subverting xyz. In finally recognizing that "non-human others and non-labouring others are also implicated in the production and appropriation of <i>surplus</i>", Roelvink and Gibson-Graham (2009) give the example of farmland whose "'gifts'" are repaid in "unremunerated exploitation and degradation" (153, emphasis in original). My reading of so-called assistive technology offers something different, I think, in that my ethics of care is concerned with practices of receiving and acknowledging giftings of things irreducible to commodities. Moreover, recognizing my printer as actively gifting sites its materiality not fully within commodity capitalism imbricated, too, in the gift economy of alleyways. Operating on urban denizens’ tacit knowledge of the city, matters deemed no longer fit for manufactured purpose are offered up as open-ended invitations for recirculation by passersby. By "urban denizens tacit knowledge of the city" I mean practical knowledge of the way things work; a box of odds and ends put out on the curb or the edge of a lawn means passersby are welcome to take what they want. The gift economy of alleyways is therefore also entwined with consumer excess under commodity capitalism. (I once encountered a giant TV with a note: santa brought a bigger one.) Alleyways, curbsides, and free boxes become sites where use and value are refigured. My printer is more than an assistive technology or office appliance—it is an intra-locutor, an intellection other with whom I collaborate in the physical-conceptual crafting of worlds that is knowledge production. 
     </p>
+
+    <br>
     </div>
 
-    <!--thinking with-->
+    <!--THINKING WITH-->
     <div>
     <a name="thinking-with" id="thinking-with"></a>
 <p>
     <span style="font-weight:700; font-size:17px;cursor:alias; padding: 2px; background-color:blueviolet; color:rgb(235, 241, 242)">THINKING WITH INTELLECTING OTHERS</span><br>
-        Engaging my printer as intra-locutor is a way of making explicit practices of thinking with nonhuman others. I am reminded of Erin Manning's reading of Bracha Ettinger, an Israeli-French artist and psychoanalyst whose Autistwork series works with found images and a scanner. Writes Erin Manning: "the photocopy machine is itself a way of seeing-with, a collaborator in the processual fielding that is the autistwork" (2013, 182). Ettinger's Autistwork series 
+    Engaging my printer as intra-locutor is a way of making explicit practices of thinking with nonhuman others. I am reminded of Erin Manning's reading of Bracha Ettinger, an Israeli-French artist and psychoanalyst whose Autistwork series crafts with found images and a scanner. Writes Erin Manning: "the photocopy machine is itself a way of seeing-with, a collaborator in the processual fielding that is the autistwork" (2013, 182). Ettinger's Autistwork series 
         <span class="brmedium"></span>
         <span class="quote">
             demonstrates that the <i>how</i> of knowing much exceeds the <i>what</i> (and the who) of knowing…It makes seen the constitutive difference between knowing-with and a more generalized knowing—knowing as categorization, organization, representation. It reminds us that to know is to participate in a folding that will remain an intensity too multiple, too ineffable and too indefinite to articulate without composing-with. To know is to know-with—to participate in the creation of worlds, words churning with the exquisite singular-infinity of eternal objects [conceptualized elsewhere as xyz], seeings-in-the-feeling that continuously reinvent what perception (and knowing) can do. (Manning 2013, 181)
         </span>
         <span class="brmedium"></span>
+        There is no isolated knowing, just as there is no composing alone. What if marks of the way things were made (printer line; uneven stitching) were embraced as part of the artwork, not error? I want to broaden my practice of thinking with materiality that co-composes my artworks to the material-discursive boundary making practices, or Baradian apparatuses, which create the conditions for my intra-action with them. Research-creation as a practice of feeling, thinking, knowing, and composing <i>with</i> requires novel citational practices for acknowledging intellecting others. Citation cites interaction: the intellectual engagement of two presupposed human interlocutors who existed as independent entities before their encounter. In my ma thesis, I began to theorize <i>sitation</i> as an alternative boundary making practice to citation, one which recognizes artworks as phenomena wherein collaborators intra-actively mark one another. Sitation assumes agencies and object of investigation to be provisional configurations where encounter's formal acknowledgement within an academic work renders <i>intra-locutors</i> differentially determinate. Whereas citations cite interactions, <i>sitations site intra-actions</i>. Sitations are diffraction patterns marking the effects of "differential intra-actions". Sitations are therefore both sites and tactics of interference. Sitation offers a way of "explicitly valorizing the collective webs one thinks with" (Puig de la Bellacasa 2012, 202). Sitational practice "create[s] an environment where knowing as final act is not the aim…Where what is remembered is how we came to a thought" (Manning and Bozalek 2024).
+    </p>
+
+    <span class="brmedium"></span>
+
+    <!--memo on sitation-->
+    <div class="vignette">
+        memo on sitation
+    </div>
+
+    <span class="brmedium"></span>
+
+    <p>
+        The brevity of this sunk in in the past two days as I recognized sitation could address my question, raised by my reading of J.K. Gibson-Graham, of how to account for the hauntings materials inherit as they undergo discursive (and indeed material) refigurings.
+    </p>
+
+    <p>
+        To celebrate the conclusion of my thesis I hosted a dinner party at the end of November. At the party, I read an excerpt from my thesis and answered questions about the work. I also prepared sitations from my thesis in the form of stickers which I encouraged people to take and resite around the city in perpetuation of a "proliferating illegitimacy" (de Certeau 1984, 96). I had already begun doing this with FIND THE DRIFT/CROSS THE FENCE/REPORT ALL SIGNS a year or more ago. 
 
     </p>
+
+      <!--find the drift resitations-->
+      <div class="vignette">
+        <img src="./sitations/resitation/find-the-drift_20230505.jpg" style="width:45%">
+        <img src="./sitations/resitation/find-the-drift_20230916.jpg" style="width:45%">
+        <br>
+        See <code><a href="https://uploads.knightlab.com/storymapjs/b238a6d62c46c28699e948c1e9d7abc7/findthedrift/index.html" target="_blank">here for context of tag</a></code>
+        <br><br>
+    </div>
+
+    <p>
+        On a walk to Green's grocer Thursday I passed the vacant storefront where earlier this year (February) the graffiti "An Economy is a Soul/Spirit/Love" had inspired a conference paper and then the tactics page of my thesis. This December the whole wall was painted over with thick white paint. I had leftover sitations in my pocket and added one of the first sitation I created to the wall. Thinking with this resitation, I began to wonder what this act was doing.
+
+
+    </p>
+
+
+    <span class="brmedium"></span>
+
+    <!--memo on resitation-->
+    <div class="vignette">
+        <audio controls >
+            <source src="./sitations/resitation/resitation_20241219.mp3" type="audio/mpeg" >
+            giving a haircut
+        </audio>
+            <br>
+    </div>
+
+    <span class="brmedium"></span>
+
+    <p>
+        The next day I decided to do this intentionally to a sitation made under the ramp of the granville bridge which runs closest to where I live. There's an electrical building there with weathered green-turquoise walls. Interestingly, at the base there are large swatches painted in different hues. I made cards with this sitation early in the summer. This fall, I noticed someone had added abstract line-art over one of these swatches with earth and organic matter. It's really beautiful and creative and I've not encountered anything like it. The sitation has changed from what it once was, and I went down yesterday and added a sticker of a figuration from a different time. 
+
+    </p>
+
+    <!--turqoise wall sitations-->
+    <div class="vignette">
+        <img src="./sitations/resitation/turquoise-wall_20230419.jpg" style="width:100%">
+
+        add audio too
+        <br>
+
+        <img src="./sitations/resitation/turquoise-wall_20241220.jpg" style="width:100%">
+
+        <br><br>
+
+        <img src="./sitations/resitation/turquoise-wall-resitation-a.jpg" style="width:48%">
+        <img src="./sitations/resitation/turquoise-wall-resitation-b.jpg" style="width:48%">
+
+        <br><br>
+
+    </div>
+
 
     </div>
 
 
     <!--making practices-->
-    <div>
+    <!-- <div>
         <a name="making-practices" id="making-practices"></a>
     <p>
           <span style="font-weight:700; font-size:17px;cursor:alias; padding: 2px; background-color:blueviolet; color:rgb(235, 241, 242)">MAKING PRACTICES</span><br>
 
     </p>
     <br><br><br>
-    <!--sitation deck PURPLE DRESS-->
+
     <div>
         <div>
             <div class="slideshow-container1">
               <div class="mySlides1 fade" style="display: none;">
                 <div class="numbertext">1 / 17</div>
                 <img src="./sitations/dressing/purple-dress-5.JPG" style="width:100%">
-                <!--<div class="capt-text">Caption Text</div>-->
+                
               </div>
       
               <div class="mySlides1 fade">
@@ -383,10 +511,7 @@
                 <img src="./sitations/dressing/purple-dress-2.JPG" style="width:100%">
               </div>
 
-              <!-- <div class="mySlides1 fade">
-                <div class="numbertext">7 / 17</div>
-                <img src="./sitations/dressing/purple-dress-7.JPG" style="width:100%">
-              </div> -->
+         
 
               <div class="mySlides1 fade">
                 <div class="numbertext">8 / 17</div>
@@ -438,14 +563,14 @@
                 <img src="./sitations/dressing/purple-dress-17.JPG" style="width:100%">
               </div>
 
-              <!--remember to update function name here-->
+          
               <a class="prev" onclick="plusSlides1(-1)">❮</a>
               <a class="next" onclick="plusSlides1(1)">❯</a>
       
             </div>
             <br>
       
-            <!--dots must be unique class well in css head style for each deck-->
+       
             <div style="text-align:center">
               <span class="dot1" onclick="currentSlide(1)"></span>
               <span class="dot1" onclick="currentSlide(2)"></span>
@@ -468,8 +593,7 @@
             </div>
       
       
-            <!--script for purple dress sitation deck-->
-            <!--function names and slidindex variables must be unique-->
+          
             <script>
               let slideIndex1 = 1;
               showSlides1(slideIndex1);
@@ -504,62 +628,61 @@
     </div>
 
         <br><br><br><br>
-      <!--sitation deck PINK EARS-->
+ 
       <div>
         <div>
             <div class="slideshow-container2">
               <div class="mySlides2 fade" style="display: none;">
                 <div class="numbertext">1 / 7</div>
                 <img src="./sitations/dressing/pink-ears-1.JPG" style="width:100%">
-                <!--<div class="capt-text">Caption Text</div>-->
+              
               </div>
              
 
               <div class="mySlides2 fade" style="display: none;">
                 <div class="numbertext">2 / 7</div>
                 <img src="./sitations/dressing/pink-ears-2.JPG" style="width:100%">
-                <!--<div class="capt-text">Caption Text</div>-->
+              
               </div>
 
               <div class="mySlides2 fade" style="display: none;">
                 <div class="numbertext">3 / 7</div>
                 <img src="./sitations/dressing/pink-ears-3.JPG" style="width:100%">
-                <!--<div class="capt-text">Caption Text</div>-->
+                <div class="capt-text">Caption Text</div>
               </div>
 
               <div class="mySlides2 fade" style="display: none;">
                 <div class="numbertext">4 / 7</div>
                 <img src="./sitations/dressing/pink-ears-4.JPG" style="width:100%">
-                <!--<div class="capt-text">Caption Text</div>-->
+                <div class="capt-text">Caption Text</div>
               </div>
 
               <div class="mySlides2 fade" style="display: none;">
                 <div class="numbertext">5 / 7</div>
                 <img src="./sitations/dressing/pink-ears-5.JPG" style="width:100%">
-                <!--<div class="capt-text">Caption Text</div>-->
+                <div class="capt-text">Caption Text</div>
               </div>
 
               <div class="mySlides2 fade" style="display: none;">
                 <div class="numbertext">6 / 7</div>
                 <img src="./sitations/dressing/pink-ears-6.JPG" style="width:100%">
-                <!--<div class="capt-text">Caption Text</div>-->
+                <div class="capt-text">Caption Text</div>
               </div>
 
               <div class="mySlides2 fade" style="display: none;">
                 <div class="numbertext">7 / 7</div>
                 <img src="./sitations/dressing/pink-ears-7.JPG" style="width:100%">
-                <!--<div class="capt-text">Caption Text</div>-->
+                <div class="capt-text">Caption Text</div>
               </div>
 
 
-              <!--remember to update function name here-->
+           
               <a class="prev" onclick="plusSlides2(-1)">❮</a>
               <a class="next" onclick="plusSlides2(1)">❯</a>
       
             </div>
             <br>
       
-            <!--dots must be unique class well in css head style for each deck-->
             <div style="text-align:center">
               <span class="dot2" onclick="currentSlide(1)"></span>
               <span class="dot2" onclick="currentSlide(2)"></span>
@@ -571,8 +694,7 @@
             </div>
       
       
-            <!--script for purple dress sitation deck-->
-            <!--function names and slidindex variables must be unique-->
+    
             <script>
               let slideIndex2 = 1;
               showSlides2(slideIndex2);
@@ -607,7 +729,7 @@
     </div>
     <br><br><br>
 
-    </div>
+    </div> -->
 
 
 
@@ -656,8 +778,8 @@
 <br><br>
 
 
-    <!--bibliography-->
-    <div style="width:60%; margin:auto;">
+<!--bibliography-->
+<div style="width:60%; margin:auto;">
         <div>
                <button class="accordion">References (click to expand)</button>
                <div class="panel">
@@ -683,6 +805,46 @@
            </div> 
        </div>
 
+
+
+
+<!--footer nav elsewhere-->
+<div class="footer">
+    <div>
+      <div id="mySidenav2" class="sidenav2">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+       
+        <a href="./questions.html">questions</a><br>
+     <a href="./thinking-through-practice.html">thinking-through-practice</a><br>
+     <a href="./iterative-proposals.html">iterative proposals</a>
+     <br>
+     <a href="./index.html">index</a>
+     <a href="https://github.com/negative-spaces/the-middle-of-things/blob/main/what-the-work-can-do.html" target="_blank">CODE_SIDE </a>
+      </div> 
+     <div id="main2">
+        <span style="font-size:17px;cursor:alias; padding: 2px; background-color:blueviolet; color:rgb(235, 241, 242)" onclick="openNav2()">&#9776; navigate elsewhere>></span>
+     </div>
+       
+     <script>
+     function openNav2() {
+       document.getElementById("mySidenav2").style.width = "250px";
+       document.getElementById("main2").style.marginLeft = "250px";
+     }
+     function closeNav2() {
+       document.getElementById("mySidenav2").style.width = "0";
+       document.getElementById("main2").style.marginLeft= "0";
+     }
+  
+     document.onscroll = function closeNav2() {
+       document.getElementById("mySidenav2").style.width = "0";
+       document.getElementById("main2").style.marginLeft= "0";
+     }
+  
+  </script>
+  
+     </div>
+  
+  </div>
 
 
 </body>
