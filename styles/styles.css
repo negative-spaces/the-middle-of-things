@@ -60,7 +60,7 @@ p {
           flex: 55%;
           max-width: 55%;
           padding: 0 10px;
-          margin-left: 6%;
+          margin-left: 3%;
     }
   }
 
@@ -130,6 +130,25 @@ div.column0 {
     }
   }
  
+
+  /*asides column*/
+  div.column3{
+    -ms-flex: 27%; 
+    flex: 21%;
+    max-width: 22%;
+    padding: 0px 0px 8px 20px   
+    }
+
+/* main column takes full page width for NARROW display - asides bumped to bottom*/
+@media screen and (max-width: 700px) {
+    div.column3 {
+      -ms-flex: 100%; 
+          flex: 100%;
+          max-width: 100%;
+          padding: 0 2px;
+    }
+  }
+
   div.sticky {
     position: -webkit-sticky;
     position: sticky;
