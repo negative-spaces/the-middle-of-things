@@ -345,19 +345,19 @@ body {
   }
   
   /* links and hover */
-  a.text:link {
+  a:link {
 
     color: slategray;
     text-decoration: none;
   }
-  a.text:link,
-  a.text:visited,
-  a.text:active {
+  a:link,
+  a:visited,
+  a:active {
   
     color: rgb(109, 110, 110);
     text-decoration: none;
   }
-  a.text:hover {
+  a:hover {
     color: rgb(230, 65, 0);
     text-decoration: none;
   }
@@ -404,3 +404,13 @@ a.header:link,
     font-weight: 200;
   
   }
+
+
+
+.highlight-light-purple{
+    background-color:rgba(199, 139, 255, 0.199);
+}
+
+.highlight-yellow{
+    background-color:rgba(241, 251, 109, 0.599);
+}
