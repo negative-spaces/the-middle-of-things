@@ -32,11 +32,41 @@ p {
 
 <body>
 
-    <!--NAVIGATE ELSEWHERE-->
-<div>
+<!--header nav-->
+    <div class="header" id="myHeader" >
+        <a class="header">navigate elsewhere>></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <a class="header"  href="./index.html">index</a>
+        &nbsp&nbsp&nbsp&nbsp
+        <a class="header" href="./what-the-work-can-do.html">what the work can do</a> 
+        &nbsp&nbsp&nbsp
+        <a class="header" href="./thinking-through-practice.html">thinking-through-practice</a>&nbsp&nbsp&nbsp&nbsp
+        <!-- <a class="header" href="./iterative-proposals.html">iterative proposals</a> -->
+        &nbsp&nbsp&nbsp&nbsp
+        <a class="header" href="https://github.com/negative-spaces/the-middle-of-things/blob/main/questions.html" target="_blank">CODE_SIDE </a>
+      </div>
+    
+<!--script for sticky header-->
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+        </script>
+    
+<!--NAVIGATE ELSEWHERE-->
+<!-- <div>
     <div id="mySidenav" class="sidenav">
      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-     <a href="./what-the-work-can-do.html">what the work can do</a>
+     <a href="./what-the-work-can-do.html">what the work can do</a><br>
+     <a href="./thinking-through-practice.html">thinking-through-practice</a><br>
      <a href="./iterative-proposals.html">iterative proposals</a>
      <br>
      <a href="./index.html">index</a>
@@ -62,7 +92,7 @@ p {
    </script>
 
 
-</div>
+</div> -->
 
 
     <br>
@@ -73,7 +103,7 @@ p {
         </p>
    
         <p>
-            What could it mean to think with place? To feel the city? 
+            What could it mean to think <i>with</i>> place? To <i>feel</i> the city? 
         </p>
 
         <p>
@@ -120,6 +150,11 @@ p {
         <p>
             What happens when gifted materials intermingle with so-called commodities? What would it mean for a feminist political economy to recognize, as Barad (2007) does, that "Knowing is a distributed practice that includes the larger material arrangement" (342) "(i.e., the full set of practices) that is a part of the phenomenon investigated or produced" (390)? How might we account for hauntings materials inherit as they are discursively refigured? 
         </p>
+
+        <p>
+            What might it mean to cultivate an acknowledgement practice for hauntings matters inherit as they undergo physical-conceptual refigurings? 
+        </p>
+       
     </div>
 
 </body>
