@@ -6,249 +6,242 @@
 
     <!--for tabs-->
     <style>
-        .tab {
-            overflow: hidden;
-                /* border: 1px solid #ccc;*/
-                /* background-color: #f7f5fc;*/
-        }
-
-        .tab button {
-  background-color: inherit;
-  float: auto;
-  border: 1px solid #ccc;
-  outline: none;
-  cursor: pointer;
-  padding: 10px 12px;
-  transition: 0s;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 16px;
-font-weight: lighter;
-        }
-
-        .tab button:hover {
+      .tab {
+        overflow: hidden;
+        /* border: 1px solid #ccc;*/
+        /* background-color: #f7f5fc;*/
+      }
+    
+      .tab button {
+        background-color: inherit;
+        float: auto;
+        border: 1px solid #ccc;
+        outline: none;
+        cursor: pointer;
+        padding: 10px 12px;
+        transition: 0s;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 16px;
+        font-weight: lighter;
+      }
+    
+      .tab button:hover {
         background-color: #dcdae3;
-        }
-
-        .tab button.active {
+      }
+    
+      .tab button.active {
         background-color: #ccc;
-        }
-
-        .tabcontent {
+      }
+    
+      .tabcontent {
         display: none;
         padding: 3px 3px;
+      }
+    </style>
+    
+    <!--styling for sitation decks-->
+    <style>
+      img {
+        vertical-align: middle;
+      }
+    
+      /* Position the image container (needed to position the left and right arrows) */
+      .container {
+        position: relative;
+      }
+    
+      /* Add a pointer when hovering over the thumbnail images */
+      .cursor {
+        cursor: arrow;
+      }
+    
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.1s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+    
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+    
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    
+      /* Fading animation */
+      .fade {
+        animation-name: none;
+        /* animation-duration: 1.5s; */
+      }
+    
+      @keyframes fade {
+        from {
+          opacity: .4
         }
-
+    
+        to {
+          opacity: 1
+        }
+      }
+    
+      /* Caption text */
+      .capt-text {
+        color: #3a3330;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+        padding: 2px 2px;
+        position: absolute;
+        bottom: 1px;
+        width: 100%;
+        text-align: center;
+      }
+    
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+    
+    
+      /* EACH SUBSEQUENT SLIDE DECK MUST BE DECLARED A NEW VARIABLE, AND SLIDE INDEX RENAMED AS WELL.  */
+      .mySlides1 {
+        display: none;
+      }
+    
+      .mySlides2 {
+        display: none;
+      }
+    
+    
+      .mySlides3 {
+        display: none;
+      }
+    
+      .slideshow-container1 {
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+      }
+    
+      .slideshow-container2 {
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+      }
+    
+      .slideshow-container3 {
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+      }
+    
+      /* The dots/bullets/indicators */
+      /* create new unique dot for each new sitation deck */
+      .dot1 {
+        cursor: pointer;
+        height: 7px;
+        width: 7px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 10%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+    
+      .dot2 {
+        cursor: pointer;
+        height: 7px;
+        width: 7px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 10%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+    
+    
+      .dot3 {
+        cursor: pointer;
+        height: 7px;
+        width: 7px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 10%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+    
+      .active,
+      .dot1:hover {
+        background-color: #717171;
+      }
+    
+      .active,
+      .dot2:hover {
+        background-color: #717171;
+      }
+    
+    
+      .active,
+      .dot3:hover {
+        background-color: #717171;
+      }
     </style>
 
-     <!--styling for sitation decks-->
-     <style>
-  
-        img {
-          vertical-align: middle;
-        }
-    
-        /* Position the image container (needed to position the left and right arrows) */
-        .container {
-          position: relative;
-        }
-    
-        /* Add a pointer when hovering over the thumbnail images */
-        .cursor {
-          cursor: arrow;
-        }
-    
-        /* Next & previous buttons */
-        .prev,
-        .next {
-          cursor: pointer;
-          position: absolute;
-          top: 50%;
-          width: auto;
-          padding: 16px;
-          margin-top: -22px;
-          color: white;
-          font-weight: bold;
-          font-size: 18px;
-          transition: 0.1s ease;
-          border-radius: 0 3px 3px 0;
-          user-select: none;
-        }
-    
-        /* Position the "next button" to the right */
-        .next {
-          right: 0;
-          border-radius: 3px 0 0 3px;
-        }
-    
-        /* On hover, add a black background color with a little bit see-through */
-        .prev:hover,
-        .next:hover {
-          background-color: rgba(0, 0, 0, 0.8);
-        }
-    
-        /* Fading animation */
-        .fade {
-          animation-name: none;
-          /* animation-duration: 1.5s; */
-        }
-    
-        @keyframes fade {
-          from {
-            opacity: .4
-          }
-    
-          to {
-            opacity: 1
-          }
-        }
-    
-        /* Caption text */
-        .capt-text {
-          color: #3a3330;
-          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-          font-size: 15px;
-          padding: 2px 2px;
-          position: absolute;
-          bottom: 1px;
-          width: 100%;
-          text-align: center;
-        }
-    
-        /* Number text (1/3 etc) */
-        .numbertext {
-          color: #f2f2f2;
-          font-size: 12px;
-          padding: 8px 12px;
-          position: absolute;
-          top: 0;
-        }
-    
-    
-        /* EACH SUBSEQUENT SLIDE DECK MUST BE DECLARED A NEW VARIABLE, AND SLIDE INDEX RENAMED AS WELL.  */
-        .mySlides1 {
-          display: none;
-        }
-    
-        .mySlides2 {
-          display: none;
-        }
-        
-
-        .mySlides3 {
-          display: none;
-        }
-    
-        .slideshow-container1 {
-          max-width: 100%;
-          position: relative;
-          margin: auto;
-        }
-    
-        .slideshow-container2 {
-          max-width: 100%;
-          position: relative;
-          margin: auto;
-        }
-
-        .slideshow-container3 {
-          max-width: 100%;
-          position: relative;
-          margin: auto;
-        }
-    
-        /* The dots/bullets/indicators */
-        /* create new unique dot for each new sitation deck */
-        .dot1 {
-          cursor: pointer;
-          height: 7px;
-          width: 7px;
-          margin: 0 2px;
-          background-color: #bbb;
-          border-radius: 10%;
-          display: inline-block;
-          transition: background-color 0.6s ease;
-        }
-    
-        .dot2 {
-          cursor: pointer;
-          height: 7px;
-          width: 7px;
-          margin: 0 2px;
-          background-color: #bbb;
-          border-radius: 10%;
-          display: inline-block;
-          transition: background-color 0.6s ease;
-        }
-
-
-        .dot3 {
-          cursor: pointer;
-          height: 7px;
-          width: 7px;
-          margin: 0 2px;
-          background-color: #bbb;
-          border-radius: 10%;
-          display: inline-block;
-          transition: background-color 0.6s ease;
-        }
-    
-        .active,
-        .dot1:hover {
-          background-color: #717171;
-        }
-        
-        .active,
-        .dot2:hover {
-          background-color: #717171;
-        }
-
-
-        .active,
-        .dot3:hover {
-          background-color: #717171;
-        }
-       
-        </style>
 </head>
 
 <body>
 
-        <!--NAVIGATE ELSEWHERE-->
-<div>
-    <div id="mySidenav" class="sidenav">
-     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-     <a href="./what-the-work-can-do.html">what the work can do</a>
-     <a href="./iterative-proposals.html">iterative proposals</a>
-     <a href="./questions.html">research questions</a>
-     <br>
-     <a href="./index.html">index</a>
-     <a href="https://github.com/negative-spaces/the-middle-of-things/blob/main/thinking-through-practice.html" target="_blank">CODE_SIDE </a>
-   </div>
-   <div id="main">
-     <span style="font-size:17px;cursor:alias; padding: 2px; background-color:blueviolet; color:rgb(235, 241, 242)" onclick="openNav()">&#9776; navigate elsewhere>></span>
-   </div>
-   <script>
-   function openNav() {
-     document.getElementById("mySidenav").style.width = "250px";
-     document.getElementById("main").style.marginLeft = "250px";
-   }
-   function closeNav() {
-     document.getElementById("mySidenav").style.width = "0";
-     document.getElementById("main").style.marginLeft= "0";
-   }
-
-   window.onscroll = function closeNav() {
-     document.getElementById("mySidenav").style.width = "0";
-     document.getElementById("main").style.marginLeft= "0";
-   }
-   </script>
-
-
+<!--header nav-->
+<div class="header" id="myHeader" >
+  <a class="header">navigate elsewhere>></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <a class="header"  href="./index.html">index</a>
+  &nbsp&nbsp&nbsp&nbsp
+  <a class="header"  href="./what-the-work-can-do.html">what-the-work-can-do</a>
+  &nbsp&nbsp&nbsp&nbsp
+  <a class="header" href="./questions.html">questions</a> 
+  &nbsp&nbsp&nbsp
+  <a class="header" href="./iterative-proposals.html">iterative proposals</a>
+  &nbsp&nbsp
+  <a class="header" href="https://github.com/negative-spaces/the-middle-of-things/blob/main/alleyway-political-ecology.html" target="_blank">CODE_SIDE </a>
 </div>
 
+<!--script for sticky header-->
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var header = document.getElementById("myHeader");
+  var sticky = header.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+  </script>
 
 
-<br><br>
 
 <div class="column1">
     <p>
@@ -261,17 +254,17 @@ font-weight: lighter;
 
 <br><br><br>
 
-<!--menu-->
+<!--MENU-->
 <div class="tab" style="text-align:center;">
     <button class="tablinks" onclick="openPractice(event, 'haircut')">giving a haircut</button>
     <button class="tablinks" onclick="openPractice(event, 'sewing')">hand sewing</button>
     <!-- <button class="tablinks" onclick="openPractice(event, 'resitation')">resitation</button> -->
+    <button class="tablinks" onclick="openPractice(event, 'up-my-alley')">up my alley</button>
   </div>
 
 
+<br>
 
-<br>
-<br>
 
 <!--giving a haircut-->
 <div id="haircut" class="tabcontent">
@@ -818,7 +811,218 @@ font-weight: lighter;
 </div> -->
 
 
-<!--script-->
+<!--up my alley-->
+<div id="up-my-alley" class="tabcontent">
+
+
+<!--BANNER IMAGE-->
+<img src="./sitations/alley-upe/apartment-recycling.jpg" style="width:100%">
+<br>
+Overflowing recycling containers in the basement of the apartment building where I live. 
+ <br>
+
+
+ <p><span style="font-weight:700; font-size:17px;cursor:alias; padding: 2px; color:rgb(0, 0, 0);">Up my alley: reading concepts in urban political ecology through practices of urban gleaning</span></p>
+
+ <!--CONTENTS-->
+ <div class="row">
+
+  <!-- outline-->
+<div class="column0">
+
+  <div class="sticky">
+    <br><br><br>
+    <!--line breaks needed so outline show hide button sticks beneath the sticky menu-->
+    <button onclick="myOutline()" style="font-family: 'Courier New', Courier, monospace; font-size:10pt; border-color:#e2dfdf">Show/Hide Outline</button>
+
+    <div id="outline">
+    <span style="font-family: 'Courier New', Courier, monospace; font-size: 10.5pt;  line-height: 1.3; opacity: 0.8;">
+      <br>
+    <a href="#upe-intro">Introduction</a><br>
+     <br><br>
+    <a href="#top">&#9650 return to top</a><br>
+    <a href="#what-the-work-can-do-bibliography">&#9660 bibliography</a>
+    
+  </span>
+  </div>
+
+    <!--script to show/hide outline -->
+   <script>
+  function myOutline() {
+  var x = document.getElementById("outline");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  }
+      </script>
+
+  </div>
+ 
+</div>
+
+  <!--main text-->
+  <div class="column1" style="margin:auto;">
+   
+
+  <!--INTRODUCTION-->
+    <div>
+
+    <a name="upe-intro" id="upe-intro"></a>
+  <br>
+    <p>
+    <span style="font-weight:700; font-size:17px;cursor:alias; padding: 2px; background-color:rgb(237, 75, 54); color:rgb(248, 252, 253);">INTRODUCTION</span><br>
+    <br>
+    <span style="text-align:right; line-height:1.7; font-size:15px;">The crafting of a research question is the crafting of a story that is also the crafting of an ethics.<br>
+      Natalie Loveless, <i>How to make art at the end of the world</i>
+      </span>
+ 
+  </p>
+
+    <p>
+      The kind of story, or quality of text, I desire to craft in my PhD has been on my mind lately as I prepare to assemble my comprehensive reading lists. Orienting toward a topic of study is an ethical matter as it involves foregrounding some concerns to the exclusion of others. While my master's research attended to the everyday experience of urban inhabitation and thinking with/in posthuman entanglements, my praxis lacked recognition of socio-ecological production of cities. Therefore, in my composition of a list entitled Urban Everyday, I want to foreground the tension between the directness of experience and engagement with broader underlying politics that structure landscapes of encounter. The following renders my exploration and response to the question: How might the analytic or "theoretical platform" (Heynen et al. 2006, 8) practiced by urban political ecologists re/orient my approach to urban investigations and the questions that drive my research-creation forwards?  
+    </p>
+
+    <p>
+      My inquiry takes the form of a diffractive reading in which I read concepts of urbanization as a process (Harvey 2014; Brenner 2014), infrastructure as political (Anand 2017; Cowen 2020; Barua 2023), and metabolic circulation (Swyngedouw 2006; Newell and Cousins 2014; Zhang 2020) through my practice of alleyway gleaning. Drawing from Donna Haraway's (1991) initial suggestion of diffraction as a mapping of <i>the effects</i> of difference and Karen Barad's (2007) subsequent ontological elaboration and extension, Karin Murris and Vivienne Bozalek (2019) develop propositions to guide diffractive readings: "The idea is to read theory with practice diffractively guided by, for example, key questions that move the experiment forward" (pg). Diffractive readings agitate presuppositions, allowing new learnings to interfere with prior convictions. Reading diffractively challenges the fixity of any one configuration of intelligibility while accounting for the differential stakes and constitutive exclusions entailed in each refiguring. Finally, diffractive readings are a way to bring different (even incommensurable) perspectives into relation without antagonism. Focusing on resonances and dissonances will help me clarify the differences that <i>do</i> matter. I believe this sort of exercise serves me well in ascertaining where and how urban political ecology might supplement my study.
+    </p>
+
+    <p>
+      Although my sites of urban gleaning extend beyond alleyways, I impose this enabling constraint (a term from process philosopher Erin Manning) so as to practice denaturalizing, historicizing, and politicizing an infrastructure my preoccupation with immediacy has heretofore led me to take for granted. Rather than conduct an urban political ecology of alleyways which I feel as yet unprepared to do, I aim to map out the concerns such an account might foreground and outline the kinds of questions I might ask. For instance, before taking urban political ecology this term yet thinking with geographical political economy and J.K. Gibson-Graham last term, I would have framed my urban gleaning practices as means of participating in noncapitalist economies. However, reading alleyway gleaning through urban political ecology, the question arises, What does it mean to situate alley gleaning as an alternate or marginal form of circulation while the very infrastructure that conditions it is simultaneously enrolled in the ongoing production of the settler-colonial city?
+    </p>
+
+    <p>
+      I choose to reconceptualize alleyways along the lines of urban political ecology <i>through my practice of gleaning</i> because I sense a relational articulation between this particular infrastructure and urban metabolisms. Enrolled in economies of resource extraction and development, Vancouver's alleyways literally pave the way for municipal waste disposal and in so doing, facilitate the ongoing process of urbanization. Walking alleyways while attending to their material histories, uneven maintenances, and the differential nature of their ecologies, I believe I can glean more than a dish here or a lemon balm clipping and handful of blackberries there. I believe the takeaway will be a more complex view on the politics and ethics of thinking <i>with</i> alleyways, <i>through</i> gleaning practices, and <i>in entangled collaboration with</i> things gleaned. 
+    </p>
+
+    <p>
+      ROADMAP OF WHAT FOLLOWS
+    </p>
+
+  </div>
+
+
+   <!--Gleaning-->
+   <div>
+
+    <a name="upe-gleaning" id="upe-gleaning"></a>
+  <br>
+    <p>
+    <span style="font-weight:700; font-size:17px;cursor:alias; padding: 2px; background-color:rgb(237, 75, 54); color:rgb(248, 252, 253);">THINKING THROUGH GLEANING</span><br>
+    <br>
+
+    </p>
+
+    </div>
+
+
+
+
+  </div>
+
+
+   <!--asides-->
+ <div class="column3">
+
+  <div class="sticky" >
+    <br><br><br>
+    <!--the breaks are needed so it sticks underneath the sticky menu-->
+    <button onclick="myAsides()" style="font-family: 'Courier New', Courier, monospace; font-size:11pt; margin-left:49%; border-color:#e2dfdf">Show/Hide Asides</button>
+  
+    <div id="asides">
+
+
+      <!--script to copy paste selected text-->
+      <script language=javascript>
+
+          function getSelText()
+          {
+          var txt = '';
+          if (window.getSelection)
+              {
+                  txt = "'"+ window.getSelection() +"'" ;
+              }
+          else if (document.getSelection)
+          {
+          txt =  "'"+ document.getSelection() +"'" ;
+              }
+          else if (document.selection)
+          {
+          txt = "'"+document.selection.createRange().text +"'" ;
+          }
+          else return;
+          document.testform.selectedtext.value = document.testform.selectedtext.value + '\n\n' + txt;
+          }
+      
+          
+          </script>
+
+    <br>
+    
+    <button  onmousedown="getSelText()" style="font-family: 'Courier New', Courier, monospace; font-size:11pt; letter-spacing:-0.6pt;"> Take Note; Make Note</button>
+    <form name="testform">
+      <textarea id="selectedtext" placeholder="Highlight a selection of text to the left and click the above button to save it here. Type notes to yourself here as you go. Resize this window as needed." style="width:100%; max-width:100%; height: 200px"></textarea>
+  </form>
+
+<!--show hide asides-->
+  <script>
+    function myAsides() {
+    var x = document.getElementById("asides");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+    }
+    </script>
+
+<!--code for downloading asides to local computer-->
+  <!--source: https://www.geeksforgeeks.org/how-to-trigger-a-file-download-when-clicking-an-html-button-or-javascript/-->
+<input type="button" id="btn"  style="border:none; font-family: 'Courier New', Courier, monospace; font-size:11pt; letter-spacing:-0.6pt;" value="download" />
+
+<!--download file-->
+  <script>
+      function download(file, text) {
+          var element = document.createElement('a');
+          element.setAttribute('href',
+              'data:text/plain;charset=utf-8, '
+              + encodeURIComponent(text));
+          element.setAttribute('download', file);
+          document.body.appendChild(element);
+          element.click();
+          document.body.removeChild(element);
+      }
+
+     
+      // Start file download.
+
+      document.getElementById("btn")
+          .addEventListener("click", function () {
+              var text = 
+              'Notes and quotes from https://negative-spaces.github.io/the-middle-of-things/thinkig-through-practice.html, a processing space of Lily Demet' + document.getElementById("selectedtext").value ;
+              var filename = "asides.txt";
+
+              download(filename, text);
+          }, false);
+  </script>
+
+    </div>
+
+
+   
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!--script for tabs-->
 <script>
     function openPractice(evt, practiceName) {
       var i, tabcontent, tablinks;
