@@ -1,416 +1,394 @@
-
 /* paragraph text */
 p {
-    padding: 5px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
-    font-size: 13pt;
-    font-weight: lighter;
-    line-height: 2.2;
-    text-align: justify;
-    letter-spacing: .16mm;
-    text-justify: inter-word; 
-  }
+  padding: 5px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 13pt;
+  font-weight: lighter;
+  line-height: 2.2;
+  text-align: justify;
+  letter-spacing: 0.16mm;
+  text-justify: inter-word;
+}
 
 /*text styling for NARROW phone screen*/
 @media screen and (max-width: 600px) {
-    p {
-      font-size: 11pt;
-      font-weight: 300;
-       line-height: 1.5;
-       text-align: left;      
-    }
+  p {
+    font-size: 11pt;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: left;
   }
-
+}
 
 /* block quote */
 .quote {
-    display: block;
-    margin-left: 20%;
-    line-height: 1.4;
-  }
+  display: block;
+  margin-left: 20%;
+  line-height: 1.4;
+}
 
 /*commonplace quote*/
 /* block quote */
 .commquote {
-    display: block;
-    margin-left: 2%;
-    margin-right: 6%;
-    line-height: 1.4;
-  }
+  display: block;
+  margin-left: 2%;
+  margin-right: 6%;
+  line-height: 1.4;
+}
 
 /*RESPONSIVE PAGE ARCHITECTURE*/
 * {
-    box-sizing: border-box;
-  }
-  
-  .row {
-    display: -ms-flexbox; 
-    display: flex;
-    -ms-flex-wrap: wrap; 
-    flex-wrap: wrap;
-    padding: 0 2px;
-  }
+  box-sizing: border-box;
+}
 
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 2px;
+}
 
-  /*text blocks paragraph margins on computer WIDE screen*/
-  /*changed max-width to adjust page margins; using page margin properties in div column object broke sticky contents side nav*/
-  @media screen and (min-width: 1001px) {
-    div.column1 {
-      -ms-flex: 55%; 
-          flex: 55%;
-          max-width: 55%;
-          padding: 0 10px;
-          margin-left: 3%;
-    }
+/*text blocks paragraph margins on computer WIDE screen*/
+/*changed max-width to adjust page margins; using page margin properties in div column object broke sticky contents side nav*/
+@media screen and (min-width: 1001px) {
+  div.column1 {
+    -ms-flex: 55%;
+    flex: 55%;
+    max-width: 55%;
+    padding: 0 10px;
+    margin-left: 3%;
   }
+}
 
-    /*main column takes full page width for NARROW display*/
+/*main column takes full page width for NARROW display*/
 @media screen and (max-width: 1000px) {
-    div.column1 {
-      -ms-flex: 70%; 
-          flex: 70%;
-          max-width: 70%;
-          padding: 0 2px;
-          margin: auto;
-    }
+  div.column1 {
+    -ms-flex: 70%;
+    flex: 70%;
+    max-width: 70%;
+    padding: 0 2px;
+    margin: auto;
   }
-  
+}
+
 /*main column takes full page width for NARROW display*/
 @media screen and (max-width: 700px) {
-    div.column1 {
-      -ms-flex: 100%; 
-          flex: 100%;
-          max-width: 100%;
-          padding: 0 2px;
-          margin: auto;
-    }
+  div.column1 {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+    padding: 0 2px;
+    margin: auto;
   }
-  
+}
 
-  /*for two column layout | WIDE SCREEN*/
-  @media screen and (min-width: 801px) {
-    div.column2 {
-      -ms-flex: 50%; 
-          flex: 50%;
-          max-width: 50%;
-          padding: 0 40px;
-          margin: auto;
-    }
+/*for two column layout | WIDE SCREEN*/
+@media screen and (min-width: 801px) {
+  div.column2 {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 40px;
+    margin: auto;
   }
+}
 
-    /*for two column layout | NARROW SCREEN*/
-  @media screen and (max-width: 800px) {
-    div.column2 {
-      -ms-flex: 100%; 
-          flex: 100%;
-          max-width: 100%;
-          padding: 0 2px;
-          margin: auto;
-    }
+/*for two column layout | NARROW SCREEN*/
+@media screen and (max-width: 800px) {
+  div.column2 {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+    padding: 0 2px;
+    margin: auto;
   }
+}
 
-
-
-  /*for page contents*/
+/*for page contents*/
 div.column0 {
-    -ms-flex: 20%; 
-    flex: 20%;
-    max-width: 20%;
-    padding: 0 0px;
-    }
+  -ms-flex: 20%;
+  flex: 20%;
+  max-width: 20%;
+  padding: 0 0px;
+}
 
 /*page contents menu disappears for NARROW screen  display*/
 @media screen and (max-width: 700px) {
-    div.column0 {
-     visibility:hidden;
-     -ms-flex: 20%; 
-          flex: 20%;
-          max-width: 0%;
-          padding: 0 0px;
-    }
+  div.column0 {
+    visibility: hidden;
+    -ms-flex: 20%;
+    flex: 20%;
+    max-width: 0%;
+    padding: 0 0px;
   }
- 
+}
 
-  /*asides column*/
-  div.column3{
-    -ms-flex: 27%; 
-    flex: 21%;
-    max-width: 22%;
-    padding: 0px 0px 8px 20px   
-    }
+/*asides column*/
+div.column3 {
+  -ms-flex: 27%;
+  flex: 21%;
+  max-width: 22%;
+  padding: 0px 0px 8px 20px;
+}
 
 /* main column takes full page width for NARROW display - asides bumped to bottom*/
 @media screen and (max-width: 700px) {
-    div.column3 {
-      -ms-flex: 100%; 
-          flex: 100%;
-          max-width: 100%;
-          padding: 0 2px;
-    }
+  div.column3 {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+    padding: 0 2px;
   }
+}
 
-  div.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    padding: 1px;
-  }
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 1px;
+}
 
-  /* FOR ACCORDIAN */ 
-  .accordion {
-    background-color: none;
-    color: #020202;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: true;
-    text-align: center;
-    outline: #000000;
-    font-size: 15px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    transition: 0.4s;
-  }
-  
-  .active, .accordion:hover {
-    background-color: none; 
-  }
-  
-  .panel {
-    padding: 0 18px;
-    display: none;
-    background-color: #efefef95;
-    overflow: hidden;
-  }
+/* FOR ACCORDIAN */
+.accordion {
+  background-color: none;
+  color: #020202;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: true;
+  text-align: center;
+  outline: #000000;
+  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  transition: 0.4s;
+}
 
+.active,
+.accordion:hover {
+  background-color: none;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: #efefef95;
+  overflow: hidden;
+}
 
 /*code */
-  code {
-    background: #d9f2fb54;
-    padding: .1rem .2rem;
-    border-radius: .2rem;
-    font-size: 10pt
-  }
-
+code {
+  background: #d9f2fb54;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.2rem;
+  font-size: 10pt;
+}
 
 /* links and hover */
 a:link {
-
-    color: slategray;
-    text-decoration: none;
-  }
-  a:link,
-  a:visited,
-  a:active {
-  
-    color: rgb(109, 110, 110);
-    text-decoration: none;
-  }
-  a:hover {
-    color: rgb(230, 65, 0);
-    text-decoration: none;
-  }
-  
+  color: slategray;
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:active {
+  color: rgb(109, 110, 110);
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(230, 65, 0);
+  text-decoration: none;
+}
 
 /*for top menu*/
 /*navigate elsewhere table of contents menu */
 /* CSS for disappearing menu navigation */
 body {
-    font-family: "Courier New", Courier, monospace;
-  }
-  
-  .sidenav {
-    height: 400pt;
-    width: 0;
-    font-family: "Courier New", Courier, monospace;
-    position: fixed;
-    background-color: #f0f0f0;
-    opacity: .9;
-    overflow-x: scroll;
-    transition: 0.5s;
-  }
-  
-  /* important not to use padding for margins and spacing bc it will make links  clickable only over part of the words */
-  .sidenav a {
-    line-height:1.8;
-    margin-right: 40px;
-    font-size: 16px;
-    color: #242424;
-    display: block;
-    text-align:right;
-    font-family: "Courier New", Courier, monospace;
-    transition: 0.3s;
-  }
-  
-  .sidenav a:hover {
-    color: #eb4d09;
-  }
-  
-  .sidenav .closebtn {
-    position: sticky;
-    font-size: 30px;
-  }
-  
-  #main {
-    transition: 0.3s;
-   height:fit-content;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {
-      padding-top: 15px;
-    }
-    .sidenav a {
-      font-size: 10px;
-    }
-  }
+  font-family: "Courier New", Courier, monospace;
+}
 
+.sidenav {
+  height: 400pt;
+  width: 0;
+  font-family: "Courier New", Courier, monospace;
+  position: fixed;
+  background-color: #f0f0f0;
+  opacity: 0.9;
+  overflow-x: scroll;
+  transition: 0.5s;
+}
+
+/* important not to use padding for margins and spacing bc it will make links  clickable only over part of the words */
+.sidenav a {
+  line-height: 1.8;
+  margin-right: 40px;
+  font-size: 16px;
+  color: #242424;
+  display: block;
+  text-align: right;
+  font-family: "Courier New", Courier, monospace;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #eb4d09;
+}
+
+.sidenav .closebtn {
+  position: sticky;
+  font-size: 30px;
+}
+
+#main {
+  transition: 0.3s;
+  height: fit-content;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 10px;
+  }
+}
 
 /* line break around block quotes that are mid paragraph */
 .brmedium {
-    display:flex;
-    margin-bottom: .8em;
-  }
-
+  display: flex;
+  margin-bottom: 0.8em;
+}
 
 /* vignette */
 .vignette {
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 15px;
-    background: rgb(243, 243, 248);
-    line-height: 1.7;
-  }
-  
-  /*vignette text  NARROW screen */
-  @media screen and (max-width: 500px) {
-    div.vignette {
-      font-size: 17px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  background: rgb(243, 243, 248);
+  line-height: 1.7;
+}
+
+/*vignette text  NARROW screen */
+@media screen and (max-width: 500px) {
+  div.vignette {
+    font-size: 17px;
     line-height: 1.2;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 20px;
-    }
   }
-
-
+}
 
 /* BOTTOM side nav */
 .sidenav2 {
-    height: 330px;
-    width: 0;
-    font-family: "Courier New", Courier, monospace;
-    position: bottom;
-    background-color: #f0f0f0c5;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top:20px;
-  }
-  
-  .sidenav2 a {
-    padding: 8px 40px 6px 6px;
-    text-decoration: none;
-    line-height: .8;
-    font-size: 16px;
-    color: #242424;
-    display: block;
-    font-family: "Courier New", Courier, monospace;
-    transition: 0.3s;
-  }
-  
-  .sidenav2 a:hover {
-    color: #eb4d09;
-  }
-  
-  .sidenav2 .closebtn {
-    position: sticky;
-    top: 0;
-    right: 20px;
-    font-size: 30px;
-  
-  }
-  
-  #main2 {
-    transition: 0.3s;
-    padding: 5px;
-    font-family: "Courier New", Courier, monospace;
-  }
-  
-  /* MENUS AND BUTTONS */
-  /* Directory Items */
-  .nav {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 9.5pt;
-  }
-  
-  /* links and hover */
-  a:link {
+  height: 330px;
+  width: 0;
+  font-family: "Courier New", Courier, monospace;
+  position: bottom;
+  background-color: #f0f0f0c5;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
 
-    color: slategray;
-    text-decoration: none;
-  }
-  a:link,
-  a:visited,
-  a:active {
-  
-    color: rgb(109, 110, 110);
-    text-decoration: none;
-  }
-  a:hover {
-    color: rgb(230, 65, 0);
-    text-decoration: none;
-  }
+.sidenav2 a {
+  padding: 8px 40px 6px 6px;
+  text-decoration: none;
+  line-height: 0.8;
+  font-size: 16px;
+  color: #242424;
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  transition: 0.3s;
+}
 
-   /*white text for header*/
-a.header:link{
-    color:aliceblue;
+.sidenav2 a:hover {
+  color: #eb4d09;
+}
 
-    text-decoration: none;
+.sidenav2 .closebtn {
+  position: sticky;
+  top: 0;
+  right: 20px;
+  font-size: 30px;
+}
+
+#main2 {
+  transition: 0.3s;
+  padding: 5px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* MENUS AND BUTTONS */
+/* Directory Items */
+.nav {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 9.5pt;
+}
+
+/* links and hover */
+a:link {
+  color: slategray;
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:active {
+  color: rgb(109, 110, 110);
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(230, 65, 0);
+  text-decoration: none;
+}
+
+/*white text for header*/
+a.header:link {
+  color: aliceblue;
+  text-decoration: none;
+  padding: 5px 5px 5px 5px;
+  /*added the padding here and in header so that when screen is minimized text isnt too close to each other*/
 }
 a.header:link,
-  a.header:visited,
-  a.header:active {
-  
-    color:aliceblue;
-    text-decoration: none;
-    
-  }
-  a.header:hover {
-    color: rgb(230, 65, 0);
-    text-decoration: none;
-  }
-
+a.header:visited,
+a.header:active {
+  color: aliceblue;
+  text-decoration: none;
+}
+a.header:hover {
+  color: rgb(230, 65, 0);
+  text-decoration: none;
+}
 
 /*header */
 .header {
-    height: 26px;
-    background: #ee43eb;
-    color: #f1f1f1;
-  }
-
-
-  /* footer */
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    /* width: 99.5%; */
-    /* background-color: #82ffd562; */
-    color: black;
-    text-align: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 9pt;
-    font-weight: 200;
-  
-  }
-
-
-
-.highlight-light-purple{
-    background-color:rgba(199, 139, 255, 0.199);
+  height: 27px;
+  background: #ee43eb;
+  color: #f1f1f1;
+  padding: 5px 5px 5px 5px;
 }
 
-.highlight-yellow{
-    background-color:rgba(241, 251, 109, 0.599);
+/* footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  /* width: 99.5%; */
+  /* background-color: #82ffd562; */
+  color: black;
+  text-align: right;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 9pt;
+  font-weight: 200;
+}
+
+.highlight-light-purple {
+  background-color: rgba(199, 139, 255, 0.199);
+}
+
+.highlight-yellow {
+  background-color: rgba(241, 251, 109, 0.599);
 }
