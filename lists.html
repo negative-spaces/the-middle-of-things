@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>lists</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+
+
+    <!--accordion styling-->
+    <style>
+        /* FOR ACCORDIAN */
+        .accordion {
+            background-color: blueviolet;
+            color: rgb(235, 241, 242);
+            font-weight: 600;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border-width: 0;
+            letter-spacing: 5px;
+            text-align: center;
+            font-size: 17px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            transition: 0.4s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: none;
+        }
+
+        .panel {
+            padding: 0 5px;
+            display: none;
+            background-color: #d6c5de23;
+            overflow: hidden;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 200;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--HEADER NAV-->
+    <div>
+        <div class="header" id="myHeader">
+            <a class="header">navigate elsewhere>></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a class="header" href="./index.html">index</a>
+            &nbsp&nbsp&nbsp&nbsp
+            <a class="header" href="./what-the-work-can-do.html">what the work can do</a>
+            &nbsp&nbsp&nbsp
+            <a class="header" href="./thinking-through-practice.html">thinking-through-practice</a>&nbsp&nbsp&nbsp&nbsp
+            <a class="header" href="./questions.html">questions</a>&nbsp&nbsp&nbsp&nbsp
+            <a class="header" href="./iterative-proposals.html">iterative proposals</a>
+
+        </div>
+
+        <!--script for sticky header-->
+        <script>
+            window.onscroll = function () { myFunction() };
+
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
+        </script>
+    </div>
+
+
+    <br><br><br><br>
+
+    <!--LISTS-->
+    <div class="column1" style="margin:auto;">
+
+        <!--URBAN EVERYDAY-->
+        <div style="width:100%; margin:auto;">
+            <div>
+                <button class="accordion">URBAN EVERYDAY &#9660</button>
+                <div class="panel">
+                    <div>
+                        <!--text here-->
+
+                        <p>
+                            text here
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <br><br><br><br><br><br>
+        <!--THINKING THROUGH PRACTICE-->
+        <div style="width:100%; margin:auto;">
+            <div>
+                <button class="accordion" style="background-color: rgb(226, 43, 223)">THINKING THROUGH PRACTICE
+                    &#9660</button>
+                <div class="panel">
+                    <div>
+                        <!--text here-->
+
+                        <p>
+                            text here
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <br><br><br><br><br><br>
+        <!--RENDERING... MAPPING/SPECULATIVE DATA/DIGITAL GEOGRAPHIES-->
+        <div style="width:100%; margin:auto;">
+            <div>
+                <button class="accordion" style="background-color:rgb(215, 82, 30)">MAPPING/SPECULATIVE DATA/DIGITAL
+                    GEOGRAPHIES &#9660</button>
+                <div class="panel">
+                    <div>
+                        <!--text here-->
+
+                        <p>
+                            text here
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+        <!--script for list accordions-->
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        </script>
+
+    </div>
+
+
+</body>
+
+</html>
