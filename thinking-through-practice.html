@@ -73,6 +73,7 @@
       user-select: none;
     }
 
+
     /* Position the "next button" to the right */
     .next {
       right: 0;
@@ -84,6 +85,39 @@
     .next:hover {
       background-color: rgba(0, 0, 0, 0.8);
     }
+
+
+
+    /* Next & previous buttons for gardens */
+    .prev4,
+    .next4 {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      background-color:#585050;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.1s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+      /* Position the "next button" to the right */
+      .next4 {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev4:hover,
+    .next4:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
 
     /* Fading animation */
     .fade {
@@ -137,6 +171,10 @@
       display: none;
     }
 
+    .mySlides4 {
+      display: none;
+    }
+
     .slideshow-container1 {
       max-width: 100%;
       position: relative;
@@ -151,6 +189,12 @@
 
     .slideshow-container3 {
       max-width: 100%;
+      position: relative;
+      margin: auto;
+    }
+
+    .slideshow-container4 {
+      max-width: 90%;
       position: relative;
       margin: auto;
     }
@@ -191,6 +235,17 @@
       transition: background-color 0.6s ease;
     }
 
+    .dot4 {
+      cursor: pointer;
+      height: 7px;
+      width: 7px;
+      margin: 0 2px;
+      background-color: #585050;
+      border-radius: 10%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
     .active,
     .dot1:hover {
       background-color: #717171;
@@ -204,6 +259,11 @@
 
     .active,
     .dot3:hover {
+      background-color: #717171;
+    }
+
+    .active,
+    .dot4:hover {
       background-color: #717171;
     }
   </style>
@@ -825,279 +885,56 @@
 
 
   <!--up my alley-->
-  <div id="up-my-alley2" class="tabcontent">
+  <div id="up-my-alley" class="tabcontent">
 
-
+    <a name="upe-top" id="upe-top"></a>
     <!--BANNER IMAGE-->
     <img src="./sitations/alley-upe/apartment-recycling.jpg" style="width:100%">
     <br>
-    Overflowing recycling containers in the basement of the apartment building where I live.
     <br>
-
-
-    <p><span style="font-weight:700; font-size:17px;cursor:alias; padding: 2px; color:rgb(0, 0, 0);">Up my alley:
-        reading concepts in urban political ecology through practices of urban gleaning</span></p>
+    
 
     <!--CONTENTS-->
     <div class="row">
 
-      <!-- outline-->
+      <!--page outline-->
       <div class="column0">
 
         <div class="sticky">
-          <br><br><br>
-          <!--line breaks needed so outline show hide button sticks beneath the sticky menu-->
-          <button onclick="myOutline()"
-            style="font-family: 'Courier New', Courier, monospace; font-size:10pt; border-color:#e2dfdf">Show/Hide
-            Outline</button>
+            <br><br>
+          <button onclick="myOutline()" style="font-family: 'Courier New', Courier, monospace; font-size:10pt; border-color:#e2dfdf">Show/Hide Page Outline</button>
 
-          <div id="outline">
-            <span
-              style="font-family: 'Courier New', Courier, monospace; font-size: 10.5pt;  line-height: 1.3; opacity: 0.8;">
-              <br>
-              <a href="#upe-intro">Introduction</a><br>
-              <br><br>
-              <a href="#top">&#9650 return to top</a><br>
-              <a href="#what-the-work-can-do-bibliography">&#9660 bibliography</a>
-
-            </span>
-          </div>
+          <div id="outline1">
+          <span style="font-family: 'Courier New', Courier, monospace; font-size: 10.5pt;  line-height: 1.3; opacity: 0.8;">
+            <br>
+          <a href="#upe-intro">Introduction</a><br>
+          <a href="#upe-walking-the-alley">Walking the Alleyways</a><br>
+          <a href="#upe-alley-matters">Alley Matters</a><br>
+          <a href="#politicizing-alleys">Politicizing Alleys as Infrastructure</a><br>
+          <a href="#conclusion">Conclusion </a><br>
+          
+          <br><br>
+          <a href="#upe-top">&#9650 return to top</a><br>
+          <a href="#upe-bibliography">&#9660 bibliography</a>
+          
+        </span>
+        </div>
 
           <!--script to show/hide outline -->
-          <script>
-            function myOutline() {
-              var x = document.getElementById("outline");
-              if (x.style.display === "none") {
-                x.style.display = "block";
-              } else {
-                x.style.display = "none";
-              }
-            }
-          </script>
-
-        </div>
-
-      </div>
-
-      <!--main text-->
-      <div class="column1" style="margin:auto;">
-
-
-        <!--INTRODUCTION-->
-        <div>
-
-          <a name="upe-intro" id="upe-intro"></a>
-          <br>
-          <p>
-            <span
-              style="font-weight:700; font-size:17px;cursor:alias; padding: 2px; background-color:rgb(237, 75, 54); color:rgb(248, 252, 253);">INTRODUCTION</span><br>
-            <br>
-            <span style="text-align:right; line-height:1.7; font-size:15px;">The crafting of a research question is the
-              crafting of a story that is also the crafting of an ethics.<br>
-              Natalie Loveless, <i>How to make art at the end of the world</i>
-            </span>
-
-          </p>
-
-          <p>
-            The kind of story, or quality of text, I desire to craft in my PhD has been on my mind lately as I prepare
-            to assemble my comprehensive reading lists. Orienting toward a topic of study is an ethical matter as it
-            involves foregrounding some concerns to the exclusion of others. While my master's research attended to the
-            everyday experience of urban inhabitation and thinking with/in posthuman entanglements, my praxis lacked
-            recognition of socio-ecological production of cities. Therefore, in my composition of a list entitled Urban
-            Everyday, I want to foreground the tension between the directness of experience and engagement with broader
-            underlying politics that structure landscapes of encounter. The following renders my exploration and
-            response to the question: How might the analytic or "theoretical platform" (Heynen et al. 2006, 8) practiced
-            by urban political ecologists re/orient my approach to urban investigations and the questions that drive my
-            research-creation forwards?
-          </p>
-
-          <p>
-            My inquiry takes the form of a diffractive reading in which I read concepts of urbanization as a process
-            (Harvey 2014; Brenner 2014), infrastructure as political (Anand 2017; Cowen 2020; Barua 2023), and metabolic
-            circulation (Swyngedouw 2006; Newell and Cousins 2014; Zhang 2020) through my practice of alleyway gleaning.
-            Drawing from Donna Haraway's (1991) initial suggestion of diffraction as a mapping of <i>the effects</i> of
-            difference and Karen Barad's (2007) subsequent ontological elaboration and extension, Karin Murris and
-            Vivienne Bozalek (2019) develop propositions to guide diffractive readings: "The idea is to read theory with
-            practice diffractively guided by, for example, key questions that move the experiment forward" (pg).
-            Diffractive readings agitate presuppositions, allowing new learnings to interfere with prior convictions.
-            Reading diffractively challenges the fixity of any one configuration of intelligibility while accounting for
-            the differential stakes and constitutive exclusions entailed in each refiguring. Finally, diffractive
-            readings are a way to bring different (even incommensurable) perspectives into relation without antagonism.
-            Focusing on resonances and dissonances will help me clarify the differences that <i>do</i> matter. I believe
-            this sort of exercise serves me well in ascertaining where and how urban political ecology might supplement
-            my study.
-          </p>
-
-          <p>
-            Although my sites of urban gleaning extend beyond alleyways, I impose this enabling constraint (a term from
-            process philosopher Erin Manning) so as to practice denaturalizing, historicizing, and politicizing an
-            infrastructure my preoccupation with immediacy has heretofore led me to take for granted. Rather than
-            conduct an urban political ecology of alleyways which I feel as yet unprepared to do, I aim to map out the
-            concerns such an account might foreground and outline the kinds of questions I might ask. For instance,
-            before taking urban political ecology this term yet thinking with geographical political economy and J.K.
-            Gibson-Graham last term, I would have framed my urban gleaning practices as means of participating in
-            noncapitalist economies. However, reading alleyway gleaning through urban political ecology, the question
-            arises, What does it mean to situate alley gleaning as an alternate or marginal form of circulation while
-            the very infrastructure that conditions it is simultaneously enrolled in the ongoing production of the
-            settler-colonial city?
-          </p>
-
-          <p>
-            I choose to reconceptualize alleyways along the lines of urban political ecology <i>through my practice of
-              gleaning</i> because I sense a relational articulation between this particular infrastructure and urban
-            metabolisms. Enrolled in economies of resource extraction and development, Vancouver's alleyways literally
-            pave the way for municipal waste disposal and in so doing, facilitate the ongoing process of urbanization.
-            Walking alleyways while attending to their material histories, uneven maintenances, and the differential
-            nature of their ecologies, I believe I can glean more than a dish here or a lemon balm clipping and handful
-            of blackberries there. I believe the takeaway will be a more complex view on the politics and ethics of
-            thinking <i>with</i> alleyways, <i>through</i> gleaning practices, and <i>in entangled collaboration
-              with</i> things gleaned.
-          </p>
-
-          <p>
-            ROADMAP OF WHAT FOLLOWS
-          </p>
-
-        </div>
-
-
-        <!--Gleaning-->
-        <div>
-
-          <a name="upe-gleaning" id="upe-gleaning"></a>
-          <br>
-          <p>
-            <span
-              style="font-weight:700; font-size:17px;cursor:alias; padding: 2px; background-color:rgb(237, 75, 54); color:rgb(248, 252, 253);">THINKING
-              THROUGH GLEANING</span><br>
-            <br>
-
-          </p>
-
-        </div>
-
-
-
-
-      </div>
-
-
-      <!--asides-->
-      <div class="column3">
-
-        <div class="sticky">
-          <br><br><br>
-          <!--the breaks are needed so it sticks underneath the sticky menu-->
-          <button onclick="myAsides()"
-            style="font-family: 'Courier New', Courier, monospace; font-size:11pt; margin-left:49%; border-color:#e2dfdf">Show/Hide
-            Asides</button>
-
-          <div id="asides">
-
-
-            <!--script to copy paste selected text-->
-            <script language=javascript>
-
-              function getSelText() {
-                var txt = '';
-                if (window.getSelection) {
-                  txt = "'" + window.getSelection() + "'";
-                }
-                else if (document.getSelection) {
-                  txt = "'" + document.getSelection() + "'";
-                }
-                else if (document.selection) {
-                  txt = "'" + document.selection.createRange().text + "'";
-                }
-                else return;
-                document.testform.selectedtext.value = document.testform.selectedtext.value + '\n\n' + txt;
-              }
-
-
+        <script>
+        function myOutline() {
+        var x = document.getElementById("outline1");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        }
             </script>
 
-            <br>
-
-            <button onmousedown="getSelText()"
-              style="font-family: 'Courier New', Courier, monospace; font-size:11pt; letter-spacing:-0.6pt;"> Take Note;
-              Make Note</button>
-            <form name="testform">
-              <textarea id="selectedtext"
-                placeholder="Highlight a selection of text to the left and click the above button to save it here. Type notes to yourself here as you go. Resize this window as needed."
-                style="width:100%; max-width:100%; height: 200px"></textarea>
-            </form>
-
-            <!--show hide asides-->
-            <script>
-              function myAsides() {
-                var x = document.getElementById("asides");
-                if (x.style.display === "none") {
-                  x.style.display = "block";
-                } else {
-                  x.style.display = "none";
-                }
-              }
-            </script>
-
-            <!--code for downloading asides to local computer-->
-            <!--source: https://www.geeksforgeeks.org/how-to-trigger-a-file-download-when-clicking-an-html-button-or-javascript/-->
-            <input type="button" id="btn"
-              style="border:none; font-family: 'Courier New', Courier, monospace; font-size:11pt; letter-spacing:-0.6pt;"
-              value="download" />
-
-            <!--download file-->
-            <script>
-              function download(file, text) {
-                var element = document.createElement('a');
-                element.setAttribute('href',
-                  'data:text/plain;charset=utf-8, '
-                  + encodeURIComponent(text));
-                element.setAttribute('download', file);
-                document.body.appendChild(element);
-                element.click();
-                document.body.removeChild(element);
-              }
-
-
-              // Start file download.
-
-              document.getElementById("btn")
-                .addEventListener("click", function () {
-                  var text =
-                    'Notes and quotes from https://negative-spaces.github.io/the-middle-of-things/thinkig-through-practice.html, a processing space of Lily Demet' + document.getElementById("selectedtext").value;
-                  var filename = "asides.txt";
-
-                  download(filename, text);
-                }, false);
-            </script>
-
-          </div>
-
-
-
         </div>
-
+      
       </div>
-
-
-    </div>
-
-  </div>
-
-  <!--up my alley-->
-  <div id="up-my-alley" class="tabcontent">
-
-
-    <!--BANNER IMAGE-->
-    <img src="./sitations/alley-upe/apartment-recycling.jpg" style="width:100%">
-    <br>
-    <br>
-
-
-    <!--CONTENTS-->
-    <div class="row">
-
 
 
       <!--main text-->
@@ -1106,7 +943,7 @@
             style="font-weight:450; padding: 2px; font-size: 17px;background-color:rgb(66, 54, 237); color:rgb(248, 252, 253);">Up
             my alley:
             reading concepts in urban political ecology through practices of urban gleaning</span></p>
-
+          
         <!--INTRODUCTION-->
         <div>
 
@@ -1114,7 +951,7 @@
           <br>
           <p>
             <span
-              style="font-weight:700; font-size:17px;cursor:alias; padding: 2px; background-color:rgb(237, 75, 54); color:rgb(248, 252, 253);">INTRODUCTION</span><br>
+              style="font-weight:700; font-size:17px;cursor:alias; padding: 2px; background-color:rgb(241, 88, 68); color:rgb(248, 252, 253);">INTRODUCTION</span><br>
             <br>
             <span class="quote" style="text-align:right; line-height:1.7; font-size:14px;">The crafting of a research
               question is the
@@ -1125,25 +962,11 @@
           </p>
 
           <p>
-            The kind of story, or quality of text, I desire to craft in my PhD has been on my mind lately as I begin assembling my comprehensive reading lists. Orienting toward a topic of study is an ethical matter as it involves foregrounding some concerns to the exclusion of others. While my master's research attended to the everyday experience of urban inhabitation and thinking with/in posthuman entanglements, my praxis lacked recognition of the socio-ecological production of cities. Therefore, in my composition of a list entitled <a href="http://negative-spaces.github.io/the-middle-of-things/lists.html" target="_blank">Urban Everyday</a>, I want to foreground the tension between the directness of experience and engagement with broader underlying politics that structure landscapes of encounter. Taking an urban political ecology course this term has given me some critical tools with which to think this through: tracking winners and losers as well as the persistent structures that maintain their disparity; narrating humans and nonhumans as dialectical; exploring contradictions; and making ontological claims while also attending to the epistemes from whence they are made (Robbins 2012, 87). What follows renders the effects of my term project, viz., an exploration and response to the question: <span style="background-color:rgba(246, 248, 170, 0.599)">How might the analytic or "theoretical platform" (Heynen et al. 2006, 8) practiced by urban political ecologists re/orient my approach to urban investigations and the questions that drive my research-creation forwards?</span>
+            The kind of story, or quality of text, I desire to craft in my PhD has been on my mind lately as I begin assembling my comprehensive reading lists. Orienting toward a topic of study is an ethical matter as it involves foregrounding some concerns to the exclusion of others. While my master's research-creation attended to the everyday experience of urban inhabitation and thinking with/in posthuman entanglements, my praxis lacked recognition of the socio-ecological production of cities. Therefore, in my composition of a list entitled <a href="http://negative-spaces.github.io/the-middle-of-things/lists.html" target="_blank">Urban Everyday</a>, I want to foreground the tension between the directness of experience and engagement with broader underlying politics that structure landscapes of encounter. Taking an urban political ecology course this term has given me some critical tools with which to think this through: tracking winners and losers as well as the persistent structures that maintain their disparity; narrating humans and nonhumans as dialectical; exploring contradictions; and making ontological claims while also attending to the epistemes from whence they are made (Robbins 2012, 87). What follows renders the effects of my term project, viz., an exploration and response to the question: <span style="background-color:rgba(246, 248, 170, 0.599)">How might the analytic or "theoretical platform" (Heynen et al. 2006, 8) practiced by urban political ecologists re/orient my approach to urban investigations and the questions that drive my research-creation forwards?</span>
           </p>
 
           <p>
-            <span style="background-color:rgba(254, 183, 150, 0.27)">My inquiry takes the form of a diffractive reading
-              in which I read concepts of urbanization as a process (Harvey 2014; Brenner 2014), infrastructure as
-              political (Anand 2017; Cowen 2020; Barua 2023), and metabolic circulation (Swyngedouw 2006; Newell and
-              Cousins 2014; Zhang 2020) through my practice of alleyway gleaning.</span> Drawing from Donna Haraway's
-            (1991) initial suggestion of diffraction as a mapping of <i>the effects</i> of difference and Karen Barad's
-            (2007) subsequent ontological elaboration and extension, Karin Murris and Vivienne Bozalek (2019) develop
-            propositions to guide diffractive readings: "The idea is to read theory <i>with</i> practice diffractively
-            guided by, for example, key questions that move the experiment forward" (1505, emphasis in original).
-            Diffractive readings agitate presuppositions, allowing new learnings to interfere with prior convictions.
-            Reading diffractively challenges the fixity of any one configuration of intelligibility while accounting for
-            the differential stakes and constitutive exclusions entailed in each refiguring. Finally, diffractive
-            readings are a way to bring different (even incommensurable) perspectives into relation without antagonism.
-            Focusing on resonances and dissonances will help me clarify the differences that <i>do</i> matter. I believe
-            this sort of exercise serves me well in ascertaining where and how urban political ecology might supplement
-            my study of the urban everyday.
+            <span style="background-color:rgba(254, 183, 150, 0.27)">My inquiry takes the form of a diffractive reading in which I read concepts of infrastructure as political (Anand 2017; Cowen 2020; Barua 2023) and metabolic circulation (Swyngedouw 2006; Zhang 2020) through my practice of alleyway gleaning.</span> Drawing from Donna Haraway's (1991) initial suggestion of diffraction as a mapping of <i>the effects</i> of difference and Karen Barad's (2007) subsequent ontological elaboration and extension, Karin Murris and Vivienne Bozalek (2019) develop propositions to guide diffractive readings: "The idea is to read theory <i>with</i> practice diffractively guided by, for example, key questions that move the experiment forward" (1505, emphasis in original). Diffractive readings agitate presuppositions, allowing new learnings to interfere with prior convictions. Reading diffractively challenges the fixity of any one configuration of intelligibility while accounting for the differential stakes and constitutive exclusions entailed in each refiguring. Finally, diffractive readings are a way to bring different (even incommensurable) perspectives into relation without antagonism. Focusing on resonances and dissonances will help me clarify the differences that <i>do</i> matter. I believe this sort of exercise serves me well in ascertaining where and how urban political ecology might supplement my study of the urban everyday.
           </p>
 
           <p>
@@ -1155,32 +978,32 @@
           </p>
 
           <p>
-            <span style="background-color:rgba(254, 183, 150, 0.27)">Although my sites of urban gleaning extend beyond alleyways, I impose this 'enabling constraint' (a term from process philosopher Erin Manning) so as to practice <i>denaturalizing</i>, <i>historicizing</i>, and <i>politicizing</i> an infrastructure my preoccupation with immediacy has heretofore led me to take for granted.</span> Rather than conduct an urban political ecology of Vancouver alleyways (which I feel as yet unprepared to do), I aim to map out the concerns such an account might foreground and outline the kinds of questions I might ask. In short, what's rendered here is my efforts to exercise concepts of urban political ecology learned this term, taking them into my everyday practices in dialogue with infrastructures near and dear to me. I begin what follows by inviting you into my practice. <span style="background-color:rgba(246, 248, 170, 0.599)">How does gleaning primarily residential alleyways for physical objects differ from other practices of urban scavenging such as food reclamation and redeemable recyclable collection?</span> From the immediacy of walking Vancouver's alleyways, I step/scale back in order to critically consider alleys as infrastructure. <span style="background-color:rgba(246, 248, 170, 0.599)">What role do alleys play  in urban metabolism? What can be gleaned by approaching alleys as sites of circulation that the waste/value dialectic of discard studies misses by focusing on the contained spaces of dumpsters and landfills?</span> Positioning alleyways as urban/izing infrastructure, I continue to denaturalize, historicize, and politicize them by situating them "within and as part of"—to borrow a feminist new materialism's phrase, or more specifically a Baradian figure that conveys the ontological inseparability of subject and object, cause and effect, measurement and instruments/agencies of measurement, concept and experimental setup—the settler-colonial city. I conclude by reflecting on notions of the city as process and differences that matter across my own work and perspectives in urban political ecology.
+           <span style="background-color:rgba(254, 183, 150, 0.27)">Although my sites of urban gleaning extend beyond alleyways, I impose this 'enabling constraint' (a term from process philosopher Erin Manning) so as to practice <i>denaturalizing</i>, <i>historicizing</i>, and <i>politicizing</i> an infrastructure my preoccupation with immediacy has heretofore led me to take for granted.</span> Rather than conduct an urban political ecology of Vancouver alleyways (which I feel as yet unprepared to do), I aim to map out the concerns such an account might foreground and outline the kinds of questions I might ask. In short, what's rendered here is my efforts to exercise concepts of urban political ecology learned this term, taking them into my everyday practices in dialogue with infrastructures near and dear to me. I begin what follows by inviting you into my practice. <span style="background-color:rgba(246, 248, 170, 0.599)">How does gleaning primarily residential alleyways for physical objects differ from other practices of urban scavenging such as food reclamation and redeemable recyclable collection?</span> From the immediacy of walking Vancouver's alleyways, I step/scale back in order to critically consider alleys as infrastructure. <span style="background-color:rgba(246, 248, 170, 0.599)">What role do alleys play  in urban metabolism? What can be gleaned by approaching alleys as sites of circulation that the waste/value dialectic of discard studies misses by focusing on the contained spaces of dumpsters and landfills?</span> Positioning alleyways as urban/izing infrastructure, I continue to denaturalize, historicize, and politicize them by situating them "within and as part of"—to borrow a feminist new materialism's phrase, or more specifically a Baradian figure that conveys the ontological inseparability of subject and object, cause and effect, measurement and instruments/agencies of measurement, concept and experimental setup—the settler-colonial city. I conclude by reflecting on notions of the city as process and differences that matter across my own work and perspectives in urban political ecology.
           </p>
 
         </div>
 
         <br><br>
-        <img src="./sitations/alley-upe/dumpsters_20231225.jpg" style="width:100%">
-        <br><br>
+        <img src="./sitations/alley-upe/table_20250402.jpg" style="width:100%">
+        <br><br><br>
 
         <!--Part 1 - walking the alley -->
         <div>
 
-          <a name="upe-walking-the-alleys" id="upe-walking-the-alleys"></a>
+          <a name="upe-walking-the-alley" id="upe-walking-the-alley"></a>
           <br>
           <p>
              <span
               style="font-weight:700; font-size:17px;cursor:alias; padding: 2px; background-color:rgb(237, 75, 54); color:rgb(248, 252, 253);">WALKING THE ALLEYS</span><br>
-            <span style="font-weight:400;">Walking the alleys</span> is a practice I began after moving to Vancouver in July of 2021. The first neighborhood I lived in was Dunbar, an area predominated by single-family homes on the city's western limit. Both the larger neighborhood of Dunbar-Southlands and the University Endowment Lands it borders to the west occupy unceded Musqueam territory. To the south lies the Musqueam Indian Reserve. Urban Indigeneity—as a historical phenomenon, statistical enumeration, and cultural identity—is something I've just begun learning about. Since the 1950s, the Aboriginal population in Canada's ten largest cities has dramatically increased, from a total of 2,506 in 1951 to 301,095 in 2006 (Peters and Andersen 2013, 37). In Vancouver, Statistics Canada's count for Indigenous identity has gone from 239 in 1951 to 40,310 in 2006 (Peters and Andersen 2013, 37) to 63,340 according to the 2021 census (Government of Canada 2023). From what I've read, this significant leap is due not only to natural increase and net migration but also shifting self-identification as well as changes in who Canada recognized as Indigenous or allowed to claim status (Peters and Andersen 2013, 36). Moreover, Aboriginal urbanization was historically stymied by settler-colonial intent to keep reserves distant from urban areas, "ostensibly to reduce contact between settlers and First Nations peoples but also to ensure that prime land was not under the control of First Nations governments" (Peters and Andersen 2013, 22). First Nations are actors and agents in the urbanization of Vancouver's landscape. For example, near where I live, construction is underway on a massive eleven-tower apartment development on Squamish owned land spearheaded by the Squamish First Nation in partnership with Westbank (Cyca 2024; “Sen̓áḵw,” n.d.).
+              <span style="font-weight:400;">Walking the alleys</span> is a practice I began after moving to Vancouver in July of 2021. The first neighborhood I lived in was Dunbar, an area predominated by single-family homes on the city's western limit. Both the larger neighborhood of Dunbar-Southlands and the University Endowment Lands it borders to the west occupy unceded Musqueam territory. To the south lies the Musqueam Indian Reserve. Urban Indigeneity—as a historical phenomenon, statistical enumeration, and cultural identity—is something I've just begun learning about. Since the 1950s, the Aboriginal population in Canada's ten largest cities has dramatically increased, from a total of 2,506 in 1951 to 301,095 in 2006 (Peters and Andersen 2013, 37). In Vancouver, Statistics Canada's count for Indigenous identity has grown from 239 in 1951 to 40,310 in 2006 (Peters and Andersen 2013, 37) to 63,340 according to the 2021 census (Government of Canada 2023). From what I've read, this significant leap is due not only to natural increase and net migration but also shifting self-identification as well as changes in who Canada recognizes as Indigenous by allowing to claim status (Peters and Andersen 2013, 36). Moreover, Aboriginal urbanization was historically stymied by the settler-colonial intent to keep reserves distant from urban areas, "ostensibly to reduce contact between settlers and First Nations peoples but also to ensure that prime land was not under the control of First Nations governments" (Peters and Andersen 2013, 22). First Nations are actors and agents in the urbanization of Vancouver's landscape. For example, near where I live now, construction is underway on a massive eleven-tower apartment development on Squamish owned land spearheaded by the Squamish First Nation in partnership with Westbank (Cyca 2024; “Sen̓áḵw,” n.d.).
           </p>
 
           <p>
-            My house in Dunbar was fanatic about reusing and recycling. To parry passive aggressive comments about my discard, I began tossing my garbage into neighbors' bins under  cover of night. On a walk with two housemates my first week in Vancouver, we dumpster dove for what I want to say were tortillas or flatbreads of some kind still in their package. Later on, I drove with another housemate to East Point Grey where we snuck into the backyard of a house slated for demolition and stripped a giant plum tree of fruit. The next week the house and all its trees were torn down. In the alleyway between 30th and 31st Ave I found the Epson WorkForce Pro 4740 printer I use every day for both academic and creative projects. The following winter I moved east to Mount Pleasant to a house whose ample backyard opened onto the alley between 12th and 13th. This alley became my main road and lucrative source of dishware, clothing, shoes, sunglasses, and other items set out in cardboard boxes free for the taking. Every other week (and every week for compost aka "organics"), my roommate or I would sort our plastic recycling, glass, paper, garbage, and organics into bins and place them (sanctioned distances apart) for pickup (by whom? which companies). Two years later I moved west again to Fairview. While south of Broadway (9th Ave), Fairview consists of two, three, and four story apartment buildings, a couple towers, and single-family homes, Fairview north of Broadway yet east of Burrard is nearly all condominiums and townhouses. The alleys here are paved, sterile spaces where gleaners only come on garbage pick-up days. Waste is sorted indoors and taken out to the alley (by whom?) only on pick-up days (by what companies?). When there's system failure, pileup occurs as seen in banner image triggering elevator notices to "hold organics" or "hold recyclables". 
+            My house in Dunbar was fanatic about reusing and recycling. To parry passive aggressive comments about my discard, I began tossing my garbage into neighbors' bins under cover of night. On a walk with two housemates my first week in Vancouver, we "dumpster dove" for what I want to say were tortillas or flatbreads of some kind still in their packaging. Later on, I drove with another housemate to East Point Grey where we snuck into the backyard of a house slated for demolition and stripped a plum tree of fruit. The next week the house and all its trees were torn down. In the alleyway between 30th and 31st Ave I found the Epson WorkForce Pro 4740 printer I use every day for both academic and creative projects. The following winter I moved east to Mount Pleasant to a house whose ample backyard opened onto the alley between 12th and 13th. This alley became my main road and lucrative source of dishware, clothing, shoes, sunglasses, and other items set out in cardboard boxes free for the taking. Every other week (and every week for compost aka "organics"), my roommate or I would sort our plastic recycling, glass, paper, garbage, and organics into bins and place them (sanctioned distances apart) for pickup (by whom? which companies?). Two years later I moved west again to Fairview. While south of Broadway (9th Ave), Fairview consists of two, three, and four story apartment buildings, a couple towers, and single-family homes, Fairview north of Broadway yet east of Burrard is nearly all condominiums and townhouses. The alleys here are paved, sterile spaces where gleaners only come on garbage pick-up days. Waste is sorted indoors and taken out to the alley (by whom?) only on pick-up days (by what companies?). When there's system failure, pileup occurs as seen in banner image triggering elevator notices to "hold organics" or "hold recyclables".
           </p>
 
           <p>
-            To begin material labor on this term project, I spent an entire day walking Vancouver's alleyways. Sidewalks hail pedestrians. In the alley, you're free to move at whatever pace you like and take up as much space as you want. I began in Fairview near Granville Park and zig-zagged my way east to Cambie then back and south into Shaughnessy. Past the massive Oakridge development going up at Oak and 41st, I wandered over to Sunset and over to Victoria-Fraserview. Finally tired, I road the 22 bus down Victoria and Commercial Drive. Stepping of at 4th, I walked west towards Clark Drive, under the skytrain and past Clark Station until I could catch the 84 bus back to Granville. At Brewing August, I continued to read urban political ecology. I intentionally began in a direction I don't often wonder so as to disorient myself. I didn't use Google Maps. Having forgotten to brig water and it being one of the first truly warm days this year, I became quite dehydrated. Thankfully, I wandered through parks with water fountains. An additional problem was lack of public toilets, especially in residential neighborhoods. My "guileful ruse" (de Certeau 1984, 37)? The many unlocked portapotties dotting the alleyways for real estate construction. 
+            To begin material labor on this term project, I spent an entire day walking Vancouver's alleyways. Sidewalks hail pedestrians. In the alley, you're free to move at whatever pace you like and take up as much space as you want. I began in Fairview near Granville Park and zig-zagged my way east to Cambie then back and south into Shaughnessy. Past the massive Oakridge development going up at Oak and 41st, I wandered over to Sunset and over to Victoria-Fraserview. Finally tired, I road the 22 bus down Victoria and Commercial Drive. Stepping of at 4th, I walked west towards Clark Drive, under the skytrain and past Clark Station until I could catch the 84 bus back to Granville. At Brewing August, I continued to read urban political ecology. I intentionally began in a direction I don't often wonder so as to disorient myself. I didn't use Google Maps. Having forgotten to bring water and it being one of the first truly warm days this year, I became quite dehydrated. Thankfully, I wandered through public parks with water fountains. An additional problem was the lack of public toilets, especially in residential neighborhoods. My "guileful ruse" (de Certeau 1984, 37)? The many unlocked portapotties dotting the alleyways for real estate construction. 
           </p>
 
           <img src="./sitations/alley-upe/public-restroom-20250325.jpg" style="width:100%">
@@ -1188,13 +1011,119 @@
           <br>
 
          <p>
-         Vancouver's alleys generally run east-west, though they also run north-south along major north-south streets like Granville, Main, Fraser, Clark, Commercial, and Victoria to accommodate commercial businesses. Of course there are exceptions—tangled places where alleys turn onto more alleys. For instance, the area south of Clark Park or around where Victoria and Argyle Drive meet. Across the city, different assemblages cohere in the alleys…. discuss further
+          Vancouver's alleys generally run east-west, though they also run north-south along major north-south streets like Granville, Main, Fraser, Clark, Commercial, and Victoria to accommodate commercial businesses. Of course there are exceptions—tangled places where alleys turn onto more alleys. For instance, the area south of Clark Park or around where Victoria and Argyle Drive meet. Across the city, different assemblages cohere in the alleys making some areas more lucrative for gleaning. For instance, there is generally more graffiti in the alleyways of East Vancouver, the West End, and Downtown Eastside. Clothing, dishware, electronics, and other once-belongings are more often set out in the alleyways of low-rise apartment buildings in residential neighborhoods, while cardboard boxes of free items are set in front of single-family homes. (The cartography of gleaning is something I could write so much more on given the time.) The alleys themselves have different vibes, constituted in part by the kind of buildings, houses and backyards that foreground them. In Victoria-Fraserview, backyard food provisioning predominates, with the whole backyard converted into a garden.  I saw something similar though less extensive in the area just east of Renfrew and 1st. 
          </p>
 
+        <!--sitation deck for garden images-->
+        <div>
+          <div class="slideshow-container4">
+
+            <div class="mySlides4 fade" style="display: none;">
+              <div class="numbertext">1 / 6</div>
+              <img src="./sitations/alley-upe/garden1.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <div class="mySlides4 fade" style="display: none;">
+              <div class="numbertext">2 / 6</div>
+              <img src="./sitations/alley-upe/garden2.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides4 fade" style="display: none;">
+              <div class="numbertext">3 / 6</div>
+              <img src="./sitations/alley-upe/garden3.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides4 fade" style="display: none;">
+              <div class="numbertext">4 / 6</div>
+              <img src="./sitations/alley-upe/garden4.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides4 fade" style="display: none;">
+              <div class="numbertext">5 / 6</div>
+              <img src="./sitations/alley-upe/garden5.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides4 fade" style="display: none;">
+              <div class="numbertext">6 / 6</div>
+              <img src="./sitations/alley-upe/garden6.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <!--remember to update function name here-->
+            <a class="prev4" onclick="plusSlides4(-1)">❮</a>
+            <a class="next4" onclick="plusSlides4(1)">❯</a>
+
+          </div>
+          <br>
+
+          <!--dots must be unique class well in css head style for each deck-->
+          <div style="text-align:center">
+            <span class="dot4" onclick="currentSlide(1)"></span>
+            <span class="dot4" onclick="currentSlide(2)"></span>
+            <span class="dot4" onclick="currentSlide(3)"></span>
+            <span class="dot4" onclick="currentSlide(4)"></span>
+            <span class="dot4" onclick="currentSlide(5)"></span>
+            <span class="dot4" onclick="currentSlide(6)"></span>
+          </div>
+
+
+          <!--script for pink dress sitation deck-->
+          <!--function names and slidindex variables must be unique-->
+          <script>
+            let slideIndex4 = 1;
+            showSlides4(slideIndex4);
+
+            function plusSlides4(n) {
+              showSlides4(slideIndex4 += n);
+            }
+
+            function currentSlide(n) {
+              showSlides4(slideIndex4 = n);
+            }
+
+            function showSlides4(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides4");
+              let dots = document.getElementsByClassName("dot4");
+              if (n > slides.length) { slideIndex4 = 1 }
+              if (n < 1) { slideIndex4 = slides.length }
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex4 - 1].style.display = "block";
+              dots[slideIndex4 - 1].className += " active";
+            }
+          </script>
+
+        </div>
+
+        <p>
+          What else grows in alleyways untended? Mosses, dandelions, "invasives" like blackberries and scotch broom, rosemary, lemon balm, oregano, and one very impressive lavender bush. (I want to read <a href="https://core.ac.uk/outputs/5185678/" target="_blank">Kevin Anderson's dissertation</a> on what he calls marginal nature as it relates to the ecologies of alleyways as well as vacant lots and road verges which I've been thinking about lately.) 
+
+        </p>
+
+        <img src="./sitations/alley-upe/lavender-bush.jpg" style="width:100%">
+        <br><br>
+        <img src="./sitations/alley-upe/20250325_112426.jpg" style="width:100%">
 
          <p>
-          things in/out of place -> what to glean.
+          animals -> crows -> quinns work
+          <br>
+          "meshwork" ->maan barua in calling city lively formation →gesture towards →  alleyways as ecologies 
+
          </p>
+
+         <p>There is so much more alleys I could address. Given the time, I could render a more nuanced cartography of Vancouver's alleys. I would be interested in looking at urban planning documents from when residential roads were constructed and the history of waste management in Vancouver. The closest I've come is <a href="https://summit.sfu.ca/_flysystem/fedora/sfu_migrate/20807/etd21007.pdf" target="_blank">Hailey Venn's MA thesis</a> on an environmental history of Vancouver's landfill in Delta. I'd also like to respond to a question my interlocutor Bella asked me recently along the lines of how do you know something is out to be gleaned? Alleyways → transitional belonging -- tacit knowledge. Finally, I recognize my practice of walking the alleyways, and primarily residential ones, is distinct from gleaners looking for specific items such as cans or food reclamation. Moreover, "alley walks" mean something specific in the context of the Downtown Eastside where they refer specifically to harm reduction practice of walking an alley to ensure no one has overdosed alone. </p>
 
         </div>
 
@@ -1205,12 +1134,12 @@
             <br>
             <p>
                <span
-                style="font-weight:700; font-size:17px;cursor:alias; padding: 2px; background-color:rgb(237, 75, 54); color:rgb(248, 252, 253);">ALLEY MATTERS: URBAN METABOLISM, GLEANING BEYOND THE WASTE/VALUE DIALECTIC </span>
+                style="font-weight:700; font-size:17px;cursor:alias; padding: 2px; background-color:rgb(237, 75, 54); color:rgb(248, 252, 253);">ALLEY MATTERS </span>
                 <br>
-            The alleyways of Vancouver are paved with asphalt or, less frequently, compacted gravel. Pavement upkeep varies across the city. To my surprise, the alleys in Shaughnessy (a very wealthy neighborhood) are more often gravel and full of potholes.
+                The alleyways of Vancouver are paved with asphalt or, less frequently, compacted gravel. Pavement upkeep varies across the city. To my surprise, the alleys in Shaughnessy (a very wealthy neighborhood) are more often gravel and full of potholes.
           </p>
 
-          <br><br>
+          <br>
           <img src="./sitations/alley-upe/shaughnessy5.jpg" style="width:100%">
           <br><br>
           <p>
@@ -1218,11 +1147,11 @@
           </p>
 
           <p>
-            Alleyways literally pave the way for municipal waste disposal. They facilitate the movement of discarded matters from the container that delimits them as waste—specifically colored and signed dumpsters, bags, and bins—to sorting facilities, the landfill, and waste-to-energy incinerator in Metro Vancouver (see map <a href="https://metrovancouver.org/school-programs/Documents/k-12-system-overview-solid-waste.pdf" target="_blank">here</a>). If I were to conduct an urban political ecology of municipal waste (or discard in general, for that matter,) in Vancouver, I'd follow the flows of waste, as well as the different companies that collect it across the city. There are multiple, for example: "Recycle BC is responsible for residential curbside and multi-family recycling service in the City of Vancouver" ("Vancouver - Recycle BC" 2024), WM provides "residential waste pickup, commercial garbage collection and dumpster rental services" ("Waste, Garbage and Recycling Services in Vancouver, British Columbia | WM," n.d.), and Maple Leaf Disposal picks up residential, commercial, and industrial waste as well as recycling and organics ("Maple Leaf Disposal | Waste Disposal | British Columbia, Canada," n.d.). Municipal waste is not the only discard circulating in the alleyway. Alternate circulation - scavenging of both human gleaners and nonhumans (crows, insects, rats, possums, etc).  
+            Alleyways literally pave the way for municipal waste disposal. They facilitate the movement of discarded matters from the container that delimits them as waste—specifically colored and signed dumpsters, bags, and bins—to sorting facilities, the landfill, and waste-to-energy incinerator in Metro Vancouver (see map <a href="https://metrovancouver.org/school-programs/Documents/k-12-system-overview-solid-waste.pdf" target="_blank">here</a>). If I were to conduct an urban political ecology of municipal waste (or discard in general, for that matter,) in Vancouver, I'd follow the flows of waste, as well as the different companies that collect it across the city. There are multiple. For example: "Recycle BC is responsible for residential curbside and multi-family recycling service in the City of Vancouver" ("Vancouver - Recycle BC" 2024), WM provides "residential waste pickup, commercial garbage collection and dumpster rental services" ("Waste, Garbage and Recycling Services in Vancouver, British Columbia | WM," n.d.), and Maple Leaf Disposal picks up residential, commercial, and industrial waste as well as recycling and organics ("Maple Leaf Disposal | Waste Disposal | British Columbia, Canada," n.d.). GFL Environmental is yet another company with the signature chlorophyll-green trucks.  
           </p>
 
           <p>
-            Urban metabolism → upe concept. Tie to municipal waste disposal....
+            In class, I learned that while discard in relation to consumption has always existed, waste as a concept and set of matters is historically produced. In a seminal paper on the afterlives of waste in India, geographers Gidwani and Reddy (2011) argue "'Waste' is the political other of capitalist 'value'" (1625). Archival documents from British colonial rule define waste as unproductive nature—for example fallow land—"an untapped potential awaiting transformation into value by dint of human labor and colonial stewardship" (2011, 1630). Gidwani and Reddy trace imperial conceptualizations of waste back to John Locke's 1681 treatise, in which Locke grants property rights to those whose labors ensured that land did not go to 'waste'. (Implicit in his argument is, of course, an understanding that such labor did not need to be direct; a servant would not inherit the property of his master simply by working the land.) For Locke, laboring against waste is the route to political citizenship. Shifting their focus to postcolonial Delhi, Gidwani and Reddy (2011) examine the commodification of municipal solid waste and the privatization of waste disposal infrastructure since 2005. The privatization of "bin space" (Gidwani and Reddy 2011, 1637) meant that specific dumpsters as well as broader "catchment areas" around the city, once gleaning grounds negotiated amongst informal waste collectors, became ~limited resource. Also interested in "bin space" (Gidwani and Reddy 2011, 1637) is anthropologist David Boarder Giles, who explores dumpsters as sites of abjection. Following the waste/value dialectic introduced by Gidwani and Reddy (2011), Giles (2021) argues that waste is the constitutive outside of market value—what's thrown away maintains the value of what's in circulation (33). The making of waste—through disposal and disposability—is thus a necessary part of capitalist production and reproduction. Giles builds his argument from the context of dumpster diving carried out by Food Not Bombs, a worldwide volunteer-powered movement to cook and (often surreptitiously) distribute free meals made from salvaged food waste. 
           </p>
 
           <p>
@@ -1235,6 +1164,7 @@
 
         </div>
 
+        <img src="./sitations/alley-upe/dumpsters_20231225.jpg" style="width:100%">
 
         <!--part 3 - Alleys as infrastructure, politicizing infrastructure -->
         <div>
@@ -1257,9 +1187,131 @@
 
           </div>
 
+
+
+
+
+<!--bibliography-->
+<div style="width:100%; margin:auto;">
+  <div>
+    <a name="upe-bibliography" id="upe-bibliography"></a>
+         <button class="accordion">References (click to expand)</button>
+         <div class="panel">
+          <!--text here-->
+         </div>
+ 
+         <script>
+     var acc = document.getElementsByClassName("accordion");
+     var i;
+     
+     for (i = 0; i < acc.length; i++) {
+       acc[i].addEventListener("click", function() {
+         this.classList.toggle("active");
+         var panel = this.nextElementSibling;
+         if (panel.style.display === "block") {
+           panel.style.display = "none";
+         } else {
+           panel.style.display = "block";
+         }
+       });
+     }
+         </script>
+     </div> 
+ </div>
+
       </div>
 
+       <!--asides-->
+ <div class="column3">
+  
+  <div class="sticky" >
+      <br><br>
+    <button onclick="myAsides()" style="font-family: 'Courier New', Courier, monospace; font-size:11pt; margin-left:49%; border-color:#e2dfdf">Show/Hide Asides</button>
+  
+    <div id="asides1">
 
+
+      <!--script to copy paste selected text-->
+      <script language=javascript>
+
+          function getSelText()
+          {
+          var txt = '';
+          if (window.getSelection)
+              {
+                  txt = "'"+ window.getSelection() +"'" ;
+              }
+          else if (document.getSelection)
+          {
+          txt =  "'"+ document.getSelection() +"'" ;
+              }
+          else if (document.selection)
+          {
+          txt = "'"+document.selection.createRange().text +"'" ;
+          }
+          else return;
+          document.testform.selectedtext.value = document.testform.selectedtext.value + '\n\n' + txt;
+          }
+      
+          
+          </script>
+
+    <br>
+    
+    <button  onmousedown="getSelText()" style="font-family: 'Courier New', Courier, monospace; font-size:11pt; letter-spacing:-0.6pt;"> Take Note; Make Note</button>
+    <form name="testform">
+      <textarea id="selectedtext" placeholder="Highlight a selection of text to the left and click the above button to save it here. Type notes to yourself here as you go. Resize this window as needed." style="width:100%; max-width:100%; height: 200px"></textarea>
+  </form>
+
+<!--show hide asides-->
+  <script>
+    function myAsides() {
+    var x = document.getElementById("asides1");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+    }
+    </script>
+
+<!--code for downloading asides to local computer-->
+  <!--source: https://www.geeksforgeeks.org/how-to-trigger-a-file-download-when-clicking-an-html-button-or-javascript/-->
+<input type="button" id="btn"  style="border:none; font-family: 'Courier New', Courier, monospace; font-size:11pt; letter-spacing:-0.6pt;" value="download" />
+
+<!--download file-->
+  <script>
+      function download(file, text) {
+          var element = document.createElement('a');
+          element.setAttribute('href',
+              'data:text/plain;charset=utf-8, '
+              + encodeURIComponent(text));
+          element.setAttribute('download', file);
+          document.body.appendChild(element);
+          element.click();
+          document.body.removeChild(element);
+      }
+
+     
+      // Start file download.
+
+      document.getElementById("btn")
+          .addEventListener("click", function () {
+              var text = 
+              'Notes and quotes from https://negative-spaces.github.io/the-middle-of-things/thinking-through-practice.html' + document.getElementById("selectedtext").value ;
+              var filename = "asides.txt";
+
+              download(filename, text);
+          }, false);
+  </script>
+
+    </div>
+
+
+   
+</div>
+
+</div>  
 
 
     </div>
