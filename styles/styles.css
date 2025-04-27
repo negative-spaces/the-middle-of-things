@@ -376,13 +376,13 @@ a.header:hover {
   position: fixed;
   left: 0;
   bottom: 0;
-  /* width: 99.5%; */
-  /* background-color: #82ffd562; */
+  background: #ffffff92;
   color: black;
   text-align: right;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 9pt;
-  font-weight: 200;
+  font-size: 11pt;
+  font-weight: 300;
+  padding: 5px 5px 5px 5px;
 }
 
 .highlight-light-purple {
@@ -392,3 +392,4 @@ a.header:hover {
 .highlight-yellow {
   background-color: rgba(241, 251, 109, 0.599);
 }
+
