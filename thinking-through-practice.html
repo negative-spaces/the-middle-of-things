@@ -363,6 +363,39 @@
 
 
   </style>
+
+<!--multiple accordions for multiple bibliographies per page-->
+
+<style>
+  /* FOR ACCORDIAN */
+.accordion2 {
+  background-color: none;
+  color: #020202;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: true;
+  text-align: center;
+  outline: #000000;
+  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: none;
+}
+
+.panel2 {
+  padding: 0 18px;
+  display: none;
+  background-color: #efefef95;
+  overflow: hidden;
+}
+
+</style>
 </head>
 
 <body>
@@ -2062,7 +2095,7 @@
          <div style="width:100%; margin:auto;">
           <div>
             <a name="jkgg-bibliography" id="jkgg-bibliography"></a>
-            <button class="accordion">References (click to expand)</button>
+            <button class="accordion2">References (click to expand)</button>
             <div class="panel">
 
               <div>
@@ -2094,11 +2127,11 @@
             </div>
 
             <script>
-              var acc = document.getElementsByClassName("accordion");
+              var acc2 = document.getElementsByClassName("accordion2");
               var i;
 
-              for (i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function () {
+              for (i = 0; i < acc2.length; i++) {
+                acc2[i].addEventListener("click", function () {
                   this.classList.toggle("active");
                   var panel = this.nextElementSibling;
                   if (panel.style.display === "block") {
