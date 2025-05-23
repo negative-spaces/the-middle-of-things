@@ -149,6 +149,13 @@ div.sticky {
   padding: 1px;
 }
 
+div.sticky2 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 1px;
+}
+
 /* FOR ACCORDIAN */
 .accordion {
   background-color: none;
@@ -184,6 +191,14 @@ code {
   border-radius: 0.2rem;
   font-size: 10pt;
 }
+
+/* a.cd {
+  background: #d9f2fb54;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.2rem;
+  font-size: 12pt;
+  font-family:'Courier New', Courier, monospace;
+} */
 
 /* links and hover */
 a:link {
