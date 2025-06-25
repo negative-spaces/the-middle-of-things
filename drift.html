@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Drift</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+
+
+</head>
+
+<body>
+    <a name="drift-top" id="drift-top"></a>
+
+    <!--header nav-->
+
+    <div class="header" id="myHeader">
+        <a class="header" href="./index.html">navigate elsewhere>></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <a class="header" href="./index.html">index</a>
+        &nbsp&nbsp
+        <a class="header" href="./what-the-work-can-do.html">what-the-work-can-do</a>
+        &nbsp&nbsp&nbsp
+        <a class="header" href="./questions.html">questions</a>
+        &nbsp&nbsp
+        <a class="header" href="./thinking-through-practice.html">thinking-through-practice</a>&nbsp&nbsp
+        <a class="header" href="./iterative-proposals.html">proposals</a>
+        &nbsp&nbsp
+        <a class="header" href="./lists.html">lists</a>&nbsp&nbsp&nbsp
+
+
+
+        <!--script for sticky header-->
+        <script>
+            window.onscroll = function () { myFunction() };
+
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
+        </script>
+
+
+
+    </div>
+
+    <br>
+    <div style="margin:auto;">
+    <iframe src="./finding-the-drift.html"  style="width:70%; height:500px;"></iframe>
+</div>
+
+    <br><br>
+    <!--find the drift knightlab storymap-->
+    <iframe src="https://uploads.knightlab.com/storymapjs/b238a6d62c46c28699e948c1e9d7abc7/findthedrift/index.html"
+        frameborder="0" width="100%" height="600"></iframe>
+    </div>
+
+</body>
+
+</html>
