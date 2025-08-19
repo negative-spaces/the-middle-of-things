@@ -624,7 +624,6 @@
 
 
     <!--MENU-->
-
     <div class="tab" style="text-align:center;">
       <button class="tablinks" onclick="openPractice(event, 'haircut')">giving a haircut</button>
       <button class="tablinks" onclick="openPractice(event, 'sewing')">hand sewing</button>
@@ -4164,8 +4163,9 @@
 
 
   <!--the artfulness of rendering spatial practice-->
-  <div id="artfulness" class="artfulness">
+  <div id="artfulness" class="tabcontent">
     <div class="column1" style="margin:auto;">
+
       <p><span style="font-weight:550; padding: 2px; font-size: 18px;">Deep mapping cartography's limits: the artfulness
           of rendering spatial practice</span>
         <br>Oral presentation for the International Cartographic Conference, August 2025
@@ -4182,78 +4182,159 @@
         <br>
       </div>
       <br><br>
-    
 
-    <p>
-      Good afternoon! My name is Lily Demet. I'm a fine artist, and practitioner of critical cartography and GIS as well as more experimental/speculative mapping. Currently, I'm a 2nd year PhD student in geography at the University of British Columbia (UBC) here in Vancouver on stolen Coast Salish lands. Today, I'll be sharing reflections on my MA thesis, diffracting questions which emerged at the project's incipiency through theory I encountered at its conclusion last summer. I title this presentation: I title this
-      presentation: <b>Deep mapping cartography's limits: the artfulness of rendering spatial practice.</b>
-    </p>
-    <span class="brmedium"></span>
 
-    <p>
-      Cartesian cartographies, writes Michel de Certeau (1984), make action legible by substituting trace for practice; alas, the "gnostic drive" (92) to capture everyday navigations quote "causes a way of being in the world to be forgotten" (97). Deep mapping resists preemptive definition for it is <i>through its practice</i> that deep mapping becomes articulated as an apparatus of investigation. For me, deep mapping is situated, embodied inhabitation as a practice of ongoing and open-ended dialogue with the world. Concretely, this involves developing spatial awareness by wayfinding without reference to Google Maps, appropriating materials at-hand, and taking unfamiliar transit routes just to see how familiar places connect and reposition in shifting topological relation. It entails an openness to defamiliarization, an attention to alternate perceptual scales, and a porosity to, as Katie Stewart (2011, 452) echos, "affect and to be affected."
-    </p>
-    <p>
-      Deep mapping does not render down to a map in the sense of a Cartesian cartography. Yet neither, in my opinion, does it "counter cartography". Deep mapping is not defined through opposition so much as marked by iterative acts of interference with hegemonic forms of representing place, producing geographic knowledge, and rendering spatial research public. How might we render situated spatial practices such as deep mapping without flattening, georeferencing, and vectorizing experiential knowledge? If mapping itself were taken to be a mode of immanent inquiry (as speculative practitioners like Linda Knight suggest), how might theorizations developed <i>through</i> spatial practice be recorded while centering the generativity of cartographic process?
-    </p>
-    <p>
-      Process philosopher Erin Manning describes the artful as "a working of the work" (2020, 44); artfulness is "not
-      the work itself" (2020, 61) but what the work <i>does</i>—how it exceeds its form or rather, how form becomes
-      conduit for <i>what more the work can do</i> (2016, 48). I offer ‘the artful’ to critical and creative
-      cartographers as a conceptual framing for the ways in which our political, ethical, practical, and intellectual
-      contributions are <i>more than</i> the maps we make. As a representational apparatus, cartography is concerned
-      with tracing past action or observations. What a map of such tracings can do is determined by its form. Approached
-      as a mode of inquiry, however, cartography becomes an immersive practice whose outputs are but partial carryings
-      forward of how the practice made possible other ways of being in—and of—the world.
-    </p>
-    <p>
-      This presentation explores the artfulness of rendering spatial practice. My focus will be on 
-      <code>negative-spaces</code>, the website which renders my theory of deep mapping, and which I submitted as my
-      master's thesis in geography. While I submitted my thesis for institutional archival as a zipped folder of HTML
-      documents, associated multimedia, and styling sheets (see <a href="https://dx.doi.org/10.14288/1.0445244"
-        target="_blank">dx.doi.org/10.14288/1.0445244</a>), a readily accessible version can be engaged by navigating to
-      <a href="https://negative-spaces.github.io/" target="_blank">negative-spaces.github.io</a> from a web browser.
-      [SLIDE] <code>negative-spaces</code> not only renders the effects of my deep mapping practice—viz., my theory of
-      deep mapping—but enacts this theory as praxis. It is in its outdoing of form, I argue, that
-      <code>negative-spaces</code> touches the artful.
-    </p>
-    <span class="brmedium"></span>
-    <p>
-      First things first, let me introduce <code>negative-spaces</code> via a guided tour of the interface. [SLIDE] My theory of deep mapping unfolds across eight webpages whose formatting I designed myself. There is no specific order in which to navigate <code>negative-spaces</code>, as I wanted my thesis to be itself a space for what Les Roberts (2018) calls 'digital deep mapping'—for serendipitous discovery following ideas that grasp and lure the reader forwards. You can also explore the code that renders each page via a menu link, though this view is hosted by an external platform and therefore not technically part of my thesis. However, if you download my thesis directly to your personal computer, you can open the entire project with a source code editor (like Visual Studio Code) and explore the code-side that way.
+      <p>
+        Good afternoon! My name is Lily Demet. I'm a fine artist, and practitioner of critical cartography and GIS as
+        well as more experimental/speculative mapping. Currently, I'm a 2nd year PhD student in geography at the
+        University of British Columbia (UBC) here in Vancouver on stolen Coast Salish lands. Today, I'll be sharing
+        reflections on my MA thesis, diffracting questions which emerged at the project's incipiency through theory I
+        encountered at its conclusion last summer. I title this presentation: I title this
+        presentation: <b>Deep mapping cartography's limits: the artfulness of rendering spatial practice.</b>
+      </p>
+      <span class="brmedium"></span>
 
-    </p>
+      <p>
+        Cartesian cartographies, writes Michel de Certeau (1984), make action legible by substituting trace for
+        practice; alas, the "gnostic drive" (92) to capture everyday navigations quote "causes a way of being in the
+        world to be forgotten" (97). Deep mapping resists preemptive definition for it is <i>through its practice</i>
+        that deep mapping becomes articulated as an apparatus of investigation. For me, deep mapping is situated,
+        embodied inhabitation as a practice of ongoing and open-ended dialogue with the world. Concretely, this involves
+        developing spatial awareness by wayfinding without reference to Google Maps, appropriating materials at-hand,
+        and taking unfamiliar transit routes just to see how familiar places connect and reposition in shifting
+        topological relation. It entails an openness to defamiliarization, an attention to alternate perceptual scales,
+        and a porosity to, as Katie Stewart (2011, 452) echos, "affect and to be affected."
+      </p>
+      <p>
+        Deep mapping does not render down to a map in the sense of a Cartesian cartography. Yet neither, in my opinion,
+        does it "counter cartography". Deep mapping is not defined through opposition so much as marked by iterative
+        acts of interference with hegemonic forms of representing place, producing geographic knowledge, and rendering
+        spatial research public. How might we render situated spatial practices such as deep mapping without flattening,
+        georeferencing, and vectorizing experiential knowledge? If mapping itself were taken to be a mode of immanent
+        inquiry (as speculative practitioners like Linda Knight suggest), how might theorizations developed
+        <i>through</i> spatial practice be recorded while centering the generativity of cartographic process?
+      </p>
+      <p>
+        Process philosopher Erin Manning describes the artful as "a working of the work" (2020, 44); artfulness is "not
+        the work itself" (2020, 61) but what the work <i>does</i>—how it exceeds its form or rather, how form becomes
+        conduit for <i>what more the work can do</i> (2016, 48). I offer ‘the artful’ to critical and creative
+        cartographers as a conceptual framing for the ways in which our political, ethical, practical, and intellectual
+        contributions are <i>more than</i> the maps we make. As a representational apparatus, cartography is concerned
+        with tracing past action or observations. What a map of such tracings can do is determined by its form.
+        Approached
+        as a mode of inquiry, however, cartography becomes an immersive practice whose outputs are but partial carryings
+        forward of how the practice made possible other ways of being in—and of—the world.
+      </p>
+      <p>
+        This presentation explores the artfulness of rendering spatial practice. My focus will be on
+        <code>negative-spaces</code>, the website which renders my theory of deep mapping, and which I submitted as my
+        master's thesis in geography. While I submitted my thesis for institutional archival as a zipped folder of HTML
+        documents, associated multimedia, and styling sheets (see <a href="https://dx.doi.org/10.14288/1.0445244"
+          target="_blank">dx.doi.org/10.14288/1.0445244</a>), a readily accessible version can be engaged by navigating
+        to
+        <a href="https://negative-spaces.github.io/" target="_blank">negative-spaces.github.io</a> from a web browser.
+        [SLIDE] <code>negative-spaces</code> not only renders the effects of my deep mapping practice—viz., my theory of
+        deep mapping—but enacts this theory as praxis. It is in its outdoing of form, I argue, that
+        <code>negative-spaces</code> touches the artful.
+      </p>
+      <span class="brmedium"></span>
+      <p>
+        First things first, let me introduce <code>negative-spaces</code> via a guided tour of the interface. [SLIDE] My
+        theory of deep mapping unfolds across eight webpages whose formatting I designed myself. There is no specific
+        order in which to navigate <code>negative-spaces</code>, as I wanted my thesis to be itself a space for what Les
+        Roberts (2018) calls 'digital deep mapping'—for serendipitous discovery following ideas that grasp and lure the
+        reader forwards. You can also explore the code that renders each page via a menu link, though this view is
+        hosted by an external platform and therefore not technically part of my thesis. However, if you download my
+        thesis directly to your personal computer, you can open the entire project with a source code editor (like
+        Visual Studio Code) and explore the code-side that way.
 
-    <p>
-     Of course, structural choices carry theoretical and methodological underpinnings wherein the artful is ever present. For instance, each page has an 'asides' column which invites the visitor to take and make notes while reading. The contents of this column can then be downloaded as a text file. By staging a digital commonplace, <code>negative-spaces</code> invites a world of readers into ongoing and open-ended dialogue with
-      deep mapping.
-    </p>
+      </p>
 
-    <p>
-      Throughout my thesis, you'll notice text and multimedia, including pictures, voice recordings, and scanned pages of my fieldnotes as well as my marked up readings, are integrated together. My refusal to appendix marks an exercise in expansive citational practice where what is acknowledged is, to paraphrase a conversation between Erin Manning and Vivienne Bozalek (2024), not knowledge itself but how the ideas came about. Through staging multimodal citations, I challenge conventional in-text citation's presupposition of human interlocutors who are preemptively individuated even before their conversing. 
-    </p>
+      <p>
+        Of course, structural choices carry theoretical and methodological underpinnings wherein the artful is ever
+        present. For instance, each page has an 'asides' column which invites the visitor to take and make notes while
+        reading. The contents of this column can then be downloaded as a text file. By staging a digital commonplace,
+        <code>negative-spaces</code> invites a world of readers into ongoing and open-ended dialogue with
+        deep mapping.
+      </p>
 
-    <p>
-      The choice to <i>write</i> my thesis in the form of a website, and to submit this website as a .zip folder, was perhaps the most significant. I chose to build a website because of the digital's accommodation of multimodality, as well as being inspired by the web-antics of artist Kaldi Moss. I chose to <i>submit</i> my website as a <i>zip folder</i> because it was important to me that the entirety of my work be physically archived by cIRcle, the University of British Columbia's institutional research repository.
+      <p>
+        Throughout my thesis, you'll notice text and multimedia, including pictures, voice recordings, and scanned pages
+        of my fieldnotes as well as my marked up readings, are integrated together. My refusal to appendix marks an
+        exercise in expansive citational practice where what is acknowledged is, to paraphrase a conversation between
+        Erin Manning and Vivienne Bozalek (2024), not knowledge itself but how the ideas came about. Through staging
+        multimodal citations, I challenge conventional in-text citation's presupposition of human interlocutors who are
+        preemptively individuated even before their conversing.
+      </p>
 
-    </p>
+      <p>
+        The choice to <i>write</i> my thesis in the form of a website, and to submit this website as a .zip folder, was
+        perhaps the most significant. I chose to build a website because of the digital's accommodation of
+        multimodality, as well as being inspired by the web-antics of artist Kaldi Moss. I chose to <i>submit</i> my
+        website as a <i>zip folder</i> because it was important to me that the entirety of my work be physically
+        archived by cIRcle, the University of British Columbia's institutional research repository.
 
-    <p>
-     Before commencing my master's, I did not know how to code or style a website. Indeed, I initially learned git and Github, the version control software and code sharing platform used, through my job developing GIS workshops for the university library. In designing and building <code>negative-spaces</code>, I therefore employed the same tactics of gleaning, bricolage, and making do so fundamental to my practice of deep mapping. My MA project thus became a research-creation endeavor: both the creation of my theory of deep mapping and the creation of <code>negative-spaces</code> (the critically informed work which renders my research public) were situated <i>within and as part of</i> my deep mapping research practice. Research-creation differs significantly from practice-based or practice-led research in that it develops knew knowledge about practice <i>through</i> practice, and output is both text and creative artifact. Research-creation asks that quote "multiple <i>formal outputs</i> be treated with equal value" (Loveless 2019, 115, emphasis in original). My MA thesis presents a special case in that text and multimedia are integrated together. This posed a challenge only when, hours after I discussed my project to the Associate Director of Student Academic Services and the Public Scholarship Coordinator, UBC's guidelines for the submission of graduate theses and dissertations were changed to specify that the first file uploaded <i>must be a .pdf</i>. [SLIDE] Far from invalidating my thesis as research-creation, this change marked the effect of my interference and thus affirmed my praxis. 
-    </p>
+      </p>
 
-    <p>
-      Perhaps now is a relevant moment to address: why negative spaces? [SLIDE] The idea came to me from a sticker I saw on a lamppost in this very part of downtown. It read: AVOID THE SUBJECT. In visual art, negative space refers to that which surrounds the object of focus—what constitutes the subject's intelligibility by remaining itself unintelligible. The boundary of the intelligible form is articulated only in its crossing, when that which it relegated to the outsides shows up in the space of the intelligible. Such transgression, writes Foucault (1977), "forces the limit…to find itself in what it excludes". As Karen Barad (2007) reminds us, quote, "boundary transgressions should be equated not with the dissolution of traversed boundaries…but with the ongoing reconfiguring of boundaries." In other words, intelligibility is not a static state but the provisional effect of ongoing and open-ended boundary making practices; it is <i>through</i> transgression that boundaries are both articulated and redrawn. Deep mapping as an interference practice is about iterative acts of transgression in order to illuminate hegemonic contours of intelligibility and refigure what is possible. What remains of interest to me—and I imagine many here today—is not a specific format (much less maintaining its coherence), but rather how a given output might work artfully in excess of itself to destabilize and reconfigure hegemonic definitions of geospatial knowledge production and dissemination.
-    </p>
-    <p>
-      In her manifesto for research-creation, Natalie Loveless (2019) positions artistic form <i>as</i> method—a means of performatively challenging the hegemony of the monograph as the only intelligible form graduate dissertations may take. According to my search results, never before in the University of British Columbia's history of electronically submitted theses and dissertations has there been an MA thesis consisting entirely of a website without a significant component submitted in linear text.pdf form. <code>negative-spaces</code> thus "do[es] something different <i>to</i>, <i>with</i>, and <i>in</i> the university" (Loveless 2019, 115, emphasis in original). Not only does the form of <code>negative-spaces</code> performatively refigure what counts as a graduate thesis at the University of British Columbia, it participates others as collaborators in counter-hegemonic spatial practice: to render my website locally requires the zipped folder be downloaded and unzipped, and the index.html file therein be opened with a web browser. In this way, my theory of deep mapping is not rendered once and for all but again and again, iteratively enacting interference.
-    </p>
-    <span class="brmedium"></span>
-    <p>
-      In conclusion, bringing process philosophy's 'artful' into cartography generatively foregrounds the entanglement of theory and practice. Approaching mapping from this inseparability raises questions worth carrying forwards like: How might cartographies include what haunts them yet exceeds representation? I offer <code>negative-spaces</code>, my master's research-creation thesis, as an example of how one might render the effects of situated, embodied spatial practice without flattening, georeferencing, or vectorizing—in essence, without substituting trace for practice. Thank you.
-    </p>
+      <p>
+        Before commencing my master's, I did not know how to code or style a website. Indeed, I initially learned git
+        and Github, the version control software and code sharing platform used, through my job developing GIS workshops
+        for the university library. In designing and building <code>negative-spaces</code>, I therefore employed the
+        same tactics of gleaning, bricolage, and making do so fundamental to my practice of deep mapping. My MA project
+        thus became a research-creation endeavor: both the creation of my theory of deep mapping and the creation of
+        <code>negative-spaces</code> (the critically informed work which renders my research public) were situated
+        <i>within and as part of</i> my deep mapping research practice. Research-creation differs significantly from
+        practice-based or practice-led research in that it develops knew knowledge about practice <i>through</i>
+        practice, and output is both text and creative artifact. Research-creation asks that quote "multiple <i>formal
+          outputs</i> be treated with equal value" (Loveless 2019, 115, emphasis in original). My MA thesis presents a
+        special case in that text and multimedia are integrated together. This posed a challenge only when, hours after
+        I discussed my project to the Associate Director of Student Academic Services and the Public Scholarship
+        Coordinator, UBC's guidelines for the submission of graduate theses and dissertations were changed to specify
+        that the first file uploaded <i>must be a .pdf</i>. [SLIDE] Far from invalidating my thesis as
+        research-creation, this change marked the effect of my interference and thus affirmed my praxis.
+      </p>
 
+      <p>
+        Perhaps now is a relevant moment to address: why negative spaces? [SLIDE] The idea came to me from a sticker I
+        saw on a lamppost in this very part of downtown. It read: AVOID THE SUBJECT. In visual art, negative space
+        refers to that which surrounds the object of focus—what constitutes the subject's intelligibility by remaining
+        itself unintelligible. The boundary of the intelligible form is articulated only in its crossing, when that
+        which it relegated to the outsides shows up in the space of the intelligible. Such transgression, writes
+        Foucault (1977), "forces the limit…to find itself in what it excludes". As Karen Barad (2007) reminds us, quote,
+        "boundary transgressions should be equated not with the dissolution of traversed boundaries…but with the ongoing
+        reconfiguring of boundaries." In other words, intelligibility is not a static state but the provisional effect
+        of ongoing and open-ended boundary making practices; it is <i>through</i> transgression that boundaries are both
+        articulated and redrawn. Deep mapping as an interference practice is about iterative acts of transgression in
+        order to illuminate hegemonic contours of intelligibility and refigure what is possible. What remains of
+        interest to me—and I imagine many here today—is not a specific format (much less maintaining its coherence), but
+        rather how a given output might work artfully in excess of itself to destabilize and reconfigure hegemonic
+        definitions of geospatial knowledge production and dissemination.
+      </p>
+      <p>
+        In her manifesto for research-creation, Natalie Loveless (2019) positions artistic form <i>as</i> method—a means
+        of performatively challenging the hegemony of the monograph as the only intelligible form graduate dissertations
+        may take. According to my search results, never before in the University of British Columbia's history of
+        electronically submitted theses and dissertations has there been an MA thesis consisting entirely of a website
+        without a significant component submitted in linear text.pdf form. <code>negative-spaces</code> thus "do[es]
+        something different <i>to</i>, <i>with</i>, and <i>in</i> the university" (Loveless 2019, 115, emphasis in
+        original). Not only does the form of <code>negative-spaces</code> performatively refigure what counts as a
+        graduate thesis at the University of British Columbia, it participates others as collaborators in
+        counter-hegemonic spatial practice: to render my website locally requires the zipped folder be downloaded and
+        unzipped, and the index.html file therein be opened with a web browser. In this way, my theory of deep mapping
+        is not rendered once and for all but again and again, iteratively enacting interference.
+      </p>
+      <span class="brmedium"></span>
+      <p>
+        In conclusion, bringing process philosophy's 'artful' into cartography generatively foregrounds the entanglement
+        of theory and practice. Approaching mapping from this inseparability raises questions worth carrying forwards
+        like: How might cartographies include what haunts them yet exceeds representation? I offer
+        <code>negative-spaces</code>, my master's research-creation thesis, as an example of how one might render the
+        effects of situated, embodied spatial practice without flattening, georeferencing, or vectorizing—in essence,
+        without substituting trace for practice. Thank you.
+      </p>
     </div>
   </div>
+
 
   <!--script for tabs-->
   <script>
