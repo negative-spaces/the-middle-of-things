@@ -177,17 +177,17 @@
       display: none;
     }
 
-
     .mySlides5 {
       display: none;
     }
-
 
     .mySlides6 {
       display: none;
     }
 
-
+     .mySlides7 {
+      display: none;
+    }
 
     .mySlides10 {
       display: none;
@@ -213,6 +213,9 @@
       display: none;
     }
 
+  
+
+  
     .slideshow-container1 {
       max-width: 100%;
       position: relative;
@@ -244,14 +247,18 @@
       margin: auto;
     }
 
-
     .slideshow-container6 {
       max-width: 100%;
       position: relative;
       margin: auto;
     }
 
-    /*9 8 and 7 can still be clained*/
+ .slideshow-container7 {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
+    }
+    /*9 8 and 7 can still be claimed*/
 
     .slideshow-container10 {
       max-width: 100%;
@@ -350,6 +357,17 @@
 
 
     .dot6 {
+      cursor: pointer;
+      height: 7px;
+      width: 7px;
+      margin: 0 2px;
+      background-color: #585050;
+      border-radius: 10%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+      .dot7 {
       cursor: pointer;
       height: 7px;
       width: 7px;
@@ -462,6 +480,11 @@
 
     .active,
     .dot6:hover {
+      background-color: #717171;
+    }
+
+    .active,
+    .dot7:hover {
       background-color: #717171;
     }
 
@@ -632,10 +655,9 @@
       <button class="tablinks" onclick="openPractice(event, 'JKGG')">thinking through J.K. G-G</button>
       <button class="tablinks" onclick="openPractice(event, 'reading-tactics')">reading tactics</button>
       <!-- <button class="tablinks" onclick="openPractice(event, 'writing-tactics')">writing tactics</button> -->
-      <button class="tablinks" onclick="openPractice(event, 'digital-by-hand')">made digital by hand</button>
+      <!-- <button class="tablinks" onclick="openPractice(event, 'digital-by-hand')">made digital by hand</button> -->
       <button class="tablinks" onclick="openPractice(event, 'paper-horns')">paper horns</button>
-      <button class="tablinks" onclick="openPractice(event, 'artfulness')">the artfulness of rendering spatial
-        practice</button>
+      <button class="tablinks" onclick="openPractice(event, 'artfulness')">the artfulness of rendering </button>
 
     </div>
 
@@ -713,12 +735,14 @@
       I don't use patterns. I drape around my body and pin and sew. You have to let the dress become what it will. I'm
       inspired by Erin Manning's writing on a Japanese designer in Dress Becomes Body chapter of The minor Gesture,
       though I began hand sewing in this fashion before I encountered this book. (I'll write more on this later)
+
       <br><br><br><Br>
+
 
       <!--sitation deck PINK DRESS-->
       <div>
-        <div>
-          <div class="slideshow-container3">
+
+        <div class="slideshow-container3">
 
             <div class="mySlides3 fade" style="display: none;">
               <div class="numbertext">1 / 17</div>
@@ -781,15 +805,11 @@
               <!--<div class="capt-text">Caption Text</div>-->
             </div>
 
-
-
             <div class="mySlides3 fade" style="display: none;">
               <div class="numbertext">10 / 17</div>
               <img src="./sitations/dressing/pink-dress-9.JPG" style="width:100%">
               <!--<div class="capt-text">Caption Text</div>-->
             </div>
-
-
 
             <div class="mySlides3 fade" style="display: none;">
               <div class="numbertext">11 / 17</div>
@@ -797,14 +817,11 @@
               <!--<div class="capt-text">Caption Text</div>-->
             </div>
 
-
-
             <div class="mySlides3 fade" style="display: none;">
               <div class="numbertext">12 / 17</div>
               <img src="./sitations/dressing/pink-dress-10.JPG" style="width:100%">
               <!--<div class="capt-text">Caption Text</div>-->
             </div>
-
 
             <div class="mySlides3 fade" style="display: none;">
               <div class="numbertext">13 / 17</div>
@@ -812,14 +829,11 @@
               <!--<div class="capt-text">Caption Text</div>-->
             </div>
 
-
             <div class="mySlides3 fade" style="display: none;">
               <div class="numbertext">14 / 17</div>
               <img src="./sitations/dressing/pink-dress-13.JPG" style="width:100%">
               <!--<div class="capt-text">Caption Text</div>-->
             </div>
-
-
 
             <div class="mySlides3 fade" style="display: none;">
               <div class="numbertext">15 / 17</div>
@@ -842,8 +856,6 @@
             </div>
 
 
-
-
             <!--remember to update function name here-->
             <a class="prev" onclick="plusSlides3(-1)">❮</a>
             <a class="next" onclick="plusSlides3(1)">❯</a>
@@ -852,6 +864,7 @@
           <br>
 
           <!--dots must be unique class well in css head style for each deck-->
+
           <div style="text-align:center">
             <span class="dot3" onclick="currentSlide(1)"></span>
             <span class="dot3" onclick="currentSlide(2)"></span>
@@ -874,7 +887,10 @@
 
           </div>
 
+          <div>
+             The above pink dress I made in a day and a half of frenzied sewing for a new years eve event. I sewed 11 hours straight new years eve from 8am to 7pm.
 
+          </div>
           <!--script for pink dress sitation deck-->
           <!--function names and slidindex variables must be unique-->
           <script>
@@ -905,18 +921,14 @@
               dots[slideIndex3 - 1].className += " active";
             }
           </script>
-
-        </div>
-
-        The above pink dress I made in a day and a half of frenzied sewing for a new years eve event. I sewed 11 hours
-        straight new years eve from 8am to 7pm.
-
+       
+      
       </div>
 
       <br><br><br><br>
-      <!--sitation deck PURPLE DRESS-->
-      <div>
-        <div>
+
+      <!--sitation deck PURPLE DRESS--> 
+       <div>
           <div class="slideshow-container1">
             <div class="mySlides1 fade" style="display: none;">
               <div class="numbertext">1 / 17</div>
@@ -1068,10 +1080,8 @@
           </script>
 
         </div>
-        <p>
-
-        </p>
-      </div>
+   
+  
 
       <br><br><br>
       <!--sitation deck PINK EARS-->
@@ -1173,8 +1183,154 @@
           </script>
 
         </div>
-
       </div>
+
+
+
+
+       <br><br><br>
+      <!--sitation deck PEPPERMINT PIG--> 
+       <div>
+          <div class="slideshow-container7">
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">1 / 15</div>
+              <img src="./sitations/sewing/peppermint1.jpg" style="width:100%">
+            </div>
+
+           <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">2 / 15</div>
+              <img src="./sitations/sewing/peppermint2.jpg" style="width:100%">
+            </div>
+
+
+           <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">3 / 15</div>
+              <img src="./sitations/sewing/peppermint3.jpg" style="width:100%">
+            </div>
+
+           <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">4 / 15</div>
+              <img src="./sitations/sewing/peppermint4.jpg" style="width:100%">
+            </div>
+
+           <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">5 / 15</div>
+              <img src="./sitations/sewing/peppermint5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">6 / 15</div>
+              <img src="./sitations/sewing/peppermint6.jpg" style="width:100%">
+            </div>
+
+           
+
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">7 / 15</div>
+              <img src="./sitations/sewing/peppermint7.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">8 / 15</div>
+              <img src="./sitations/sewing/peppermint8.jpg" style="width:100%">
+            </div>
+
+           <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">9 / 15</div>
+              <img src="./sitations/sewing/peppermint9.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">10 / 15</div>
+              <img src="./sitations/sewing/peppermint10.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">11 / 15</div>
+              <img src="./sitations/sewing/peppermint11.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">12 / 15</div>
+              <img src="./sitations/sewing/peppermint12.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">13 / 15</div>
+              <img src="./sitations/sewing/peppermint13.jpg" style="width:100%">
+            </div>
+
+           <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">14 / 15</div>
+              <img src="./sitations/sewing/peppermint14.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">15 / 15</div>
+              <img src="./sitations/sewing/peppermint15.jpg" style="width:100%">
+            </div>
+
+           
+            <!--remember to update function name here-->
+            <a class="prev" onclick="plusSlides7(-1)">❮</a>
+            <a class="next" onclick="plusSlides7(1)">❯</a>
+
+          </div>
+          <br>
+
+          <!--dots must be unique class well in css head style for each deck-->
+          <div style="text-align:center">
+            <span class="dot7" onclick="currentSlide(1)"></span>
+            <span class="dot7" onclick="currentSlide(2)"></span>
+            <span class="dot7" onclick="currentSlide(3)"></span>
+            <span class="dot7" onclick="currentSlide(4)"></span>
+            <span class="dot7" onclick="currentSlide(5)"></span>
+            <span class="dot7" onclick="currentSlide(6)"></span>
+            <span class="dot7" onclick="currentSlide(7)"></span>
+            <span class="dot7" onclick="currentSlide(8)"></span>
+            <span class="dot7" onclick="currentSlide(9)"></span>
+            <span class="dot7" onclick="currentSlide(10)"></span>
+            <span class="dot7" onclick="currentSlide(11)"></span>
+            <span class="dot7" onclick="currentSlide(12)"></span>
+            <span class="dot7" onclick="currentSlide(13)"></span>
+            <span class="dot7" onclick="currentSlide(14)"></span>
+            <span class="dot7" onclick="currentSlide(15)"></span>
+
+          </div>
+
+
+          <!--script for purple dress sitation deck-->
+          <!--function names and slidindex variables must be unique-->
+          <script>
+            let slideIndex7 = 1;
+            showSlides7(slideIndex7);
+
+            function plusSlides7(n) {
+              showSlides7(slideIndex7 += n);
+            }
+
+            function currentSlide(n) {
+              showSlides7(slideIndex7 = n);
+            }
+
+            function showSlides7(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides7");
+              let dots = document.getElementsByClassName("dot7");
+              if (n > slides.length) { slideIndex7 = 1 }
+              if (n < 1) { slideIndex7 = slides.length }
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex7 - 1].style.display = "block";
+              dots[slideIndex7 - 1].className += " active";
+            }
+          </script>
+
+        </div>
 
 
       <br><br><br><br>
@@ -1399,9 +1555,7 @@
           </script>
 
         </div>
-        <p>
-
-        </p>
+ 
       </div>
 
 
@@ -4169,7 +4323,7 @@
       <p><span style="font-weight:550; padding: 2px; font-size: 18px;">Deep mapping cartography's limits: the artfulness
           of rendering spatial practice</span>
         <br>Oral presentation for the International Cartographic Conference, August 2025.
-      </p> 
+      </p>
 
       <!--embed abstract-->
       <div class="vignette">
@@ -4189,7 +4343,7 @@
         well as more experimental/speculative mapping. Currently, I'm a 2nd year PhD student in geography at the
         University of British Columbia (UBC) here in Vancouver on stolen Coast Salish lands. Today, I'll be sharing
         reflections on my MA thesis, diffracting questions which emerged at the project's incipiency through theory I
-        encountered at its conclusion last summer. I title this presentation: I title this
+        encountered at its conclusion last summer. I title this
         presentation: <b>Deep mapping cartography's limits: the artfulness of rendering spatial practice.</b>
       </p>
       <span class="brmedium"></span>
