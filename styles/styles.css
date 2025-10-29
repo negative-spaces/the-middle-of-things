@@ -363,11 +363,11 @@ a:hover {
 }
 
 /*white text for header*/
-a.header:link {
+/* a.header:link {
   color: aliceblue;
   text-decoration: none;
   padding: 5px 5px 5px 5px;
-  /*added the padding here and in header so that when screen is minimized text isnt too close to each other*/
+ 
 }
 a.header:link,
 a.header:visited,
@@ -378,7 +378,7 @@ a.header:active {
 a.header:hover {
   color: rgb(230, 65, 0);
   text-decoration: none;
-}
+} */
 
 /*header */
 .header {
@@ -424,6 +424,7 @@ a.header:hover {
             overflow: hidden;
             background-color: #ee43eb;
             width: 100%;
+         
 
         }
 
@@ -442,7 +443,8 @@ a.header:hover {
 
         .subnav {
             float: right;
-            overflow: hidden;
+            overflow:hidden;
+
         }
 
         .subnav .subnavbtn {
