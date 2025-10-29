@@ -80,42 +80,63 @@
 
 <body>
 
-  <!--NAVIGATE ELSEWHERE-->
-  <div>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="./what-the-work-can-do.html">what the work can do</a>
-      <a href="./thinking-through-practice.html">thinking-through-practice</a>
-      <a href="./questions.html">research questions</a>
-      <a href="./lists.html">lists (in progress)</a>
-      <a href="./drift.html">drift</a>
-      <br>
-      <a href="./index.html">index</a>
-      <a href="https://github.com/negative-spaces/the-middle-of-things/blob/main/iterative-proposals.html"
-        target="_blank">CODE_SIDE </a>
-    </div>
-    <div id="main">
-      <span style="font-size:17px;cursor:alias; padding: 2px; background-color:blueviolet; color:rgb(235, 241, 242)"
-        onclick="openNav()">&#9776; navigate elsewhere>></span>
-    </div>
-    <script>
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-      }
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-      }
+   <!--new nav bar-->
+   <div id="myHeader" style="padding: 0px 0px 0px 0px">
+   
+   <div class="navbar">
+    
+        <a href="./index.html">&#x25C2&#x25C2 index &nbsp;&nbsp;&nbsp;</a>
+       
+        <div class="subnav">
+            <button class="subnavbtn">Reading&#9662</button>
+            <div class="subnav-content">
+                <a href="">Tactics</a>
+                <a href="./reading.html">Notes</a>
+                <a href="./lists.html">Lists</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Material/Forms&#9662</button>
+            <div class="subnav-content">
+                <a href="./material-forms/paper-horns.html">paper-horns</a>
+                <a href="./material-forms/dressing.html">dressing</a>
+                <a href="./material-forms/creatures.html">creatures</a>
 
-      window.onscroll = function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-      }
+            </div>
+        </div>
+        <!-- <div class="subnav">
+            <button class="subnavbtn">example&#9662</button>
+            <div class="subnav-content">
+                <a href="#link1">Link 1</a>
+                <a href="#link2">Link 2</a>
+                <a href="#link3">Link 3</a>
+                <a href="#link4">Link 4</a>
+            </div>
+        </div> -->
+        <a href="./what-the-work-can-do.html">what-the-work-can-do</a>
+        <a href="./thinking-through-practice.html">thinking-through-practice</a>
+        <a href="./iterative-proposals.html">proposals</a>
+         <a href="./questions.html">questions</a>
+    
+         <script>
+            window.onscroll = function () { myFunction() };
+
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
     </script>
+    </div>
 
+     
 
-  </div>
+    </div>
 
   <br><br>
 
