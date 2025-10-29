@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<head>
+    <title>reading</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <!--column sizes-->
+    <style>
+        @media screen and (min-width: 1001px) {
+            div.column-reading {
+                -ms-flex: 55%;
+                flex: 55%;
+                max-width: 55%;
+                padding: 0 10px;
+        
+            }
+        }
+
+   
+        @media screen and (max-width: 1000px) {
+            div.column-reading {
+                -ms-flex: 70%;
+                flex: 70%;
+                max-width: 70%;
+                padding: 0 2px;
+                margin: auto;
+            }
+        }
+
+      
+        @media screen and (max-width: 700px) {
+            div.column-reading {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+                padding: 0 2px;
+                margin: auto;
+            }
+        }
+
+    
+        div.column0 {
+            -ms-flex: 25%;
+            flex: 20%;
+            max-width: 25%;
+            padding: 0 0px;
+            background-color:rgba(171, 171, 175, 0.086);
+        }
+
+
+        @media screen and (max-width: 700px) {
+            div.column0 {
+                visibility: hidden;
+                -ms-flex: 20%;
+                flex: 20%;
+                max-width: 0%;
+                padding: 0 0px;
+            }
+        }
+    </style>
+
+    <!--text-->
+    <style>
+        .p {
+            font-size: 14px; 
+            line-height: 1; 
+            font-family: Calibri, sans-serif;
+        }
+    </style>
+
+  
+</head>
+
+
+<body>
+    <a name="reading-top" id="reading-top"></a>
+
+
+    <!--new header nav -->
+
+
+    <div id="myHeader"> 
+    <div class="navbar">
+        <a href="./index.html">&#x25C2&#x25C2 index &nbsp;&nbsp;&nbsp;</a>
+       
+        <div class="subnav">
+            <button class="subnavbtn">Reading&#9662</button>
+            <div class="subnav-content">
+                <a href="">Tactics</a>
+                <a href="./reading.html">Notes</a>
+                <a href="./lists.html">Lists</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Material/Forms&#9662</button>
+            <div class="subnav-content">
+                <a href=".//material-forms/paper-horns">paper-horns</a>
+                <a href="./material-forms/dressing">dressing</a>
+                <a href=".//material-forms/peppermint">paper-horns</a>
+
+            </div>
+        </div>
+        <!-- <div class="subnav">
+            <button class="subnavbtn">example&#9662</button>
+            <div class="subnav-content">
+                <a href="#link1">Link 1</a>
+                <a href="#link2">Link 2</a>
+                <a href="#link3">Link 3</a>
+                <a href="#link4">Link 4</a>
+            </div>
+        </div> -->
+        <a href="./what-the-work-can-do.html">what-the-work-can-do</a>
+        <a href="./thinking-through-practice.html">thinking-through-practice</a>
+        <a href="./iterative-proposals.html">proposals</a>
+         <a href="./questions.html">questions</a>
+    </div>
+    </div>
+
+
+<!--old header nav-->
+        <!-- <div class="header" id="myHeader">
+            <a class="header" href="./index.html">navigate elsewhere>></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a class="header" href="./index.html">index</a>
+            &nbsp&nbsp
+             <a class="header" href="./what-the-work-can-do.html">what-the-work-can-do</a>
+            &nbsp
+            <a class="header" href="./questions.html">questions</a>
+            &nbsp
+            <a class="header" href="./thinking-through-practice.html">thinking-through-practice</a>&nbsp&nbsp&nbsp&nbsp
+            <a class="header" href="./iterative-proposals.html">iterative proposals</a>
+            &nbsp&nbsp&nbsp
+            <a class="header" href="./lists.html">lists</a>&nbsp&nbsp
+           
+        </div> -->
+
+        <script>
+            window.onscroll = function () { myFunction() };
+
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
+        </script>
+
+<!--BANNER IMAGE-->
+<!-- <img src="./sitations/readings/tabs.jpg" style="width:100%"> -->
+<br>
+
+    <!--PAGE CONTENTS-->
+    <div class="row">
+
+        <!--readings menu-->
+        <!-- <div class="column0">
+
+            <div class="sticky">
+            
+                <button onclick="myOutline()"
+                    style="font-family: 'Courier New', Courier, monospace; font-size:10pt; border-color:#e2dfdf">Show/Hide
+                    List 1 Readings</button>
+
+                <div id="outline">
+                    <br>
+                    <span
+                        style="font-family: 'Courier New', Courier, monospace; font-size: 10.5pt;  line-height: 1.3; opacity: 0.8;">
+                       <a href="#on-this-patch-of-grass"><i>On This Patch of Grass</i> (Couture et al. 2018) </a><br>
+                        <a href="#the-surrounds"><i>The Surrounds</i> (Simone 2022) </a><br>
+                         <a href="#seeing-like-a-city"><i>Seeing Like a City</i> (Amin and Thrift 2017) </a><br>
+                         <a href="#the-metropolis">"The Metropolis"(Gordillo 2019) </a><br>
+
+                       
+
+                        <br><br>
+
+                        <br><br>
+                        <a href="#reading-top">&#9650&#9650 Top of Page</a>
+
+                    </span>
+                </div>
+
+         
+                <script>
+                    function myOutline() {
+                        var x = document.getElementById("outline");
+                        if (x.style.display === "none") {
+                            x.style.display = "block";
+                        } else {
+                            x.style.display = "none";
+                        }
+                    }
+                </script>
+
+            </div>
+
+        </div> -->
+
+
+        <!--list 1 readings-->
+        <div class="column-reading" style="margin:auto;">
+
+            <!--On this patch of grass-->
+            <div style="background-color:rgba(214, 212, 230, 0.075)">
+                <a name="on-this-patch-of-grass" id="on-this-patch-of-grass"></a>
+                <br>
+               <p style="font-size: 14px; line-height: 1.5; font-family: Calibri, sans-serif;"> Couture, Daisy, Matt Hern, Selena Couture, et al. 2018. On <i>This Patch of Grass: City Parks on Occupied Land.</i> Fernwood Publishing Company, Ltd.</p>
+
+              
+            </div>
+
+            <br>
+
+             <!--the surrounds-->
+            <div>
+                <a name="the-surrounds" id="the-surrounds"></a>
+                <br>
+
+
+            </div>
+
+             <br>
+
+             <!--seeing like a city -->
+            <div>
+                <a name="seeing-like-a-city" id="seeing-like-a-city"></a>
+                <br>
+
+
+            </div>
+
+             <!--metropolis-->
+            <div>
+                <a name="metropolis" id="metropolis"></a>
+                <br>
+
+
+            </div>
+
+
+             <!--lively-cities-->
+            <div>
+                <a name="lively-cities" id="lively-cities"></a>
+                <br>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <br><br><br>
+
+
+    <footer>
+        <a class="footer" href="https://github.com/negative-spaces/the-middle-of-things/blob/main/readings.html"
+            target="_blank">CODE_SIDE </a>
+    </footer>
+
+</body>
+
+</html>
