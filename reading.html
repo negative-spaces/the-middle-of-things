@@ -13,11 +13,11 @@
                 flex: 55%;
                 max-width: 55%;
                 padding: 0 10px;
-        
+
             }
         }
 
-   
+
         @media screen and (max-width: 1000px) {
             div.column-reading {
                 -ms-flex: 70%;
@@ -28,7 +28,7 @@
             }
         }
 
-      
+
         @media screen and (max-width: 700px) {
             div.column-reading {
                 -ms-flex: 100%;
@@ -39,13 +39,13 @@
             }
         }
 
-    
+
         div.column0 {
             -ms-flex: 25%;
             flex: 20%;
             max-width: 25%;
             padding: 0 0px;
-            background-color:rgba(171, 171, 175, 0.086);
+            background-color: rgba(171, 171, 175, 0.086);
         }
 
 
@@ -58,18 +58,16 @@
                 padding: 0 0px;
             }
         }
+
+
     </style>
 
-    <!--text-->
-    <style>
-        .p {
-            font-size: 14px; 
-            line-height: 1; 
-            font-family: Calibri, sans-serif;
-        }
-    </style>
 
+
+    
   
+
+
 </head>
 
 
@@ -77,28 +75,30 @@
     <a name="reading-top" id="reading-top"></a>
 
     <!--new nav bar-->
-   <div class="navbar" id="myHeader">
-      
-        <a href="./index.html">&#x25C2&#x25C2 index &nbsp;&nbsp;&nbsp;</a>
-       
-        <div class="subnav">
-            <button class="subnavbtn">Reading&#9662</button>
-            <div class="subnav-content">
-                <a href="">Tactics</a>
-                <a href="./reading.html">Notes</a>
-                <a href="./lists.html">Lists</a>
-            </div>
-        </div>
-        <div class="subnav">
-            <button class="subnavbtn">Material/Forms&#9662</button>
-            <div class="subnav-content">
-                <a href="./material-forms/paper-horns.html">paper-horns</a>
-                <a href="./material-forms/dressing.html">dressing</a>
-                <a href="./material-forms/creatures.html">creatures</a>
+    <div id="myHeader" style="padding: 0px 0px 0px 0px">
+        <!--header has to be in overarching div so that drop down appears on scroll, but padding set to zero so there isnt a sliver of page seen at the top because 2 divs-->
+        <div class="navbar">
 
+            <a href="./index.html">&#x25C2&#x25C2 index &nbsp;&nbsp;&nbsp;</a>
+
+            <div class="subnav">
+                <button class="subnavbtn">Reading&#9662&nbsp;</button>
+                <div class="subnav-content">
+                    <a href="">Tactics</a>
+                    <a href="./reading.html">Notes</a>
+                    <a href="./lists.html">Lists</a>
+                </div>
             </div>
-        </div>
-        <!-- <div class="subnav">
+            <div class="subnav">
+                <button class="subnavbtn">Material/Forms&#9662</button>
+                <div class="subnav-content">
+                    <a href="./material-forms/paper-horns.html">paper-horns</a>
+                    <a href="./material-forms/dressing.html">dressing</a>
+                    <a href="./material-forms/creatures.html">creatures</a>
+
+                </div>
+            </div>
+            <!-- <div class="subnav">
             <button class="subnavbtn">example&#9662</button>
             <div class="subnav-content">
                 <a href="#link1">Link 1</a>
@@ -107,50 +107,32 @@
                 <a href="#link4">Link 4</a>
             </div>
         </div> -->
-        <a href="./what-the-work-can-do.html">what-the-work-can-do</a>
-        <a href="./thinking-through-practice.html">thinking-through-practice</a>
-        <a href="./iterative-proposals.html">proposals</a>
-         <a href="./questions.html">questions</a>
-    
+            <a href="./what-the-work-can-do.html">what-the-work-can-do</a>
+            <a href="./thinking-through-practice.html">thinking-through-practice</a>
+            <a href="./iterative-proposals.html">proposals</a>
+            <a href="./questions.html">questions</a>
 
-    <script>
-            window.onscroll = function () { myFunction() };
+            <script>
+                window.onscroll = function () { myFunction() };
 
-            var header = document.getElementById("myHeader");
-            var sticky = header.offsetTop;
+                var header = document.getElementById("myHeader");
+                var sticky = header.offsetTop;
 
-            function myFunction() {
-                if (window.pageYOffset > sticky) {
-                    header.classList.add("sticky");
-                } else {
-                    header.classList.remove("sticky");
+                function myFunction() {
+                    if (window.pageYOffset > sticky) {
+                        header.classList.add("sticky");
+                    } else {
+                        header.classList.remove("sticky");
+                    }
                 }
-            }
-    </script>
+            </script>
+        </div>
+
+
 
     </div>
 
-<!--old header nav-->
-        <!-- <div class="header" id="myHeader">
-            <a class="header" href="./index.html">navigate elsewhere>></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            <a class="header" href="./index.html">index</a>
-            &nbsp&nbsp
-             <a class="header" href="./what-the-work-can-do.html">what-the-work-can-do</a>
-            &nbsp
-            <a class="header" href="./questions.html">questions</a>
-            &nbsp
-            <a class="header" href="./thinking-through-practice.html">thinking-through-practice</a>&nbsp&nbsp&nbsp&nbsp
-            <a class="header" href="./iterative-proposals.html">iterative proposals</a>
-            &nbsp&nbsp&nbsp
-            <a class="header" href="./lists.html">lists</a>&nbsp&nbsp
-           
-        </div> -->
-
-       
-
-<!--BANNER IMAGE-->
-<!-- <img src="./sitations/readings/tabs.jpg" style="width:100%"> -->
-<br>
+    <br>
 
     <!--PAGE CONTENTS-->
     <div class="row">
@@ -201,51 +183,59 @@
 
 
         <!--list 1 readings-->
-        <div class="column-reading" style="margin:auto;">
+        <div class="column-reading" style="margin:auto; font-size: 14px; line-height: 1.5; font-family: Calibri, sans-serif;  font-weight:200; text-align:left; letter-spacing: 0.16mm;
+  text-justify: inter-word;">
 
             <!--On this patch of grass-->
             <div style="background-color:rgba(214, 212, 230, 0.075)">
                 <a name="on-this-patch-of-grass" id="on-this-patch-of-grass"></a>
                 <br>
-               <p style="font-size: 14px; line-height: 1.5; font-family: Calibri, sans-serif;"> Couture, Daisy, Matt Hern, Selena Couture, et al. 2018. On <i>This Patch of Grass: City Parks on Occupied Land.</i> Fernwood Publishing Company, Ltd.</p>
+               Couture, Daisy, Matt
+                    Hern, Selena Couture, et al. 2018. On <i>This Patch of Grass: City Parks on Occupied Land.</i>
+                    Fernwood Publishing Company, Ltd.
 
-              
+
             </div>
 
             <br>
 
-             <!--the surrounds-->
+            <!--the surrounds-->
             <div>
                 <a name="the-surrounds" id="the-surrounds"></a>
                 <br>
+                Simone, AbdouMaliq. 2022. <i>The Surrounds: Urban Life within and beyond Capture
+                </i>. Duke University Press.
 
-
+<br><br>
             </div>
 
-             <br>
+            
 
-             <!--seeing like a city -->
+            <!--seeing like a city -->
             <div>
                 <a name="seeing-like-a-city" id="seeing-like-a-city"></a>
                 <br>
+                Amin, Ash, and N. J. Thrift. 2017. <i>Seeing like a City</i>. Polity Press.
 
-
+                <br><br>
             </div>
 
-             <!--metropolis-->
+            <!--metropolis-->
             <div>
                 <a name="metropolis" id="metropolis"></a>
                 <br>
-
+               
+                Gordillo, Gastón. 2019. “The Metropolis: The Infrastructure of the Anthropocene.” <i>In Infrastructure, Environment, and Life in the Anthropocene</i>, edited by Kregg Hetherington. Duke University Press. 
+            <br> <br>
 
             </div>
 
 
-             <!--lively-cities-->
+            <!--lively-cities-->
             <div>
                 <a name="lively-cities" id="lively-cities"></a>
                 <br>
-
+                Barua, Maan. 2023. <i>Lively Cities: Reconfiguring Urban Ecology</i>. University of Minnesota Press.
 
             </div>
 
