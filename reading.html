@@ -76,12 +76,9 @@
 <body>
     <a name="reading-top" id="reading-top"></a>
 
-
-    <!--new header nav -->
-
-
-    <div id="myHeader"> 
-    <div class="navbar">
+    <!--new nav bar-->
+   <div class="navbar" id="myHeader">
+      
         <a href="./index.html">&#x25C2&#x25C2 index &nbsp;&nbsp;&nbsp;</a>
        
         <div class="subnav">
@@ -95,9 +92,9 @@
         <div class="subnav">
             <button class="subnavbtn">Material/Forms&#9662</button>
             <div class="subnav-content">
-                <a href=".//material-forms/paper-horns">paper-horns</a>
-                <a href="./material-forms/dressing">dressing</a>
-                <a href=".//material-forms/peppermint">paper-horns</a>
+                <a href="./material-forms/paper-horns.html">paper-horns</a>
+                <a href="./material-forms/dressing.html">dressing</a>
+                <a href="./material-forms/creatures.html">creatures</a>
 
             </div>
         </div>
@@ -114,9 +111,24 @@
         <a href="./thinking-through-practice.html">thinking-through-practice</a>
         <a href="./iterative-proposals.html">proposals</a>
          <a href="./questions.html">questions</a>
-    </div>
-    </div>
+    
 
+    <script>
+            window.onscroll = function () { myFunction() };
+
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
+    </script>
+
+    </div>
 
 <!--old header nav-->
         <!-- <div class="header" id="myHeader">
@@ -134,20 +146,7 @@
            
         </div> -->
 
-        <script>
-            window.onscroll = function () { myFunction() };
-
-            var header = document.getElementById("myHeader");
-            var sticky = header.offsetTop;
-
-            function myFunction() {
-                if (window.pageYOffset > sticky) {
-                    header.classList.add("sticky");
-                } else {
-                    header.classList.remove("sticky");
-                }
-            }
-        </script>
+       
 
 <!--BANNER IMAGE-->
 <!-- <img src="./sitations/readings/tabs.jpg" style="width:100%"> -->
