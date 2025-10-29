@@ -432,7 +432,7 @@ a.header:hover {
             font-size: 16px;
             color: white;
             text-align: center;
-            padding: 5px 2px;
+            padding: 3px 2px;
             text-decoration: none;
             margin: 2px 0px 0px 15px;
             /* margin: 5px; */
@@ -448,11 +448,11 @@ a.header:hover {
         .subnav .subnavbtn {
             font-size: 16px;
             color: white;
-            padding: 5px 2px;
+            padding: 3px 2px;
             background-color: inherit;
             font-family: inherit;
             margin: 2px;
-            
+            margin: 2px 0px 0px 15px;
             /* margin: 5px; */
             /* border: 1px solid #dfdfdfde; */
              border: none;
@@ -480,6 +480,7 @@ a.header:hover {
             float: right;
             margin-right:3px;
             color: white;
+            padding: 5px;
             text-decoration: none;
             border: none;
             background-color: #af43ee;
