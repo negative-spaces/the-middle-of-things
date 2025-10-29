@@ -434,8 +434,9 @@ a.header:hover {
             text-align: center;
             padding: 5px 2px;
             text-decoration: none;
-            margin: 5px;
-            border: 1px solid #dfdfdfde;
+            margin: 2px 0px 0px 15px;
+            /* margin: 5px; */
+            /* border: 1px solid #dfdfdfde; */
 
         }
 
@@ -450,8 +451,12 @@ a.header:hover {
             padding: 5px 2px;
             background-color: inherit;
             font-family: inherit;
-            margin: 5px;
-            border: 1px solid #dfdfdfde;
+            margin: 2px;
+            
+            /* margin: 5px; */
+            /* border: 1px solid #dfdfdfde; */
+             border: none;
+             /*added border none and decreased this and the above margins and commented out border; also increased padding */
         }
 
         .navbar a:hover,
@@ -465,17 +470,20 @@ a.header:hover {
             position:absolute;
             left: 0;
             background-color: #af43ee;
-            width: 100%;
-            z-index: 1;
+            width: 99%;
+            margin-left:.5%;
+             margin-right:.5%;
+            /* z-index: 1; */
         }
 
         .subnav-content a {
             float: right;
+            margin-right:3px;
             color: white;
             text-decoration: none;
             border: none;
-        
             background-color: #af43ee;
+        
         }
 
         .subnav-content a:hover {
