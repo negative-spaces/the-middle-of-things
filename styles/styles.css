@@ -124,6 +124,8 @@ div.column0 {
   }
 }
 
+
+
 /*asides column*/
 div.column3 {
   -ms-flex: 27%;
@@ -413,3 +415,75 @@ a.header:hover {
   background-color: rgba(241, 251, 109, 0.599);
  
 }
+
+
+/*drop down menu styling*/
+/*modified from https://www.w3schools.com/howto/howto_css_subnav.asp*/
+ .navbar {
+            font-family: "Courier New", Courier, monospace;
+            overflow: hidden;
+            background-color: #ee43eb;
+            width: 100%;
+
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 5px 2px;
+            text-decoration: none;
+            margin: 5px;
+            border: 1px solid #dfdfdfde;
+
+        }
+
+        .subnav {
+            float: right;
+            overflow: hidden;
+        }
+
+        .subnav .subnavbtn {
+            font-size: 16px;
+            color: white;
+            padding: 5px 2px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 5px;
+            border: 1px solid #dfdfdfde;
+        }
+
+        .navbar a:hover,
+        .subnav:hover .subnavbtn {
+            background-color: #af43ee;
+            border: none;
+        }
+
+        .subnav-content {
+            display: none;
+            position:absolute;
+            left: 0;
+            background-color: #af43ee;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .subnav-content a {
+            float: right;
+            color: white;
+            text-decoration: none;
+            border: none;
+        
+            background-color: #af43ee;
+        }
+
+        .subnav-content a:hover {
+            background-color: #756B7D;
+            color: white;
+            border: none;
+        }
+
+        .subnav:hover .subnav-content {
+            display: block;
+        }
