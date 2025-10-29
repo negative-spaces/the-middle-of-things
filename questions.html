@@ -69,24 +69,45 @@
 
 <body>
 
-    <!--header nav-->
+   <!--new nav bar-->
+   <div id="myHeader" style="padding: 0px 0px 0px 0px">
+    <!--header has to be in overarching div so that drop down appears on scroll, but padding set to zero so there isnt a sliver of page seen at the top because 2 divs-->
+   <div class="navbar">
+    
+        <a href="./index.html">&#x25C2&#x25C2 index &nbsp;&nbsp;&nbsp;</a>
+       
+        <div class="subnav">
+            <button class="subnavbtn">Reading&#9662</button>
+            <div class="subnav-content">
+                <a href="">Tactics</a>
+                <a href="./reading.html">Notes</a>
+                <a href="./lists.html">Lists</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Material/Forms&#9662</button>
+            <div class="subnav-content">
+                <a href="./material-forms/paper-horns.html">paper-horns</a>
+                <a href="./material-forms/dressing.html">dressing</a>
+                <a href="./material-forms/creatures.html">creatures</a>
 
-    <div class="header" id="myHeader">
-        <a class="header" href="./index.html">navigate elsewhere>></a>&nbsp&nbsp&nbsp&nbsp&nbsp
-        <a class="header" href="./index.html">index</a>
-        &nbsp&nbsp&nbsp
-        <a class="header" href="./what-the-work-can-do.html">what the work can do</a>
-        &nbsp&nbsp&nbsp
-        <a class="header" href="./thinking-through-practice.html">thinking-through-practice</a>&nbsp&nbsp&nbsp&nbsp
-        <a class="header" href="./iterative-proposals.html">iterative proposals</a>
-        &nbsp&nbsp&nbsp
-        <a class="header" href="./lists.html">lists</a>&nbsp&nbsp&nbsp
-        <a class="header" href="./drift.html">drift</a>&nbsp&nbsp&nbsp&nbsp
-
-
-
-        <!--script for sticky header-->
-        <script>
+            </div>
+        </div>
+        <!-- <div class="subnav">
+            <button class="subnavbtn">example&#9662</button>
+            <div class="subnav-content">
+                <a href="#link1">Link 1</a>
+                <a href="#link2">Link 2</a>
+                <a href="#link3">Link 3</a>
+                <a href="#link4">Link 4</a>
+            </div>
+        </div> -->
+        <a href="./what-the-work-can-do.html">what-the-work-can-do</a>
+        <a href="./thinking-through-practice.html">thinking-through-practice</a>
+        <a href="./iterative-proposals.html">proposals</a>
+         <a href="./questions.html">questions</a>
+    
+         <script>
             window.onscroll = function () { myFunction() };
 
             var header = document.getElementById("myHeader");
@@ -99,11 +120,13 @@
                     header.classList.remove("sticky");
                 }
             }
-        </script>
-
-
-
+    </script>
     </div>
+
+     
+
+</div>
+
 
     <!--BANNER IMAGE-->
     <!-- <img src="./sitations/dressing/bodycon-dress-444.JPG" style="width:100%; position:sticky"> -->
@@ -302,7 +325,7 @@
                     georeferenced, or vectorized? In other words, how might the effect of interferences be marked while
                     accounting for the apparatus of their production?
                 </p>
-            <!-- </div> -->
+           
 
         </div>
 
