@@ -1,0 +1,704 @@
+
+<head>
+    <title>dressing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+
+
+    <!--styling for sitation decks-->
+    <style>
+        img {
+            vertical-align: middle;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+            position: relative;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+            cursor: arrow;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            background-color: #23181536;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.1s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+
+
+        /* Next & previous buttons for gardens */
+        .prev4,
+        .next4 {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            background-color: #39473b;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.1s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next4 {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev4:hover,
+        .next4:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+
+        /* Fading animation */
+        .fade {
+            animation-name: none;
+            /* animation-duration: 1.5s; */
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* Caption text */
+        .capt-text {
+            color: #3a3330;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+            padding: 2px 2px;
+            position: absolute;
+            bottom: 1px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+
+        /* EACH SUBSEQUENT SLIDE DECK MUST BE DECLARED A NEW VARIABLE, AND SLIDE INDEX RENAMED AS WELL.  */
+        .mySlides1 {
+            display: none;
+        }
+
+        .mySlides2 {
+            display: none;
+        }
+
+
+        .mySlides3 {
+            display: none;
+        }
+
+        .mySlides4 {
+            display: none;
+        }
+
+        .mySlides5 {
+            display: none;
+        }
+
+        .mySlides6 {
+            display: none;
+        }
+
+        .mySlides7 {
+            display: none;
+        }
+
+        .mySlides10 {
+            display: none;
+        }
+
+        .mySlides11 {
+            display: none;
+        }
+
+        .mySlides12 {
+            display: none;
+        }
+
+        .mySlides13 {
+            display: none;
+        }
+
+        .mySlides14 {
+            display: none;
+        }
+
+        .mySlides15 {
+            display: none;
+        }
+
+
+
+
+        .slideshow-container1 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container2 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container3 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container4 {
+            max-width: 90%;
+            position: relative;
+            margin: auto;
+        }
+
+
+        .slideshow-container5 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container6 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container7 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        /*9 8 and 7 can still be claimed*/
+
+        .slideshow-container10 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container11 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container12 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+
+        .slideshow-container13 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container14 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container15 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        /* The dots/bullets/indicators */
+        /* create new unique dot for each new sitation deck */
+        .dot1 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .dot2 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .dot3 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .dot4 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .dot5 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .dot6 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .dot7 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .dot10 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .dot11 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .dot12 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .dot13 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .dot14 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .dot15 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+
+        .active,
+        .dot1:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot2:hover {
+            background-color: #717171;
+        }
+
+
+        .active,
+        .dot3:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot4:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot5:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot6:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot7:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot10:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot11:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot12:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot13:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot14:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot15:hover {
+            background-color: #717171;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+       <!--new nav bar-->
+    <div id="myHeader" style="padding: 0px 0px 0px 0px">
+        <!--header has to be in overarching div so that drop down appears on scroll, but padding set to zero so there isnt a sliver of page seen at the top because 2 divs-->
+        <div class="navbar">
+
+            <a href="../index.html">&#x25C2&#x25C2 index &nbsp;&nbsp;&nbsp;</a>
+
+            <div class="subnav">
+                <button class="subnavbtn">Reading&#9662&nbsp;</button>
+                <div class="subnav-content">
+                    <a href="">Tactics</a>
+                    <a href="../reading.html">Notes</a>
+                    <a href="../lists.html">Lists</a>
+                </div>
+            </div>
+            <div class="subnav">
+                <button class="subnavbtn">Material/Forms&#9662</button>
+                <div class="subnav-content">
+                    <a href="./paper-horns.html">paper-horns</a>
+                    <a href="./dressing.html">dressing</a>
+                    <a href="./creatures.html">creatures</a>
+
+                </div>
+            </div>
+            <!-- <div class="subnav">
+            <button class="subnavbtn">example&#9662</button>
+            <div class="subnav-content">
+                <a href="#link1">Link 1</a>
+                <a href="#link2">Link 2</a>
+                <a href="#link3">Link 3</a>
+                <a href="#link4">Link 4</a>
+            </div>
+        </div> -->
+            <a href="../what-the-work-can-do.html">what-the-work-can-do</a>
+            <a href="../thinking-through-practice.html">thinking-through-practice</a>
+            <a href="../iterative-proposals.html">proposals</a>
+            <a href="../questions.html">questions</a>
+
+            <script>
+                window.onscroll = function () { myFunction() };
+
+                var header = document.getElementById("myHeader");
+                var sticky = header.offsetTop;
+
+                function myFunction() {
+                    if (window.pageYOffset > sticky) {
+                        header.classList.add("sticky");
+                    } else {
+                        header.classList.remove("sticky");
+                    }
+                }
+            </script>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+   <br><br><br>
+      <!--sitation deck PEPPERMINT PIG--> 
+       <div class="column1" style="margin:auto;">
+          <div class="slideshow-container7">
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">1 / 15</div>
+              <img src="../sitations/sewing/peppermint1.jpg" style="width:100%">
+            </div>
+
+           <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">2 / 15</div>
+              <img src="../sitations/sewing/peppermint2.jpg" style="width:100%">
+            </div>
+
+
+           <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">3 / 15</div>
+              <img src="../sitations/sewing/peppermint3.jpg" style="width:100%">
+            </div>
+
+           <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">4 / 15</div>
+              <img src="../sitations/sewing/peppermint4.jpg" style="width:100%">
+            </div>
+
+           <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">5 / 15</div>
+              <img src="../sitations/sewing/peppermint5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">6 / 15</div>
+              <img src="../sitations/sewing/peppermint6.jpg" style="width:100%">
+            </div>
+
+           
+
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">7 / 15</div>
+              <img src="../sitations/sewing/peppermint7.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">8 / 15</div>
+              <img src="../sitations/sewing/peppermint8.jpg" style="width:100%">
+            </div>
+
+           <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">9 / 15</div>
+              <img src="../sitations/sewing/peppermint9.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">10 / 15</div>
+              <img src="../sitations/sewing/peppermint10.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">11 / 15</div>
+              <img src="../sitations/sewing/peppermint11.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">12 / 15</div>
+              <img src="../sitations/sewing/peppermint12.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">13 / 15</div>
+              <img src="../sitations/sewing/peppermint13.jpg" style="width:100%">
+            </div>
+
+           <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">14 / 15</div>
+              <img src="../sitations/sewing/peppermint14.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides7 fade" style="display: none;">
+              <div class="numbertext">15 / 15</div>
+              <img src="../sitations/sewing/peppermint15.jpg" style="width:100%">
+            </div>
+
+           
+            <!--remember to update function name here-->
+            <a class="prev" onclick="plusSlides7(-1)">❮</a>
+            <a class="next" onclick="plusSlides7(1)">❯</a>
+
+          </div>
+          <br>
+
+          <!--dots must be unique class well in css head style for each deck-->
+          <div style="text-align:center">
+            <span class="dot7" onclick="currentSlide(1)"></span>
+            <span class="dot7" onclick="currentSlide(2)"></span>
+            <span class="dot7" onclick="currentSlide(3)"></span>
+            <span class="dot7" onclick="currentSlide(4)"></span>
+            <span class="dot7" onclick="currentSlide(5)"></span>
+            <span class="dot7" onclick="currentSlide(6)"></span>
+            <span class="dot7" onclick="currentSlide(7)"></span>
+            <span class="dot7" onclick="currentSlide(8)"></span>
+            <span class="dot7" onclick="currentSlide(9)"></span>
+            <span class="dot7" onclick="currentSlide(10)"></span>
+            <span class="dot7" onclick="currentSlide(11)"></span>
+            <span class="dot7" onclick="currentSlide(12)"></span>
+            <span class="dot7" onclick="currentSlide(13)"></span>
+            <span class="dot7" onclick="currentSlide(14)"></span>
+            <span class="dot7" onclick="currentSlide(15)"></span>
+
+          </div>
+
+
+          <!--script for purple dress sitation deck-->
+          <!--function names and slidindex variables must be unique-->
+          <script>
+            let slideIndex7 = 1;
+            showSlides7(slideIndex7);
+
+            function plusSlides7(n) {
+              showSlides7(slideIndex7 += n);
+            }
+
+            function currentSlide(n) {
+              showSlides7(slideIndex7 = n);
+            }
+
+            function showSlides7(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides7");
+              let dots = document.getElementsByClassName("dot7");
+              if (n > slides.length) { slideIndex7 = 1 }
+              if (n < 1) { slideIndex7 = slides.length }
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex7 - 1].style.display = "block";
+              dots[slideIndex7 - 1].className += " active";
+            }
+          </script>
+
+        </div>
+
+        <br>
+
+</body>
+
+
+</html>

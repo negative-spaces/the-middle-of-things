@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+
+<head>
+    <title>dressing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+
+
+    <!--styling for sitation decks-->
+    <style>
+        img {
+            vertical-align: middle;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+            position: relative;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+            cursor: arrow;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            background-color: #23181536;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.1s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+
+
+        /* Next & previous buttons for gardens */
+        .prev4,
+        .next4 {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            background-color: #39473b;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.1s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next4 {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev4:hover,
+        .next4:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+
+        /* Fading animation */
+        .fade {
+            animation-name: none;
+            /* animation-duration: 1.5s; */
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* Caption text */
+        .capt-text {
+            color: #3a3330;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+            padding: 2px 2px;
+            position: absolute;
+            bottom: 1px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+
+        /* EACH SUBSEQUENT SLIDE DECK MUST BE DECLARED A NEW VARIABLE, AND SLIDE INDEX RENAMED AS WELL.  */
+        .mySlides1 {
+            display: none;
+        }
+
+        .mySlides2 {
+            display: none;
+        }
+
+
+        .mySlides3 {
+            display: none;
+        }
+
+        .mySlides4 {
+            display: none;
+        }
+
+        .mySlides5 {
+            display: none;
+        }
+
+        .mySlides6 {
+            display: none;
+        }
+
+        .mySlides7 {
+            display: none;
+        }
+
+        .mySlides10 {
+            display: none;
+        }
+
+        .mySlides11 {
+            display: none;
+        }
+
+        .mySlides12 {
+            display: none;
+        }
+
+        .mySlides13 {
+            display: none;
+        }
+
+        .mySlides14 {
+            display: none;
+        }
+
+        .mySlides15 {
+            display: none;
+        }
+
+
+
+
+        .slideshow-container1 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container2 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container3 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container4 {
+            max-width: 90%;
+            position: relative;
+            margin: auto;
+        }
+
+
+        .slideshow-container5 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container6 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container7 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        /*9 8 and 7 can still be claimed*/
+
+        .slideshow-container10 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container11 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container12 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+
+        .slideshow-container13 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container14 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container15 {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        /* The dots/bullets/indicators */
+        /* create new unique dot for each new sitation deck */
+        .dot1 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .dot2 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .dot3 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .dot4 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .dot5 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .dot6 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .dot7 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .dot10 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .dot11 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .dot12 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .dot13 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .dot14 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .dot15 {
+            cursor: pointer;
+            height: 7px;
+            width: 7px;
+            margin: 0 2px;
+            background-color: #585050;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+
+        .active,
+        .dot1:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot2:hover {
+            background-color: #717171;
+        }
+
+
+        .active,
+        .dot3:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot4:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot5:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot6:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot7:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot10:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot11:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot12:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot13:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot14:hover {
+            background-color: #717171;
+        }
+
+        .active,
+        .dot15:hover {
+            background-color: #717171;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+       <!--new nav bar-->
+    <div id="myHeader" style="padding: 0px 0px 0px 0px">
+        <!--header has to be in overarching div so that drop down appears on scroll, but padding set to zero so there isnt a sliver of page seen at the top because 2 divs-->
+        <div class="navbar">
+
+            <a href="../index.html">&#x25C2&#x25C2 index &nbsp;&nbsp;&nbsp;</a>
+
+            <div class="subnav">
+                <button class="subnavbtn">Reading&#9662&nbsp;</button>
+                <div class="subnav-content">
+                    <a href="">Tactics</a>
+                    <a href="../reading.html">Notes</a>
+                    <a href="../lists.html">Lists</a>
+                </div>
+            </div>
+            <div class="subnav">
+                <button class="subnavbtn">Material/Forms&#9662</button>
+                <div class="subnav-content">
+                    <a href="./paper-horns.html">paper-horns</a>
+                    <a href="./dressing.html">dressing</a>
+                    <a href="./creatures.html">creatures</a>
+
+                </div>
+            </div>
+            <!-- <div class="subnav">
+            <button class="subnavbtn">example&#9662</button>
+            <div class="subnav-content">
+                <a href="#link1">Link 1</a>
+                <a href="#link2">Link 2</a>
+                <a href="#link3">Link 3</a>
+                <a href="#link4">Link 4</a>
+            </div>
+        </div> -->
+            <a href="../what-the-work-can-do.html">what-the-work-can-do</a>
+            <a href="../thinking-through-practice.html">thinking-through-practice</a>
+            <a href="../iterative-proposals.html">proposals</a>
+            <a href="../questions.html">questions</a>
+
+            <script>
+                window.onscroll = function () { myFunction() };
+
+                var header = document.getElementById("myHeader");
+                var sticky = header.offsetTop;
+
+                function myFunction() {
+                    if (window.pageYOffset > sticky) {
+                        header.classList.add("sticky");
+                    } else {
+                        header.classList.remove("sticky");
+                    }
+                }
+            </script>
+        </div>
+
+
+
+    </div>
+
+
+      <!--hand sewing-->
+<br><Br>
+
+    <div class="column1" style="margin:auto;">
+
+      "This is what materials do: they teach you how to move them, and how to be moved by them" (Manning 2020, 73).
+      <br><br><br>
+      I don't use patterns. I drape around my body and pin and sew. You have to let the dress become what it will. I'm
+      inspired by Erin Manning's writing on a Japanese designer in Dress Becomes Body chapter of The minor Gesture,
+      though I began hand sewing in this fashion before I encountered this book. (I'll write more on this later)
+
+      <br><br><br><Br>
+
+
+      <!--sitation deck PINK DRESS-->
+      <div>
+
+        <div class="slideshow-container3">
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">1 / 17</div>
+              <img src="../sitations/dressing/pink-dress-0.jpg" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">2 / 17</div>
+              <img src="../sitations/dressing/pink-dress-1.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">3 / 17</div>
+              <img src="../sitations/dressing/pink-dress-2.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">4 / 17</div>
+              <img src="../sitations/dressing/pink-dress-3.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">5 / 17</div>
+              <img src="../sitations/dressing/pink-dress-4.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">6 / 17</div>
+              <img src="../sitations/dressing/pink-dress-5.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">7 / 17</div>
+              <img src="../sitations/dressing/pink-dress-6.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">8 / 17</div>
+              <img src="../sitations/dressing/pink-dress-7.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">9 / 17</div>
+              <img src="../sitations/dressing/pink-dress-8.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">10 / 17</div>
+              <img src="../sitations/dressing/pink-dress-9.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">11 / 17</div>
+              <img src="../sitations/dressing/pink-dress-11.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">12 / 17</div>
+              <img src="../sitations/dressing/pink-dress-10.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">13 / 17</div>
+              <img src="../sitations/dressing/pink-dress-12.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">14 / 17</div>
+              <img src="../sitations/dressing/pink-dress-13.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">15 / 17</div>
+              <img src="../sitations/dressing/pink-dress-14.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">16 / 17</div>
+              <img src="../sitations/dressing/pink-dress-15.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <div class="mySlides3 fade" style="display: none;">
+              <div class="numbertext">17 / 17</div>
+              <img src="../sitations/dressing/pink-dress-16.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <!--remember to update function name here-->
+            <a class="prev" onclick="plusSlides3(-1)">❮</a>
+            <a class="next" onclick="plusSlides3(1)">❯</a>
+
+          </div>
+          <br>
+
+          <!--dots must be unique class well in css head style for each deck-->
+
+          <div style="text-align:center">
+            <span class="dot3" onclick="currentSlide(1)"></span>
+            <span class="dot3" onclick="currentSlide(2)"></span>
+            <span class="dot3" onclick="currentSlide(3)"></span>
+            <span class="dot3" onclick="currentSlide(4)"></span>
+            <span class="dot3" onclick="currentSlide(5)"></span>
+            <span class="dot3" onclick="currentSlide(6)"></span>
+            <span class="dot3" onclick="currentSlide(7)"></span>
+            <span class="dot3" onclick="currentSlide(8)"></span>
+            <span class="dot3" onclick="currentSlide(9)"></span>
+            <span class="dot3" onclick="currentSlide(10)"></span>
+            <span class="dot3" onclick="currentSlide(11)"></span>
+            <span class="dot3" onclick="currentSlide(12)"></span>
+            <span class="dot3" onclick="currentSlide(13)"></span>
+            <span class="dot3" onclick="currentSlide(14)"></span>
+            <span class="dot3" onclick="currentSlide(15)"></span>
+            <span class="dot3" onclick="currentSlide(16)"></span>
+            <span class="dot3" onclick="currentSlide(17)"></span>
+
+
+          </div>
+
+          <div>
+             The above pink dress I made in a day and a half of frenzied sewing for a new years eve event. I sewed 11 hours straight new years eve from 8am to 7pm.
+
+          </div>
+          <!--script for pink dress sitation deck-->
+          <!--function names and slidindex variables must be unique-->
+          <script>
+            let slideIndex3 = 1;
+            showSlides3(slideIndex3);
+
+            function plusSlides3(n) {
+              showSlides3(slideIndex3 += n);
+            }
+
+            function currentSlide(n) {
+              showSlides3(slideIndex3 = n);
+            }
+
+            function showSlides3(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides3");
+              let dots = document.getElementsByClassName("dot3");
+              if (n > slides.length) { slideIndex3 = 1 }
+              if (n < 1) { slideIndex3 = slides.length }
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex3 - 1].style.display = "block";
+              dots[slideIndex3 - 1].className += " active";
+            }
+          </script>
+       
+      
+      </div>
+
+      <br><br><br><br>
+
+      <!--sitation deck PURPLE DRESS--> 
+       <div>
+          <div class="slideshow-container1">
+            <div class="mySlides1 fade" style="display: none;">
+              <div class="numbertext">1 / 17</div>
+              <img src="../sitations/dressing/purple-dress-5.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">2 / 17</div>
+              <img src="../sitations/dressing/purple-dress-3.JPG" style="width:100%">
+            </div>
+
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">3 / 17</div>
+              <img src="../sitations/dressing/purple-dress-6.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">4 / 17</div>
+              <img src="../sitations/dressing/purple-dress-4.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">5 / 17</div>
+              <img src="../sitations/dressing/purple-dress-1.JPG" style="width:100%">
+            </div>
+
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">6 / 17</div>
+              <img src="../sitations/dressing/purple-dress-2.JPG" style="width:100%">
+            </div>
+
+            <!-- <div class="mySlides1 fade">
+                    <div class="numbertext">7 / 17</div>
+                    <img src="../sitations/dressing/purple-dress-7.JPG" style="width:100%">
+                  </div> -->
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">8 / 17</div>
+              <img src="../sitations/dressing/purple-dress-8.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">9 / 17</div>
+              <img src="../sitations/dressing/purple-dress-9.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">10 / 17</div>
+              <img src="../sitations/dressing/purple-dress-10.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">11 / 17</div>
+              <img src="../sitations/dressing/purple-dress-11.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">12 / 17</div>
+              <img src="../sitations/dressing/purple-dress-12.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">13 / 17</div>
+              <img src="../sitations/dressing/purple-dress-13.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">14 / 17</div>
+              <img src="../sitations/dressing/purple-dress-14.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">15 / 17</div>
+              <img src="../sitations/dressing/purple-dress-15.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">16 / 17</div>
+              <img src="../sitations/dressing/purple-dress-16.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">17 / 17</div>
+              <img src="../sitations/dressing/purple-dress-17.JPG" style="width:100%">
+            </div>
+
+            <!--remember to update function name here-->
+            <a class="prev" onclick="plusSlides1(-1)">❮</a>
+            <a class="next" onclick="plusSlides1(1)">❯</a>
+
+          </div>
+          <br>
+
+          <!--dots must be unique class well in css head style for each deck-->
+          <div style="text-align:center">
+            <span class="dot1" onclick="currentSlide(1)"></span>
+            <span class="dot1" onclick="currentSlide(2)"></span>
+            <span class="dot1" onclick="currentSlide(3)"></span>
+            <span class="dot1" onclick="currentSlide(4)"></span>
+            <span class="dot1" onclick="currentSlide(5)"></span>
+            <span class="dot1" onclick="currentSlide(6)"></span>
+            <span class="dot1" onclick="currentSlide(7)"></span>
+            <span class="dot1" onclick="currentSlide(8)"></span>
+            <span class="dot1" onclick="currentSlide(9)"></span>
+            <span class="dot1" onclick="currentSlide(10)"></span>
+            <span class="dot1" onclick="currentSlide(11)"></span>
+            <span class="dot1" onclick="currentSlide(12)"></span>
+            <span class="dot1" onclick="currentSlide(13)"></span>
+            <span class="dot1" onclick="currentSlide(14)"></span>
+            <span class="dot1" onclick="currentSlide(15)"></span>
+            <span class="dot1" onclick="currentSlide(16)"></span>
+            <span class="dot1" onclick="currentSlide(17)"></span>
+
+          </div>
+
+
+          <!--script for purple dress sitation deck-->
+          <!--function names and slidindex variables must be unique-->
+          <script>
+            let slideIndex1 = 1;
+            showSlides1(slideIndex1);
+
+            function plusSlides1(n) {
+              showSlides1(slideIndex1 += n);
+            }
+
+            function currentSlide(n) {
+              showSlides1(slideIndex1 = n);
+            }
+
+            function showSlides1(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides1");
+              let dots = document.getElementsByClassName("dot1");
+              if (n > slides.length) { slideIndex1 = 1 }
+              if (n < 1) { slideIndex1 = slides.length }
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex1 - 1].style.display = "block";
+              dots[slideIndex1 - 1].className += " active";
+            }
+          </script>
+
+        </div>
+   
+  
+
+      <br><br><br>
+      <!--sitation deck PINK EARS-->
+      <div>
+        <div>
+          <div class="slideshow-container2">
+            <div class="mySlides2 fade" style="display: none;">
+              <div class="numbertext">1 / 7</div>
+              <img src="../sitations/dressing/pink-ears-1.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <div class="mySlides2 fade" style="display: none;">
+              <div class="numbertext">2 / 7</div>
+              <img src="../sitations/dressing/pink-ears-2.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides2 fade" style="display: none;">
+              <div class="numbertext">3 / 7</div>
+              <img src="../sitations/dressing/pink-ears-3.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides2 fade" style="display: none;">
+              <div class="numbertext">4 / 7</div>
+              <img src="../sitations/dressing/pink-ears-4.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides2 fade" style="display: none;">
+              <div class="numbertext">5 / 7</div>
+              <img src="../sitations/dressing/pink-ears-5.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides2 fade" style="display: none;">
+              <div class="numbertext">6 / 7</div>
+              <img src="../sitations/dressing/pink-ears-6.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides2 fade" style="display: none;">
+              <div class="numbertext">7 / 7</div>
+              <img src="../sitations/dressing/pink-ears-7.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <!--remember to update function name here-->
+            <a class="prev" onclick="plusSlides2(-1)">❮</a>
+            <a class="next" onclick="plusSlides2(1)">❯</a>
+
+          </div>
+          <br>
+
+          <!--dots must be unique class well in css head style for each deck-->
+          <div style="text-align:center">
+            <span class="dot2" onclick="currentSlide(1)"></span>
+            <span class="dot2" onclick="currentSlide(2)"></span>
+            <span class="dot2" onclick="currentSlide(3)"></span>
+            <span class="dot2" onclick="currentSlide(4)"></span>
+            <span class="dot2" onclick="currentSlide(5)"></span>
+            <span class="dot2" onclick="currentSlide(6)"></span>
+            <span class="dot2" onclick="currentSlide(7)"></span>
+          </div>
+
+
+          <!--script for purple dress sitation deck-->
+          <!--function names and slidindex variables must be unique-->
+          <script>
+            let slideIndex2 = 1;
+            showSlides2(slideIndex2);
+
+            function plusSlides2(n) {
+              showSlides2(slideIndex2 += n);
+            }
+
+            function currentSlide(n) {
+              showSlides2(slideIndex2 = n);
+            }
+
+            function showSlides2(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides2");
+              let dots = document.getElementsByClassName("dot2");
+              if (n > slides.length) { slideIndex2 = 1 }
+              if (n < 1) { slideIndex2 = slides.length }
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex2 - 1].style.display = "block";
+              dots[slideIndex2 - 1].className += " active";
+            }
+          </script>
+
+        </div>
+      </div>
+
+
+
+      <br><br><br><br>
+
+      <!--bodycon dress-->
+      <div>
+        <div>
+          <div class="slideshow-container5">
+            <div class="mySlides5 fade" style="display: none;">
+              <div class="numbertext">1 / 11</div>
+              <img src="../sitations/dressing/bodycon-dress-1.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <div class="mySlides5 fade" style="display: none;">
+              <div class="numbertext">2 / 11</div>
+              <img src="../sitations/dressing/bodycon-dress-2.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides5 fade" style="display: none;">
+              <div class="numbertext">3 / 11</div>
+              <img src="../sitations/dressing/bodycon-dress-3.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides5 fade" style="display: none;">
+              <div class="numbertext">4 / 11</div>
+              <img src="../sitations/dressing/bodycon-dress-4.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides5 fade" style="display: none;">
+              <div class="numbertext">5 / 11</div>
+              <img src="../sitations/dressing/bodycon-dress-5.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides5 fade" style="display: none;">
+              <div class="numbertext">6 / 11</div>
+              <img src="../sitations/dressing/bodycon-dress-6.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides5 fade" style="display: none;">
+              <div class="numbertext">7 / 11</div>
+              <img src="../sitations/dressing/bodycon-dress-7.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides5 fade" style="display: none;">
+              <div class="numbertext">8 / 11</div>
+              <img src="../sitations/dressing/bodycon-dress-8.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides5 fade" style="display: none;">
+              <div class="numbertext">9 / 11</div>
+              <img src="../sitations/dressing/bodycon-dress-9.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides5 fade" style="display: none;">
+              <div class="numbertext">10 / 11</div>
+              <img src="../sitations/dressing/bodycon-dress-10.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides5 fade" style="display: none;">
+              <div class="numbertext">11 / 11</div>
+              <img src="../sitations/dressing/bodycon-dress-11.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <!--remember to update function name here-->
+            <a class="prev4" onclick="plusSlides5(-1)">❮</a>
+            <a class="next4" onclick="plusSlides5(1)">❯</a>
+
+          </div>
+          <br>
+
+          <!--dots must be unique class well in css head style for each deck-->
+          <div style="text-align:center">
+            <span class="dot5" onclick="currentSlide(1)"></span>
+            <span class="dot5" onclick="currentSlide(2)"></span>
+            <span class="dot5" onclick="currentSlide(3)"></span>
+            <span class="dot5" onclick="currentSlide(4)"></span>
+            <span class="dot5" onclick="currentSlide(5)"></span>
+            <span class="dot5" onclick="currentSlide(6)"></span>
+            <span class="dot5" onclick="currentSlide(7)"></span>
+            <span class="dot5" onclick="currentSlide(8)"></span>
+            <span class="dot5" onclick="currentSlide(9)"></span>
+            <span class="dot5" onclick="currentSlide(10)"></span>
+            <span class="dot5" onclick="currentSlide(11)"></span>
+
+
+          </div>
+
+
+          <!--script for purple dress sitation deck-->
+          <!--function names and slidindex variables must be unique-->
+          <script>
+            let slideIndex5 = 1;
+            showSlides5(slideIndex5);
+
+            function plusSlides5(n) {
+              showSlides5(slideIndex5 += n);
+            }
+
+            function currentSlide(n) {
+              showSlides5(slideIndex5 = n);
+            }
+
+            function showSlides5(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides5");
+              let dots = document.getElementsByClassName("dot5");
+              if (n > slides.length) { slideIndex5 = 1 }
+              if (n < 1) { slideIndex5 = slides.length }
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex5 - 1].style.display = "block";
+              dots[slideIndex5 - 1].className += " active";
+            }
+          </script>
+
+        </div>
+        <p>
+
+        </p>
+      </div>
+
+      <br><br><br>
+
+      <!--mesh dress-->
+      <div>
+        <div>
+          <div class="slideshow-container6">
+            <div class="mySlides6 fade" style="display: none;">
+              <div class="numbertext">1 / 5</div>
+              <img src="../sitations/dressing/mesh-dress-1.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+
+            <div class="mySlides6 fade" style="display: none;">
+              <div class="numbertext">2 / 5</div>
+              <img src="../sitations/dressing/mesh-dress-2.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides6 fade" style="display: none;">
+              <div class="numbertext">3 / 5</div>
+              <img src="../sitations/dressing/mesh-dress-3.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides6 fade" style="display: none;">
+              <div class="numbertext">4 / 5</div>
+              <img src="../sitations/dressing/mesh-dress-4.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides6 fade" style="display: none;">
+              <div class="numbertext">5 / 5</div>
+              <img src="../sitations/dressing/mesh-dress-5.JPG" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <!--remember to update function name here-->
+            <a class="prev4" onclick="plusSlides6(-1)">❮</a>
+            <a class="next4" onclick="plusSlides6(1)">❯</a>
+
+          </div>
+          <br>
+
+          <!--dots must be unique class well in css head style for each deck-->
+          <div style="text-align:center">
+            <span class="dot6" onclick="currentSlide(1)"></span>
+            <span class="dot6" onclick="currentSlide(2)"></span>
+            <span class="dot6" onclick="currentSlide(3)"></span>
+            <span class="dot6" onclick="currentSlide(4)"></span>
+            <span class="dot6" onclick="currentSlide(5)"></span>
+          </div>
+
+
+          <!--script for purple dress sitation deck-->
+          <!--function names and slidindex variables must be unique-->
+          <script>
+            let slideIndex6 = 1;
+            showSlides6(slideIndex6);
+
+            function plusSlides6(n) {
+              showSlides6(slideIndex6 += n);
+            }
+
+            function currentSlide(n) {
+              showSlides6(slideIndex6 = n);
+            }
+
+            function showSlides6(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides6");
+              let dots = document.getElementsByClassName("dot6");
+              if (n > slides.length) { slideIndex6 = 1 }
+              if (n < 1) { slideIndex6 = slides.length }
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex6 - 1].style.display = "block";
+              dots[slideIndex6 - 1].className += " active";
+            }
+          </script>
+
+        </div>
+ 
+      </div>
+
+
+
+      <br><Br><br>
+
+
+    </div>
+
+  
+
+
+
+</body>
+
+
+</html>
