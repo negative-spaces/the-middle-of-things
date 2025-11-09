@@ -5,6 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/styles.css">
 
+
+  <!--for index-->
+  <style>
+     div.column0 {
+                -ms-flex: 20%;
+                flex: 20%;
+                max-width: 20%;
+                padding: 0 0px;
+                /* background-color: rgba(171, 171, 175, 0.086); */
+                font-family: Calibri, sans-serif;
+                font-size: 12px;
+                line-height: 2;
+                text-align: left;
+                letter-spacing: 0.16mm;
+                text-justify: inter-word;
+                padding-left: 5px;
+                font-weight:lighter;
+            }
+
+
+            @media screen and (max-width: 700px) {
+                div.column0 {
+                    visibility: hidden;
+                    -ms-flex: 20%;
+                    flex: 20%;
+                    max-width: 0%;
+                    padding: 0 0px;
+            
+                }
+            }
+  </style>
+  
   <!--for tabs-->
   <style>
     .tab {
@@ -677,7 +709,7 @@
       <!-- <button class="tablinks" onclick="openPractice(event, 'resitation')">resitation</button> -->
       <button class="tablinks" onclick="openPractice(event, 'up-my-alley')">up my alley</button>
       <button class="tablinks" onclick="openPractice(event, 'JKGG')">J.K. Gibson-Graham + research-creation</button>
-      <button class="tablinks" onclick="openPractice(event, 'reading-tactics')">reading tactics</button>
+      <!-- <button class="tablinks" onclick="openPractice(event, 'reading-tactics')">reading tactics</button> -->
       <!-- <button class="tablinks" onclick="openPractice(event, 'writing-tactics')">writing tactics</button> -->
       <!-- <button class="tablinks" onclick="openPractice(event, 'digital-by-hand')">made digital by hand</button> -->
       <!-- <button class="tablinks" onclick="openPractice(event, 'paper-horns')">paper horns</button> -->
@@ -1614,18 +1646,11 @@
     <!--CONTENTS-->
     <div class="row">
 
-      <!--page outline-->
-      <div class="column0">
 
-        <div class="sticky" style="top: 22px;">
-          <br><br>
-          <button onclick="myOutline()"
-            style="font-family: 'Courier New', Courier, monospace; font-size:10pt; border-color:#e2dfdf">Show/Hide Page
-            Outline</button>
-
-          <div id="outline1">
-            <span
-              style="font-family: 'Courier New', Courier, monospace; font-size: 10.5pt;  line-height: 1.3; opacity: 0.8;">
+       <!--up my alley outline-->
+       <div class="column0">
+            <br>
+            <div class="sticky"  style="top: 40px;">
               <br>
               <a href="#upe-intro">Orientation</a><br>
               <a href="#upe-walking-the-alley">Walking the Alleyways</a><br>
@@ -1639,29 +1664,13 @@
               <br>
               <br>
               <a href="#thinking-through-practice-top">&#9650&#9650 Top of Page</a><br>
-
-            </span>
-          </div>
-
-          <!--script to show/hide outline -->
-          <script>
-            function myOutline() {
-              var x = document.getElementById("outline1");
-              if (x.style.display === "none") {
-                x.style.display = "block";
-              } else {
-                x.style.display = "none";
-              }
-            };
-          </script>
+            </div>
 
         </div>
 
-      </div>
-
 
       <!--main text-->
-      <div class="column1" style="margin:auto;">
+      <div class="column1" style="margin-left:6%;">
         <p><span style="font-weight:550; padding: 2px; font-size: 18px;">Up
             my alley:
             reading concepts in urban political ecology through practices of urban gleaning</span>
@@ -2521,101 +2530,7 @@
         <br><br><br><br>
       </div>
 
-      <!--asides-->
-      <div class="column3">
-
-        <div class="sticky" style="top: 22px;">
-          <br><br>
-          <button onclick="myAsides()"
-            style="font-family: 'Courier New', Courier, monospace; font-size:11pt; margin-left:49%; border-color:#e2dfdf">Show/Hide
-            Asides</button>
-
-          <div id="asides1">
-
-
-            <!--script to copy paste selected text-->
-            <script language=javascript>
-
-              function getSelText() {
-                var txt = '';
-                if (window.getSelection) {
-                  txt = "'" + window.getSelection() + "'";
-                }
-                else if (document.getSelection) {
-                  txt = "'" + document.getSelection() + "'";
-                }
-                else if (document.selection) {
-                  txt = "'" + document.selection.createRange().text + "'";
-                }
-                else return;
-                document.testform.selectedtext.value = document.testform.selectedtext.value + '\n\n' + txt;
-              }
-
-
-            </script>
-
-            <br>
-
-            <button onmousedown="getSelText()"
-              style="font-family: 'Courier New', Courier, monospace; font-size:11pt; letter-spacing:-0.6pt;"> Take Note;
-              Make Note</button>
-            <form name="testform">
-              <textarea id="selectedtext"
-                placeholder="Highlight a selection of text to the left and click the above button to save it here. Type notes to yourself here as you go. Resize this window as needed."
-                style="width:100%; max-width:100%; height: 200px"></textarea>
-            </form>
-
-            <!--show hide asides-->
-            <script>
-              function myAsides() {
-                var x = document.getElementById("asides1");
-                if (x.style.display === "none") {
-                  x.style.display = "block";
-                } else {
-                  x.style.display = "none";
-                }
-              }
-            </script>
-
-            <!--code for downloading asides to local computer-->
-            <!--source: https://www.geeksforgeeks.org/how-to-trigger-a-file-download-when-clicking-an-html-button-or-javascript/-->
-            <input type="button" id="btn"
-              style="border:none; font-family: 'Courier New', Courier, monospace; font-size:11pt; letter-spacing:-0.6pt;"
-              value="download" />
-
-            <!--download file-->
-            <script>
-              function download(file, text) {
-                var element = document.createElement('a');
-                element.setAttribute('href',
-                  'data:text/plain;charset=utf-8, '
-                  + encodeURIComponent(text));
-                element.setAttribute('download', file);
-                document.body.appendChild(element);
-                element.click();
-                document.body.removeChild(element);
-              }
-
-
-              // Start file download.
-
-              document.getElementById("btn")
-                .addEventListener("click", function () {
-                  var text =
-                    'Notes and quotes from https://negative-spaces.github.io/the-middle-of-things/thinking-through-practice.html' + document.getElementById("selectedtext").value;
-                  var filename = "asides.txt";
-
-                  download(filename, text);
-                }, false);
-            </script>
-
-          </div>
-
-
-
-        </div>
-
-      </div>
+    
 
 
     </div>
@@ -2632,18 +2547,10 @@
     <div class="row">
 
       <!--page outline-->
-      <div class="column0">
+       <div class="column0">
+            <br>
+            <div class="sticky"  style="top: 40px;">
 
-        <div class="sticky" style="top: 22px;">
-          <br><br>
-          <button onclick="myOutline3()"
-            style="font-family: 'Courier New', Courier, monospace; font-size:10pt; border-color:#e2dfdf">Show/Hide Page
-            Outline</button>
-
-          <div id="outline3">
-            <span
-              style="font-family: 'Courier New', Courier, monospace; font-size: 10.5pt;  line-height: 1.3; opacity: 0.8;">
-              <br>
               <a href="#jkgg-intro">Introduction</a><br>
               <a href="#jkgg-thinking-writing-enacting">Thinking, writing, enacting diverse economies</a><br>
               <a href="#jkgg-end-of-capitalism">The End of Capitalism (As We Knew It) (1996)
@@ -2661,28 +2568,16 @@
               <br>
               <br>
               <a href="#thinking-through-practice-top">&#9650&#9650 Top of Page</a><br>
-            </span>
-          </div>
 
-          <!--script to show/hide outline -->
-          <script>
-            function myOutline3() {
-              var x = document.getElementById("outline3");
-              if (x.style.display === "none") {
-                x.style.display = "block";
-              } else {
-                x.style.display = "none";
-              }
-            }
-          </script>
+            </div>
 
         </div>
 
-      </div>
 
+    
 
       <!--main text-->
-      <div class="column1" style="margin:auto;">
+    <div class="column1" style="margin-left:6%;">
         <p><span
             style="font-family:Verdana, Geneva, Tahoma, sans-serif ;font-weight:200px; font-size: 16px; text-align:center;">
             In the middle of things: research-creation, diverse economies, and complicating commodities</span>
@@ -3596,101 +3491,7 @@
       </div>
 
 
-      <!--asides-->
-      <div class="column3">
-        <br>
-        <div class="sticky" style="top: 22px;">
-          <br><br>
-          <button onclick="myAsides2()"
-            style="font-family: 'Courier New', Courier, monospace; font-size:11pt; margin-left:49%; border-color:#e2dfdf">Show/Hide
-            Asides</button>
-
-          <div id="asides2">
-
-
-            <!--script to copy paste selected text-->
-            <script language=javascript>
-
-              function getSelText2() {
-                var txt = '';
-                if (window.getSelection) {
-                  txt = "'" + window.getSelection() + "'";
-                }
-                else if (document.getSelection) {
-                  txt = "'" + document.getSelection() + "'";
-                }
-                else if (document.selection) {
-                  txt = "'" + document.selection.createRange().text + "'";
-                }
-                else return;
-                document.testform.selectedtext.value = document.testform.selectedtext.value + '\n\n' + txt;
-              }
-
-
-            </script>
-
-            <br>
-
-            <button onmousedown="getSelText2()"
-              style="font-family: 'Courier New', Courier, monospace; font-size:11pt; letter-spacing:-0.6pt;"> Take Note;
-              Make Note</button>
-            <form name="testform2">
-              <textarea id="selectedtext2"
-                placeholder="Highlight a selection of text to the left and click the above button to save it here. Type notes to yourself here as you go. Resize this window as needed."
-                style="width:100%; max-width:100%; height: 200px"></textarea>
-            </form>
-
-            <!--show hide asides-->
-            <script>
-              function myAsides2() {
-                var x = document.getElementById("asides2");
-                if (x.style.display === "none") {
-                  x.style.display = "block";
-                } else {
-                  x.style.display = "none";
-                }
-              }
-            </script>
-
-            <!--code for downloading asides to local computer-->
-            <!--source: https://www.geeksforgeeks.org/how-to-trigger-a-file-download-when-clicking-an-html-button-or-javascript/-->
-            <input type="button" id="btn2"
-              style="border:none; font-family: 'Courier New', Courier, monospace; font-size:11pt; letter-spacing:-0.6pt;"
-              value="download" />
-
-            <!--download file-->
-            <script>
-              function download2(file, text) {
-                var element = document.createElement('a');
-                element.setAttribute('href',
-                  'data:text/plain;charset=utf-8, '
-                  + encodeURIComponent(text));
-                element.setAttribute('download2', file);
-                document.body.appendChild(element);
-                element.click();
-                document.body.removeChild(element);
-              }
-
-
-              // Start file download.
-
-              document.getElementById("btn2")
-                .addEventListener("click", function () {
-                  var text =
-                    'Notes and quotes from https://negative-spaces.github.io/the-middle-of-things/thinking-through-practice.html' + document.getElementById("selectedtext2").value;
-                  var filename = "asides.txt";
-
-                  download(filename, text);
-                }, false);
-            </script>
-
-          </div>
-
-
-
-        </div>
-
-      </div>
+     
 
     </div>
 
