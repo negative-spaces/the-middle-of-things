@@ -549,14 +549,15 @@
     </div>
 
 
-      <!--hand sewing-->
-<br><Br>
 
+<br><br>
+
+<!--hand sewing-->
     <div class="column1" style="margin:auto;">
 
       "This is what materials do: they teach you how to move them, and how to be moved by them" (Manning 2020, 73).
       <br><br><br>
-      I don't use patterns. I drape around my body and pin and sew. You have to let the dress become what it will. I'm
+      I don't use patterns. I hand sew. I drape around my body and pin and sew. You have to let the dress become what it will. I'm
       inspired by Erin Manning's writing on a Japanese designer in Dress Becomes Body chapter of The minor Gesture,
       though I began hand sewing in this fashion before I encountered this book. (I'll write more on this later)
 
@@ -1011,6 +1012,9 @@
 
 
 
+      
+     
+
       <br><br><br><br>
 
       <!--bodycon dress-->
@@ -1147,7 +1151,8 @@
         </p>
       </div>
 
-      <br><br><br>
+
+      <br><br><br><br>
 
       <!--mesh dress-->
       <div>
@@ -1238,13 +1243,93 @@
 
 
 
-      <br><Br><br>
+     
+
+         <br><br><br><br>
+        <!--crochet vest-->
+      <div>
+        <div>
+          <div class="slideshow-container4">
+            <div class="mySlides4 fade" style="display: none;">
+              <div class="numbertext">1 / 3</div>
+              <img src="../sitations/dressing/tradvest1.jpg" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
 
 
+            <div class="mySlides4 fade" style="display: none;">
+              <div class="numbertext">2 / 3</div>
+              <img src="../sitations/dressing/tradvest2.jpg" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+            <div class="mySlides4 fade" style="display: none;">
+              <div class="numbertext">3 / 3</div>
+              <img src="../sitations/dressing/tradvest3.jpg" style="width:100%">
+              <!--<div class="capt-text">Caption Text</div>-->
+            </div>
+
+          
+            <!--remember to update function name here-->
+            <a class="prev4" onclick="plusSlides4(-1)">❮</a>
+            <a class="next4" onclick="plusSlides4(1)">❯</a>
+
+          </div>
+          <br>
+
+          <!--dots must be unique class well in css head style for each deck-->
+          <div style="text-align:center">
+            <span class="dot4" onclick="currentSlide(1)"></span>
+            <span class="dot4" onclick="currentSlide(2)"></span>
+            <span class="dot4" onclick="currentSlide(3)"></span>
+
+          </div>
+
+
+          <!--script for purple dress sitation deck-->
+          <!--function names and slidindex variables must be unique-->
+          <script>
+            let slideIndex4 = 1;
+            showSlides4(slideIndex4);
+
+            function plusSlides4(n) {
+              showSlides4(slideIndex4 += n);
+            }
+
+            function currentSlide(n) {
+              showSlides4(slideIndex4 = n);
+            }
+
+            function showSlides4(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides4");
+              let dots = document.getElementsByClassName("dot4");
+              if (n > slides.length) { slideIndex4 = 1 }
+              if (n < 1) { slideIndex4 = slides.length }
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex4 - 1].style.display = "block";
+              dots[slideIndex4 - 1].className += " active";
+            }
+          </script>
+
+        </div>
+ 
+      </div>
+
+       <br><br><br><br>
     </div>
 
   
 
+<footer>
+        <a class="footer" href="https://github.com/negative-spaces/the-middle-of-things/blob/main/material-forms/dressing.html"
+            target="_blank">CODE_SIDE </a>
+    </footer>
 
 
 </body>
