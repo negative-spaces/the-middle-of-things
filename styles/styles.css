@@ -56,21 +56,22 @@ p {
     -ms-flex: 55%;
     flex: 55%;
     max-width: 55%;
-    padding: 0 10px;
-    margin-left: 3%;
+    padding: 0 5px 5px;
+  
   }
 }
 
 /*main column takes full page width for NARROW display*/
-@media screen and (max-width: 1000px) {
-  div.column1 {
-    -ms-flex: 70%;
-    flex: 70%;
-    max-width: 70%;
-    padding: 0 2px;
-    margin: auto;
-  }
-}
+ @media screen and (max-width: 1000px) {
+            div.column-reading {
+                -ms-flex: 70%;
+                flex: 70%;
+                max-width: 70%;
+                padding: 0 2px;
+                margin: auto;
+            }
+        }
+
 
 /*main column takes full page width for NARROW display*/
 @media screen and (max-width: 700px) {
@@ -78,8 +79,8 @@ p {
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
-    padding: 0 2px;
-    margin: auto;
+    padding: 0 2px 2px;
+    /* margin: auto; */
   }
 }
 
@@ -111,6 +112,7 @@ div.column0 {
   flex: 20%;
   max-width: 20%;
   padding: 0 0px;
+  
 }
 
 /*page contents menu disappears for NARROW screen  display*/
@@ -151,12 +153,7 @@ div.sticky {
   padding: 1px;
 }
 
-div.sticky2 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  padding: 1px;
-}
+
 
 /* FOR ACCORDIAN */
 .accordion {
@@ -401,13 +398,29 @@ a.header:hover {
   padding: 5px 5px 5px 5px;
 }
 
-.highlight-light-purple {
+/*HIGHLIGHTING */
+/* .highlight-light-purple {
   background-color: rgba(199, 139, 255, 0.199);
 }
 
 .highlight-yellow {
   background-color: rgba(241, 251, 109, 0.599);
+} */
+
+.crayon-purple {
+  background-color:rgba(199, 170, 248, 0.482)
 }
+
+.crayon-yellow {
+  background-color:rgba(246, 248, 170, 0.599)
+}
+
+.crayon-pink {
+  background-color:rgba(247, 170, 248, 0.482)
+}
+/* .crayon-orange{
+
+} */
 
 
 
@@ -475,7 +488,7 @@ a.header:hover {
             width: 99%;
             margin-left:.5%;
              margin-right:.5%;
-            /* z-index: 1; */
+            z-index: 1;
         }
 
         .subnav-content a {
@@ -486,15 +499,20 @@ a.header:hover {
             text-decoration: none;
             border: none;
             background-color: #af43ee;
-        
+       
         }
 
         .subnav-content a:hover {
             background-color: #756B7D;
             color: white;
             border: none;
+            z-index: 1;
         }
 
         .subnav:hover .subnav-content {
-            display: block;
+            display:block;
+            z-index: 1;
+            position:absolute;
+            
+            
         }
