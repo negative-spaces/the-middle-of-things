@@ -416,8 +416,20 @@ a.header:hover {
 }
 
 .crayon-pink {
-  background-color:rgba(247, 170, 248, 0.482)
+  background-color:rgba(247, 170, 248, 0.394)
 }
+/* .crayon-pink {
+  background-color:rgba(247, 170, 248, 0.482)
+} */
+
+.crayon-teal {
+  background-color:rgba(189, 228, 236, 0.482)
+}
+
+.crayon-orange {
+  background-color:rgba(254, 183, 150, 0.27)
+}
+
 /* .crayon-orange{
 
 } */
