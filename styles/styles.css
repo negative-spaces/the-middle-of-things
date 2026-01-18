@@ -10,6 +10,14 @@ p {
   text-justify: inter-word;
 }
 
+
+/*default body without paragraph specified*/
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+
+
 /*text styling for NARROW phone screen*/
 @media screen and (max-width: 600px) {
   p {
