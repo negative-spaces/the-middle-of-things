@@ -20,20 +20,52 @@ p {
   }
 }
 
-/* block quote */
+/* options for block quotes */
 .quote {
   display: block;
-  margin-left: 20%;
+  margin-left: 15%;
   line-height: 1.4;
+  /* padding-left:70px; */
 }
 
-/*commonplace quote*/
-/* block quote */
-.commquote {
+.block {
   display: block;
-  margin-left: 2%;
-  margin-right: 6%;
-  line-height: 1.4;
+  padding-left: 50px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  /* line-height: 1.3; */
+}
+
+/*code */
+code {
+  background: #d9f2fb54;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.2rem;
+  font-size: 10pt;
+}
+
+/*HIGHLIGHTING */
+.crayon-purple {
+  background-color: rgba(199, 170, 248, 0.482);
+}
+
+.crayon-yellow {
+  background-color: rgba(246, 248, 170, 0.599);
+}
+
+.crayon-pink {
+  background-color: rgba(247, 170, 248, 0.394);
+}
+/* .crayon-pink {
+  background-color:rgba(247, 170, 248, 0.482)
+} */
+
+.crayon-teal {
+  background-color: rgba(189, 228, 236, 0.482);
+}
+
+.crayon-orange {
+  background-color: rgba(254, 183, 150, 0.27);
 }
 
 /*RESPONSIVE PAGE ARCHITECTURE*/
@@ -57,21 +89,19 @@ p {
     flex: 55%;
     max-width: 55%;
     padding: 0 5px 5px;
-  
   }
 }
 
 /*main column takes full page width for NARROW display*/
- @media screen and (max-width: 1000px) {
-            div.column-reading {
-                -ms-flex: 70%;
-                flex: 70%;
-                max-width: 70%;
-                padding: 0 2px;
-                margin: auto;
-            }
-        }
-
+@media screen and (max-width: 1000px) {
+  div.column-reading {
+    -ms-flex: 70%;
+    flex: 70%;
+    max-width: 70%;
+    padding: 0 2px;
+    margin: auto;
+  }
+}
 
 /*main column takes full page width for NARROW display*/
 @media screen and (max-width: 700px) {
@@ -112,7 +142,6 @@ div.column0 {
   flex: 20%;
   max-width: 20%;
   padding: 0 0px;
-  
 }
 
 /*page contents menu disappears for NARROW screen  display*/
@@ -125,8 +154,6 @@ div.column0 {
     padding: 0 0px;
   }
 }
-
-
 
 /*asides column*/
 div.column3 {
@@ -152,8 +179,6 @@ div.sticky {
   top: 0;
   padding: 1px;
 }
-
-
 
 /* FOR ACCORDIAN */
 .accordion {
@@ -183,14 +208,6 @@ div.sticky {
   overflow: hidden;
 }
 
-/*code */
-code {
-  background: #d9f2fb54;
-  padding: 0.1rem 0.2rem;
-  border-radius: 0.2rem;
-  font-size: 10pt;
-}
-
 /* a.cd {
   background: #d9f2fb54;
   padding: 0.1rem 0.2rem;
@@ -213,59 +230,6 @@ a:active {
 a:hover {
   color: rgb(230, 65, 0);
   text-decoration: none;
-}
-
-/*for top menu*/
-/*navigate elsewhere table of contents menu */
-/* CSS for disappearing menu navigation */
-body {
-  font-family: "Courier New", Courier, monospace;
-}
-
-.sidenav {
-  height: 400pt;
-  width: 0;
-  font-family: "Courier New", Courier, monospace;
-  position: fixed;
-  background-color: #f0f0f0;
-  opacity: 0.9;
-  overflow-x: scroll;
-  transition: 0.5s;
-}
-
-/* important not to use padding for margins and spacing bc it will make links  clickable only over part of the words */
-.sidenav a {
-  line-height: 1.8;
-  margin-right: 40px;
-  font-size: 16px;
-  color: #242424;
-  display: block;
-  text-align: right;
-  font-family: "Courier New", Courier, monospace;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #eb4d09;
-}
-
-.sidenav .closebtn {
-  position: sticky;
-  font-size: 30px;
-}
-
-#main {
-  transition: 0.3s;
-  height: fit-content;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 10px;
-  }
 }
 
 /* line break around block quotes that are mid paragraph */
@@ -296,46 +260,6 @@ body {
   }
 }
 
-/* BOTTOM side nav */
-.sidenav2 {
-  height: 330px;
-  width: 0;
-  font-family: "Courier New", Courier, monospace;
-  position: bottom;
-  background-color: #f0f0f0c5;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 20px;
-}
-
-.sidenav2 a {
-  padding: 8px 40px 6px 6px;
-  text-decoration: none;
-  line-height: 0.8;
-  font-size: 16px;
-  color: #242424;
-  display: block;
-  font-family: "Courier New", Courier, monospace;
-  transition: 0.3s;
-}
-
-.sidenav2 a:hover {
-  color: #eb4d09;
-}
-
-.sidenav2 .closebtn {
-  position: sticky;
-  top: 0;
-  right: 20px;
-  font-size: 30px;
-}
-
-#main2 {
-  transition: 0.3s;
-  padding: 5px;
-  font-family: "Courier New", Courier, monospace;
-}
-
 /* MENUS AND BUTTONS */
 /* Directory Items */
 .nav {
@@ -359,24 +283,6 @@ a:hover {
   text-decoration: none;
 }
 
-/*white text for header*/
-/* a.header:link {
-  color: aliceblue;
-  text-decoration: none;
-  padding: 5px 5px 5px 5px;
- 
-}
-a.header:link,
-a.header:visited,
-a.header:active {
-  color: aliceblue;
-  text-decoration: none;
-}
-a.header:hover {
-  color: rgb(230, 65, 0);
-  text-decoration: none;
-} */
-
 /*header */
 .header {
   height: 27px;
@@ -398,133 +304,86 @@ a.header:hover {
   padding: 5px 5px 5px 5px;
 }
 
-/*HIGHLIGHTING */
-/* .highlight-light-purple {
-  background-color: rgba(199, 139, 255, 0.199);
+/*drop down menu styling*/
+/*modified from https://www.w3schools.com/howto/howto_css_subnav.asp*/
+.navbar {
+  font-family: "Courier New", Courier, monospace;
+  overflow: hidden;
+  background-color: #ee43eb;
+  width: 100%;
 }
 
-.highlight-yellow {
-  background-color: rgba(241, 251, 109, 0.599);
-} */
-
-.crayon-purple {
-  background-color:rgba(199, 170, 248, 0.482)
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 3px 2px;
+  text-decoration: none;
+  margin: 2px 0px 0px 15px;
+  /* margin: 5px; */
+  /* border: 1px solid #dfdfdfde; */
 }
 
-.crayon-yellow {
-  background-color:rgba(246, 248, 170, 0.599)
+.subnav {
+  float: right;
+  overflow: hidden;
 }
 
-.crayon-pink {
-  background-color:rgba(247, 170, 248, 0.394)
+.subnav .subnavbtn {
+  font-size: 16px;
+  color: white;
+  padding: 3px 2px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 2px;
+  margin: 2px 0px 0px 15px;
+  /* margin: 5px; */
+  /* border: 1px solid #dfdfdfde; */
+  border: none;
+  /*added border none and decreased this and the above margins and commented out border; also increased padding */
 }
-/* .crayon-pink {
-  background-color:rgba(247, 170, 248, 0.482)
-} */
 
-.crayon-teal {
-  background-color:rgba(189, 228, 236, 0.482)
+.navbar a:hover,
+.subnav:hover .subnavbtn {
+  background-color: #af43ee;
+  border: none;
 }
 
-.crayon-orange {
-  background-color:rgba(254, 183, 150, 0.27)
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #af43ee;
+  width: 99%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  z-index: 1;
 }
 
-/* .crayon-orange{
+.subnav-content a {
+  float: right;
+  margin-right: 3px;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  border: none;
+  background-color: #af43ee;
+}
 
-} */
+.subnav-content a:hover {
+  background-color: #756b7d;
+  color: white;
+  border: none;
+  z-index: 1;
+}
 
-
+.subnav:hover .subnav-content {
+  display: block;
+  z-index: 1;
+  position: absolute;
+}
 
 .foundDrift-custom-popup {
   background-color: rgba(241, 251, 109, 0.599);
- 
 }
-
-
-/*drop down menu styling*/
-/*modified from https://www.w3schools.com/howto/howto_css_subnav.asp*/
- .navbar {
-            font-family: "Courier New", Courier, monospace;
-            overflow: hidden;
-            background-color: #ee43eb;
-            width: 100%;
-         
-
-        }
-
-        .navbar a {
-            float: left;
-            font-size: 16px;
-            color: white;
-            text-align: center;
-            padding: 3px 2px;
-            text-decoration: none;
-            margin: 2px 0px 0px 15px;
-            /* margin: 5px; */
-            /* border: 1px solid #dfdfdfde; */
-
-        }
-
-        .subnav {
-            float: right;
-            overflow:hidden;
-
-        }
-
-        .subnav .subnavbtn {
-            font-size: 16px;
-            color: white;
-            padding: 3px 2px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 2px;
-            margin: 2px 0px 0px 15px;
-            /* margin: 5px; */
-            /* border: 1px solid #dfdfdfde; */
-             border: none;
-             /*added border none and decreased this and the above margins and commented out border; also increased padding */
-        }
-
-        .navbar a:hover,
-        .subnav:hover .subnavbtn {
-            background-color: #af43ee;
-            border: none;
-        }
-
-        .subnav-content {
-            display: none;
-            position:absolute;
-            left: 0;
-            background-color: #af43ee;
-            width: 99%;
-            margin-left:.5%;
-             margin-right:.5%;
-            z-index: 1;
-        }
-
-        .subnav-content a {
-            float: right;
-            margin-right:3px;
-            color: white;
-            padding: 5px;
-            text-decoration: none;
-            border: none;
-            background-color: #af43ee;
-       
-        }
-
-        .subnav-content a:hover {
-            background-color: #756B7D;
-            color: white;
-            border: none;
-            z-index: 1;
-        }
-
-        .subnav:hover .subnav-content {
-            display:block;
-            z-index: 1;
-            position:absolute;
-            
-            
-        }
