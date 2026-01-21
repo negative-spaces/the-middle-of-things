@@ -145,10 +145,25 @@
     }
   </style>
 
+<!--parallax header styling-->
+  <style>
+        .llax-header {
+            background-image: url('./sitations/20241217_105737.jpg');
+            background-repeat: no repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            /* position:relative; */
+            /* getting rid of position relative ensures menu bar remains sticky over scroll*/
+            min-height: 540px;
+        }
 
-
+        @media only screen and (max-device-width: 1200px) {
+            .llax-header {
+                background-attachment: scroll;
+            }
+        }
+        </style>
 </head>
-
 
 <body>
   <a name="what-the-work-can-do-top" id="what-the-work-can-do-top"></a>
@@ -215,8 +230,14 @@
 
 
   <!--BANNER IMAGE-->
-  <img src="./sitations/20241217_105737.jpg" style="width:100%">
-  <br>
+  <!-- <img src="./sitations/20241217_105737.jpg" style="width:100%"> -->
+
+  <!--parallax header-->
+  <div class="llax-header">
+
+    </div>
+
+
 
   <!--PAGE CONTENTS-->
   <div class="row">
