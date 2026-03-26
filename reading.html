@@ -104,6 +104,48 @@
     </style>
 
 
+<!--tabbed content-->
+<!--adapted from w3schools-->
+<style>
+
+.tab {
+  overflow: hidden;
+  /* border: 1px solid #ccc; */
+  background-color: none;
+  
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  /* border: none;
+  outline: none; */
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 6px 12px;
+  transition: 0.3s;
+  font-size: 12px;
+   
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #F0F0F0;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #D1D1D1;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  border-top: none;
+  /* could put all styling here rather than in div or inline */
+}
+</style>
 </head>
 
 
@@ -190,11 +232,21 @@
                          <a href="./lists.html" target="_blank"><< Lists and Questions</a>
                     <span class="brmedium"></span>
                     </div>
-
+                    
                 <!--change this div to a class with relative height styling depending on users page height-->
                 <div style="max-height:615px; overflow:scroll; padding-right:10px;">
+
+                    <div class="tab">
+  <button class="tablinks" onclick="openList(event, 'List1')">List 1</button>
+  <button class="tablinks" onclick="openList(event, 'List2')">List 2</button>
+  <button class="tablinks" onclick="openList(event, 'List3')">List 3</button>
+</div>
+
+<!--list 1-->
+<div id="List1" class="tabcontent">
                     <!--list 1-->
                     <div>
+                        <br>
                     <a href="#on-this-patch-of-grass"><i>>On This Patch of Grass</i> (Couture et al. 2018) </a>
                     <br>
                     <a href="#the-surrounds"><i>>The Surrounds</i> (Simone 2022)</a>
@@ -230,8 +282,8 @@
                      <a href="#postcolonizing-planetary-urbanization">><b>on postcolonial critiques of planetary urbanization</b> </a>
                      <br> 
                     
-                     <a href="#vibrant-matter">><i>Vibrant Matter</i> (Bennett 2010) </a>
-                     <br>
+                     <!-- <a href="#vibrant-matter">><i>Vibrant Matter</i> (Bennett 2010) </a>
+                     <br> -->
                      <a href="#urban-everyday-politics">>"Urban everyday politics" (Beveridge and Koch 2019)</a>
                      <br>
                     <a href="#urban-way-of-life-as-survival">>"Urban way of life as survival" (Guma et al. 2023)</a>
@@ -264,6 +316,38 @@
                       <br>
 
                    </div>
+
+</div>
+
+<!--list 2-->
+<div id="List2" class="tabcontent">
+  nothing read in list 2 yet 
+</div>
+
+<!--list 3-->
+<div id="List3" class="tabcontent">
+ <br>
+  <a href="#vibrant-matter">><i>Vibrant Matter</i> (Bennett 2010) </a>
+   <br>
+</div>
+
+
+<!--script to show lists on click-->
+<script>
+function openList(evt, listName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(listName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
                       
                 </div>
             </div>
@@ -2212,7 +2296,7 @@ Though not discussed in his chapter, Hokowhitu (2013, 370) remarks that Indigeno
                             
                                 <div>
                                     <p>
-                                        In this book, Eve Tuck and Marcia McKenzie critique the lack of attention paid to (the significance of) place across social science research. Drawing from Indigenous perspectives, and orientations to place articulated by the spatial turn and feminist new materialisms, they collaborate in developing <i>critical place inquiry</i> as a protocol for "theoriz[ing] and practic[ing] place more deeply in social science research" (Tuck and McKenzie 2015, 18). (Well, 'protocol' isn't there word, and I use it here in the sense Linda Knight uses it.) After a rigorous multi-disciplinary overview of 'place' in research, as well as its nature as distinct from Land as known within Indigenous cosmologies and knowledge systems, Tuck and McKenzie dedicate the rest of their book to outlining methodologies and methods for <i>critical place inquiry</i>. Importantly, they respect the incommensurabilities between Indigenous and non-Indigenous epistemologies. Indigenous methodologies and methods are therefore not only centered, but never attempted to be made legible/intelligible through settler-colonial conceptual and theoretical frameworks. 
+                                        In this book, Eve Tuck and Marcia McKenzie critique the lack of attention paid to (the significance of) place across social science research. Drawing from Indigenous perspectives, and orientations to place articulated by the spatial turn and feminist new materialisms, they collaborate in developing <i>critical place inquiry</i> as a protocol for "theoriz[ing] and practic[ing] place more deeply in social science research" (Tuck and McKenzie 2015, 18). (Well, 'protocol' isn't their word exactly;  I use it here in the sense Linda Knight uses it.) After a rigorous multi-disciplinary overview of 'place' in research (specifically social science, with a lack of attention to the geohumanities), as well as its nature as distinct from Land as known within Indigenous cosmologies and knowledge systems, Tuck and McKenzie dedicate the rest of their book to outlining methodologies and methods for <i>critical place inquiry</i>. Importantly, they respect the incommensurabilities between Indigenous and non-Indigenous epistemologies. Indigenous methodologies and methods are therefore not only centered, but never attempted to be made legible/intelligible through settler-colonial conceptual and theoretical frameworks. 
                                     </p>
 
                                     <p>
@@ -2220,29 +2304,63 @@ Though not discussed in his chapter, Hokowhitu (2013, 370) remarks that Indigeno
                                         <span class="block">
                                             <ol>
                                                 <li>
-                                                   Tuck and McKenzie made a clear distinction (while recognizing the inter-relatedness) between extraction colonialism and settler colonialism. While postcolonial studies theorizes extraction colonialism, settler colonial studies the nature of settler colonialism (see page 59-61). In <i>Indigenous in the city</i>, published only 2 years before <i>Place in Research</i>, while settlers, settler societies, and settler nations are discussed, settler colonial studies as a body of literature isn't overtly referenced. The same contexts, however, are repeatedly described by contributors as postcolonial (postcolonial societies, cities, countries). I just found this an interesting distinction, and wondered if coincidental, or just a mark of one book having a more explicitly academic audience. On the other hand, the city as a specific kind of place and urban Aboriginal people as emerging as distinct communities with unique identities, was not discussed by Tuck and McKenzie.  
+                    Tuck and McKenzie made a clear distinction (while recognizing the inter-relatedness) between extraction colonialism and settler colonialism. While postcolonial studies theorizes extraction colonialism, settler colonial studies examine the nature of settler colonialism (see page 59-61). In <code><a href="#indigenous-in-the-city"><i>Indigenous in the City</i></a></code>, published only 2 years before <i>Place in Research</i>, while settlers, settler societies, and settler nations are discussed, settler colonial studies as a body of literature isn't overtly referenced. The same contexts, however, are repeatedly described by contributors as postcolonial (postcolonial societies, cities, countries). I just found this an interesting distinction, and wondered if coincidental, or just a mark of one book having a more explicitly academic audience. On the other hand, the city as a specific kind of 'place' and urban Aboriginal people as emerging as distinct communities with unique identities, was not discussed by Tuck and McKenzie, who refer generally to tribal and reserve-based Indigenous communities. 
                                                 </li>
                                                 <span class="brmedium"></span>
-                                                <li>
+                                               
+<li>
+Emplacement and placemaking. Tuck and McKenzie (2015) define <i>settler emplacement</i> as "the desire of settlers to resolve the experience of dis-location implicit in living on stolen land" (69). Place-making, on the other hand, involves the ways in which a place comes to be named and known (133). Drawing from Keith Basso's ethnography of place-making (1996), Tuck and McKenzie (2015) describe place-making as "the (retrospective)
+building of place-worlds", and as such, place-making is always "a re-memory act" (133). 
+<span class="brmedium"></span>
+To me, the hyphen in place-making emphasizes the activities of <i>making</i> place, here through narratives, stories, and other spatial(izing) practices of meaning making such as actively traversing the land and waterways of a place. Though introduced by Tuck and McKenzie (2015) as an Indigenous method, example literature cited participates the (not necessarily Indigenous) reader in the practice of place-making (see section on "Mapping Place-Worlds and Place-Making", pages 132-134). I am inclined then to understand place-making, as defined by Tuck and McKenzie (2015), as a practice Indigenous and non-Indigenous people both engage in, albeit in different manners (and with different stakes and consequences). Indeed, it is the differential ways in which place is relationally engaged, made meaningful, and inscribed (to memory, to maps, in stories and in recall) that is at stake and of significance in a settler colony. My understanding/practice of placemaking as a settler — both in the United States and in Canada — is informed by geohumanities and geopoetics literature. (See <a href="https://negative-spaces.github.io/interference.html#thinking-through-deepmapping" target="_blank">negative-spaces.github.io/interference.html#thinking-through-deepmapping</a> for reflexive summary of how I encountered Vancouver in the initial stages of cultivating a spatial practice aimed at developing spatial awareness and, upon reflection, placemaking.) The geohumanties, perhaps a geo/poetical turn (the inaugural issue of GeoHumanities was published, if memory serves, the same year as this book was published), was not discussed in their literature review on place in research. Thus far, I've come to understand placemaking (no hyphen) as the process/activities, upon arriving in a new place, of making it meaningful to oneself. Through spatial practices aimed at generating experiential knowledge and place-specified memories, an unfamiliar place more familiar. Placemaking therefore involves developing spatial awareness of one's surroundings. Of course, mental maps and (urban, cultural, political) imaginaries are influenced by ideas not directly experienced, including the physical/digital maps used to navigate, meaning placemaking is not a neutral endeavor. 
+<span class="brmedium"></span>
+Emplacement, on the other hand, as I understand it from their book, is about inscribing oneself into a landscape. Unlike placemaking, which is largely a personal and communal practice aimed at generating a sense of relational belonging, emplacement seems concerned with laying claims which signal belonging to others who may or may not also belong. Emplacement (though placemaking too, I suppose, though perhaps more subconsciously and therefore insidiously) can involve re-narrativizations of history such as the maneuvers of settler colonialism to "cover its tracks" as Tuck and McKenzie reiterate. They write: 
+<span class="block">
+    "Settlers are defined by their actions. “‘Settler’ is a way to describe colonizers that highlights their desires to be emplaced on Indigenous land” (Morgensen, 2009, p. 157). Settler emplacement, in Morgensen’s analysis, is concerned with settlers’ attempts to live on stolen land and make it their home. <span class="crayon-orange"> The desire to emplace is a desire to resolve the experience of dis-location implicit in living on stolen land....Settler emplacement is incommensurable with Indigenous life insofar as it requires erasure of Indigenous life and ontologies."</span> (Tuck and McKenzie 2015, 67)
+</span>
+If, as indicated at start of this point, <i>settler emplacement</i> is "the desire of settlers to resolve the experience of dis-location implicit in living on stolen land" (Tuck and McKenzie 2015, 69), a foil to pernicious emplacement as a settler is to not attempt to resolve the experience of dis-location or the discomfort of living on stolen land. The practice is then to cultivate meaningful attachments to place that do not seek to familiarize the unfamiliar. To cultivate spatial awareness that includes awareness of what is not immediately present to the settler gaze. I guess my remaining questions/confusions about placemaking and emplacement is: what are the responsibilities of settler placemaking, and is settler emplacement that does not seek innocence even possible or desirable? In their chapter on (non-Indigenous) methods of critical place inquiry, Tuck and McKenzie include sections on "emplaced and land-based data" and "embodied and emplaced data". One example of the latter is mental mapping. What is emplaced data? Data constituted through placemaking? Still, data was not quite post qualitative in their account. 
+<span class="brmedium"></span>
 
-                                                </li>
-                                                <!-- <li>
-                                                   emplacement vs placemaking 
 
-                                                   solidarity vs provisinal collaboration
 
-                                                   how to use? or not? 
-                                                </li>
-                                                <span class="brmedium"></span> -->
+    <!-- "emplaced embodied methods of critical place inquiry are perhaps better poised to acknowledge the theoretical contributions of scholars on Black geographies that emphasize the ways in which the production of space has required bodies, Black bodies, in particular, as landscapes of domination" (105) -->
+
+   
+
+</li>
+ <span class="brmedium"></span> 
+<li>
+ While <i>Place in Research</i> offered a lot in terms of researching specifically place, or conducting research in which place is recognized as significant, I am not immediately sure, apart from the above, how to apply it's methods and methodologies to research that is practice oriented or whose mode of inquiry is research-creation. Or even research that's thinking with cities/a city. But then again, as I've been writing on this one post-it, the aim of my PhD I'm coming to realize is to explore the question of how I'm deepening my deep mapping and attendant sitation (rendering and data) practice (not as a method but as a mode of inquiry). For example, how does 'critical place inquiry' inform deep mapping? How does 'inefficient mapping' inform deep mapping? How might I attend to what's not immediately perceptible, and do so <i>in practice</i>? And then, how might I apply postcolonial ways of theorizing to a study in/of a settler colony in the global north? For example (and this is a question I want to elaborate in preparation for my actual comps), I can think globally without universalizing, reverse the gaze (Roy, Barua), resist binaries like constitutive inside and outside (Simone) or formal/informal (Guma et al.) and the inevitability of the subsumption of the rural and/or pastoral by capitalist urbanization (Barua, Peters and Anderson, to an extent), and write under erasure (Roy), to name but a few things. (Still have to read the Joel Wainwright paper!!)
+  <img src="./sitations/phenomena/aims_20260211.png" style="width: 50%">
+ </li>
+ <span class="brmedium"></span>
+ <li>
+    Finally, and quite relatedly, I want to continue thinking over the very excellent critiques Tuck and McKenzie made of feminist new materialism, particularly the Baradian vein. However, in terms of rendering, I don't totally agree with the following as this seems more pertinent to social science projects than research-creation, not that solipsistic and apolitical non-representational outputs don't exist or shouldn't be cautioned against. Indeed, some geohumanities/geopoetics veers in that direction.  
+
+    <span class="block"> 
+        "While critical place inquiry (like all inquiry) is performative, it is also representative; we cannot escape mental processes of thought and language in data collection or analyses. Efforts to get beyond representation are in danger of being solipsistic and apolitical, and seemingly impossible" (Tuck and McKenzie 2015, 19)
+    </span>
+    I think anarchiving (Manning) is something useful to continue thinking about, in terms of my PhD but also my MA and the article I want to write. As I wrote in the margin on page 92, when methods are not aimed at unearthing - revealing data, but attuning to what can <i>be</i> data - not about representing then, but making a work that works in excess of itself, an anarchive. 
+
+
+    <img src="./sitations/phenomena/note-on-methods_92.png" style="width: 100%">
+
+
+
+ </li>
+
+
+
+
+                                              
+                                           
                                             </ol>
                                         </span>
                                     
                                    
                                     </p>
 
-                                    <p>
-
-                                    </p>
+                                   
                                 </div>
                                 <br><br>
                             </div>
