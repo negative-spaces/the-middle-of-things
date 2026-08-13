@@ -163,7 +163,6 @@
                     <a href="./material-forms/paper-horns.html">paper-horns</a>
                     <a href="./material-forms/dressing.html">dressing</a>
                     <a href="./material-forms/cottonwood.html">cottonwood</a>
-                <a href="./material-forms/creatures.html">creatures</a>
 
                 </div>
             </div>
@@ -203,13 +202,14 @@
 
     <br>
 
-<!--BANNER IMAGE-->
+    <!--BANNER IMAGE-->
     <!-- <img src="./sitations/phenomena/vpl-firehall.jpeg" style="width:100%;"> -->
 
     
     <!--PAGE CONTENTS-->
     <div class="row">
 
+        <!--first i need to make this column resizable, within limits. then what i need to write is some function that splits the string somewhere before the parenteses, or actually right before the "(" and then cuts back however many characters, and puts an ellipses instead-->
         <!--LIST of readings-->
         <div class="column0">
             <br>
@@ -321,7 +321,7 @@
      <br>
     <a href="#geoweb-political-economy">>"Situating the Geoweb in Political Economy" (Leszczynski 2012)</a>
      <br>
-    <a href="#Dalton2012">>"Google Geo Services and the Geography of Ubiquity" (Dalton 2012)</a>
+    <span class="crayon-magenta"><a href="#Dalton2012">>"Google Geo Services and the Geography of Ubiquity" (Dalton 2012)</a></span>
      <br>
     <a href="#Srnicek2017">><i>Platform Capitalism</i> (Srnicek 2017)</a>
      <br>
@@ -357,43 +357,68 @@
      <br>
       <span class="crayon-magenta"><a href="#Agrawaal-etal2024">>"Alternative Values in Navigation Technologies for Urban Placemaking" (Agrawaal et al. 2024)</a>
      <br></span>
-      <a href="#Gilge2016">>"Google Street View and the Image as Experience" (Gilge 2016)</a>
+      <a href="#Gilge2016">>"Google Street View..." (Gilge 2016)</a>
      <br>
-   
-   
+     <a href="#Hanchard2024">><i>Engaging with Digital Maps</i> (Hanchard 2024)</a>
+     <br>
+     <span class="crayon-magenta"><a href="#Noone2024">><i>Location Awareness in the Age of Google Maps</i> (Noone 2024)</a></span>
+     <br>
+     <a href="#Leszczynski2023">>"Platforms and/as Urban Communication" (Leszczynski 2023)</a>
+     <br>
+     <a href="#Thatcher2017">>"...the Commodification of Daily Life through ‘Location’" (Thatcher 2017)</a>
+     <br>
+         
 
 </div>
 
 <!--list 3-->
-<div id="List3" class="tabcontent">
- <br>
-  <a href="#Bennett2010">><i>Vibrant Matter</i> (Bennett 2010) </a>
-   <br>
-   <a href="#Loveless2020">><i>Knowings and Knots</i> (Loveless 2020) </a>
-   <br>
-   <a href="#Carraro2021">><i>Jerusalem Online: Critical Cartography for the Digital Age</i> (Carraro 2021) </a>
-   <br>
+    <div id="List3" class="tabcontent">
+        <br>
+        <a href="#Bennett2010">><i>Vibrant Matter</i> (Bennett 2010) </a>
+        <br>
+         <a href="#Loveless2020">><i>Knowings and Knots</i> (Loveless 2020) </a>
+         <br>
+        <a href="#Carraro2021">><i>Jerusalem Online: Critical Cartography for the Digital Age</i> (Carraro 2021) </a>
+        <br>
+            <!-- <a href="#Farman2010">>"Mapping the digital empire..." (Farman 2010)</a>
+        <br>
+        <a href="#Middleton2010">>"Walking the City" (Middleton 2010; 2011)</a>
+        <br>
+        <a href="#RossiterGibson2011">>"Walking and Performing 'the City'" (Rossiter and Gibson 2011)</a>
+        <br>
+        <a href="#Buiani2020">>"...Affective geographies of Toronto" (Buiani 2020)</a>
+        <br>
+        <a href="#Lobo-etal2020">>"Practising Lively Geographies in the City" (Lobo et al. 2020)</a>
+        <br>
+        <a href="#Moretti2011">>"Researching and Representing the City through Everyday Encounters" (Moretti 2011)</a>
+        <br>
+        <a href="#Cheng2014">>"Telling Stories of the City..." (Cheng 2014)</a>
+        <br>
+            <a href="#Quiquivix2014">>"Palestinian Counter-Cartography on Google Earth" (Quiquivix 2014)</a>
+            <br>
+            <a href="#HuntStevenson2017">>"Indigenous Digital Counter-Mapping Practices on Turtle Island" (Hunt and Stevenson 2017)</a>
+            <br> -->
 
-   
-</div>
+
+    </div>
 
 
-<!--script to show lists on click-->
-<script>
-function openList(evt, listName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(listName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
+                    <!--script to show lists on click-->
+                    <script>
+                    function openList(evt, listName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(listName).style.display = "block";
+                    evt.currentTarget.className += " active";
+                    }
+                    </script>
                       
                 </div>
             </div>
@@ -512,7 +537,7 @@ function openList(evt, listName) {
                 <!-- "the surrounds are infrastructural in that they entail the possibilities with in any event, situation, setting, or project for something incomputable and unanticipated to take (its) place" (5).  
 
                     "untranslatable specificity" (5)
-                    see 132 for more on untranslatable and speciicity too. 
+                    see 132 for more on untranslatable and specificity too. 
 
 
                     relational location - across this and improvised lives... 
@@ -521,21 +546,15 @@ function openList(evt, listName) {
                         "surrounds as a way of doing time" (61) 
 
 
-                    The surrouds are a <i>mode</i> of accompniment (4) -->
+                    The surrounds are a <i>mode</i> of accompaniment (4) -->
 
 
                    
 
                     Critically, Simone posits "the surrounds" <i>not</i> as a constitutive outside but as "a kind of accompaniment to processes underway..." (10).
-                    Whereas the othered, constitutive outside hinges on demarcations of interior and exterior, accompaniment is independent to what it happens alongside of—it is supplement (32) rather than complement. "Accompaniment is a submergent infrastructure that suggests something other than what is recognized" (11). recognized both denotes definition, legibility, and also perception, acknowlegemtn, hailing. The surrounds are then perhaps what is not immediately percetable in experience or, what is immediately perceptable but not so easily decipherable, narratable, recounted or rendered. my initial research/reading questions asked after the more than structuring or compusing landsccapes of encouter, but here, simone is explicit in saying what is accompanied is not necessaryly changed or bothered by its accompinimenier. 
-
-
-
+                    Whereas the othered, constitutive outside hinges on demarcations of interior and exterior, accompaniment is independent to what it happens alongside of—it is supplement (32) rather than complement. "Accompaniment is a submergent infrastructure that suggests something other than what is recognized" (11). recognized both denotes definition, legibility, and also perception, acknowledgment, hailing. The surrounds are then perhaps what is not immediately perceptible in experience or, what is immediately perceptible but not so easily decipherable, narratable, recounted or rendered. my initial research/reading questions asked after the more than structuring or composing landscapes of encounter, but here, simone is explicit in saying what is accompanied is not necessarily changed or bothered by its accompanier. 
 
                 </p>
-
-
-              
 
             </div>
 
@@ -618,14 +637,14 @@ function openList(evt, listName) {
                         In using the term Anthropocene, however, Gordillo is not centering/exceptionalizing human activity so much as describing the reality of there being no outside to climate and landscape change. He goes on to describe the "Metropolis as...infrastructure of the Anthropocene" (93) in that the metro-bolic infrastructure (my shorthand) described above is unevenly intensive, marking some "areas of the planet with a high density of infrastructures created to" feed the voracious metropolis (83). These high density areas Gordillo calls "zones of imperial extraction" (83). Not only are capitalism's free trade and neoliberal deregulation and privatizations "legal-territorial technologies" for creating and maintaining these zones, more and more, infrastructures and logistics are too (83). Thus, the metropolis is an imperial constellation (83).
                         
                         <!-- 
-                        Seemingly paradox spacetimes, t "The metropolis... is a decentered structuration of motion and acceleration and also a structuration of containment, stasis, and slowness by closely surveilled walls and fences" (74).  -->
+                        Seemingly paradox space times, t "The metropolis... is a decentered structuration of motion and acceleration and also a structuration of containment, stasis, and slowness by closely surveilled walls and fences" (74).  -->
 
                     </p>
    
                     <p>
                         This approach to infrastructure is markedly different from Amin and Thrift's in <i>Seeing Like A City</i>. Methodological cityism aside, in claiming "cities are one of the main products and producers of the Anthropocene" (Amin and Thrift 2017, 34), Amin and Thrift missed attending to the imperial nature of cities' (and the extensive and intensive infrastructure that exceeds their bounds yet reproduces them) toll on the environment goes unaddressed. However, there <i>are</i> were a couple potential points of resonance, or at least one: the commons. Though Amin and Thrift position infrastructure itself as "the essential urban economic commons", they do call for policy to recast it from a means of private profit to that of the equitable distribution of public services. This includes the design as well. Gordillo, on the other hand, assumes a commonplace understanding of what the commons is, and, through examples of local and state resistance to "legal-territorial technologies" (essentially Monsanto tried to stop and frisk trucks for patented seed as they left silos in Rosario but unlike surrounding countries, seeds cannot be made private property in Argentina), illustrates the metropolis as "a generative space of collective encounters that offers the potential to reinvent the commons" (71). 
                         
-                         <!-- Assemblage and movement is similar but again, frame or starting point differs for gordollo. He's stepped way back but at the same time elaborating from the specificisty of Rosario and Las Lajitas Argentia. Amin and Thrift, though continually saying there were narrating from the ground up, slipped into generalizations  -->
+                         <!-- Assemblage and movement is similar but again, frame or starting point differs for Gordillo. He's stepped way back but at the same time elaborating from the specificity of Rosario and Las Lajitas Argentina. Amin and Thrift, though continually saying there were narrating from the ground up, slipped into generalizations  -->
                     </p>
 
                     <!-- <p>
@@ -638,7 +657,7 @@ function openList(evt, listName) {
 
                         
 
-                        <!-- Opacity, ungraspable nature of the metropolis - both plantery scale and xyz rather "The metropolis, likewise, is an ungraspable, nonrepresentable totality that escapes our capacity to make sense of it. And what makes it partly opaque to thought is both its planetary scale and that it is permanently redefined by practices woven locally and regionally." (70). deplyment of totality - reminds me of simone - on generaic - as modulation of visibility. -->
+                        <!-- Opacity, unparsable nature of the metropolis - both planetary scale and xyz rather "The metropolis, likewise, is an ungraspable, nonrepresentative totality that escapes our capacity to make sense of it. And what makes it partly opaque to thought is both its planetary scale and that it is permanently redefined by practices woven locally and regionally." (70). deployment of totality - reminds me of simone - on generic - as modulation of visibility. -->
                     </p>
                    
 
@@ -734,8 +753,8 @@ function openList(evt, listName) {
                     minor terms. (Major ≈ canon, arborescence, human-centered, god's eye, top-down, etc.) Major connotations of the feral include breakdown, imageries/realities of predation by the rich, and apprehension of forms that exist as neither domesticated nor wild—those once
                     domesticated that escaped and now live in-between,likened to loose animals or criminals ranging the
                     otherwise ordered/orderly city. However, "as a theoretical category constituting the outside to
-                    capital, ferality becomes a productive entry point for a minor articulation of cities composed
-                    <!-- through flows". (replace with quote) ( Importantly, Barua - critiques flows - hylomorphic, but shows, actually, reproduction - fleshyness of flows etc - something devoid in Valayden's framing of a "capitalism...defined by flows and the infrastructure that secures the circulation of goods" (14).)  -->
+                    capital, ferality becomes a productive entry point for a minor articulation of cities composed through flows". (Importantly, Barua - critiques flows - hylomorphic, but shows, actually, reproduction - fleshiness of flows etc - something devoid in Valayden's framing of a "capitalism...defined by flows and the infrastructure that secures the circulation of goods" (14).)
+                    <!-- Importantly, Barua - critiques flows - hylomorphic, but shows, actually, reproduction - fleshiness of flows etc - something devoid in Valayden's framing of a "capitalism...defined by flows and the infrastructure that secures the circulation of goods" (14).)  -->
                      <i>It is the major figure of ferality that Valayden pursues. </i>
                     </p>
                  
@@ -746,23 +765,23 @@ function openList(evt, listName) {
             <p>
                  <!-- Micropolitics of ferality - affect in encounter. -->
             <!-- affect - infrastructure - part of xyz niche. -->
-            In Valayden's account, racism morphs, no longer legitimated through establishing people in hierarchies but forstalling catastrophe (12); "The symbolics of race - the categories that define fixity - are allowed to decompose through individualization and hybridization up to the point where this degeneration signals the threat of racial feralization" (Valayden 12)
+            In Valayden's account, racism morphs, no longer legitimated through establishing people in hierarchies but forestalling catastrophe (12); "The symbolics of race - the categories that define fixity - are allowed to decompose through individualization and hybridization up to the point where this degeneration signals the threat of racial feralization" (Valayden 12)
                 <span class="brmedium"></span>
             
                  
                  <!-- however, since early years xyz.. - ferality as xyz - by fears -> census- population xyz biopolitical 
                  
                  Invasion biology and biotic nativism - frame feral parakeets as threat to
-                    demure? indigenous wildlife of England and, though no real consistent data to proove taking niches
-                    etc, anticipatory threat - many times backed plants/eforts to increase securitization against threat
-                    thourhg population counts and even planned culls.
+                    demure? indigenous wildlife of England and, though no real consistent data to prove taking niches
+                    etc, anticipatory threat - many times backed plants/efforts to increase securitization against threat
+                    through population counts and even planned culls.
                      -->
             This - immediate connection to how xyz barua multiculturalism and diversity - more the norm... what becomes object-targe?
             One Londoner Barua talked to about the Parakeets said "I want to see bright people, in muted landscapes" (153). 
                </p>
 
                 <p>
-                 Barua would therefore agree with Valayden on the bioplitical deployment of racial logics:
+                 Barua would therefore agree with Valayden on the biopolitical deployment of racial logics:
                 <br>
                 <!-- <span class="brmedium"></span> -->
                 <span class="block">
@@ -776,9 +795,7 @@ function openList(evt, listName) {
 
                    <!-- Because the major and minor rely on each other for existence (pg #) (unlike the surrounds as an—at times spatial, at times temporal—mode of accompaniment), Barua excavates both renderings of ferality. 
                     <span class="brmedium"></span> -->
-        
-
-            
+    
 
             </div>
 
@@ -1041,7 +1058,7 @@ function openList(evt, listName) {
                         <span class="block">
                             "Today, the urban represents an increasingly worldwide condition in which all political-economic relations, infrastructural geographies and socio-environmental landscapes are enmeshed. 
                             <br><br>
-                            This situation of <i>planetary urbanization</i> means, paradoxically, that even spaces that lie well beyond the traditional city cores and suburban peripheries...have become integral parts of a worldwide urban fabric...political-economic spaces can no longer be treated as if they were composed of discrete, distinct, bounded and universal types of setlement" (451).
+                            This situation of <i>planetary urbanization</i> means, paradoxically, that even spaces that lie well beyond the traditional city cores and suburban peripheries...have become integral parts of a worldwide urban fabric...political-economic spaces can no longer be treated as if they were composed of discrete, distinct, bounded and universal types of settlement" (451).
                         </span>
 
                     </p>
@@ -1145,7 +1162,7 @@ function openList(evt, listName) {
                     <p>
                         Their schematic limitations aside, I found Angelo and Goh's paper immensely helpful in parsing common critiques of planetary urbanization. I could have easily put one of said critiques on my comps list, knowing little prior to reading beyond the general argument of planetary urbanization. In pushing back on critiques that claim planetary urbanization - in its abstraction - cannot attend to difference at the scale of everyday life, is hugely significant to my intended project. <span style="background-color:rgba(199, 170, 248, 0.482)">They ask: "What does it look like to use multiscalar urban processes to study phenomena at the level of everyday life?"</span> 
                         <!-- Rather than xyz, they argue that "in our view, a planetary urbanization framework does not simply allow for local difference and particularity; it is especially well-suited t o doing so and to helping reveal connections across scales" (738) -->
-                        As I theorize the Urban Everyday, I am committed to thinking through how processes not immediately perceptible inform spatial phenomena. I found this paper also helpful in thinking further through difference. Difference here isn't in opposition to abstraction, to large scale processes or attention to such processes at a large scale. To understand how to produce situated knowledges that don't abandon attention to "broader underlying infra/structures that compose landscapes of encounter" (or however I reformulate what I was getting at), I think <code><a href="#Woods2014" target="_blank">Derek Woods' concept of scale variance</a></code>  has particular relevence. As a reminder, "scale variance refers to the thresholds that constrain biophysical, technological, and social becoming, thresholds beyond which scale effects influence how we observe systems and how they work" (Woods 2014, 135). Scale variance describes how "the observation and operation of systems are subject to different constraints at different scales due to real discontinuities" (Woods 2014, 133). To me, the Urban Everyday is not simply a zooming-in to the local, the mundane, the habitual, the ordinary, or the social but recognizing how what is local, mundane, habitual, ordinary, and social is constituted or informed or composed by <i>more than</i> what appears immediately to be at work. The effort to attend to the more than is what I think is important when conducting work that preferences the immediate. What other scales, other formations, other processes are on the same plane? 
+                        As I theorize the Urban Everyday, I am committed to thinking through how processes not immediately perceptible inform spatial phenomena. I found this paper also helpful in thinking further through difference. Difference here isn't in opposition to abstraction, to large scale processes or attention to such processes at a large scale. To understand how to produce situated knowledges that don't abandon attention to "broader underlying infra/structures that compose landscapes of encounter" (or however I reformulate what I was getting at), I think <code><a href="#Woods2014" target="_blank">Derek Woods' concept of scale variance</a></code>  has particular relevance. As a reminder, "scale variance refers to the thresholds that constrain biophysical, technological, and social becoming, thresholds beyond which scale effects influence how we observe systems and how they work" (Woods 2014, 135). Scale variance describes how "the observation and operation of systems are subject to different constraints at different scales due to real discontinuities" (Woods 2014, 133). To me, the Urban Everyday is not simply a zooming-in to the local, the mundane, the habitual, the ordinary, or the social but recognizing how what is local, mundane, habitual, ordinary, and social is constituted or informed or composed by <i>more than</i> what appears immediately to be at work. The effort to attend to the more than is what I think is important when conducting work that preferences the immediate. What other scales, other formations, other processes are on the same plane? 
 
                         <!-- Although "scale critique emphasizes disjunctures and incommensurable differences among scales" (Woods 2014, 133) -->
                     </p>
@@ -1626,7 +1643,7 @@ function openList(evt, listName) {
 
                     <p>  
                         Specifically, in the beginning of his introduction to <i>Implosions/Explosions</i>, <a href="#urban-theory-without-an-outside" target="_blank">"Urban Theory Without an Outside"</a>, Brenner critiques approaches to the urban question that use a modifier as he argues this creates a subset of a more general "city". 
-                        <!-- Brenner discredits approaches which "use[] a modifying term" such as "ordinary, postolonial and so forth" because they do so in order "to demarcate its research terrain as a subset of a putatively more general sociospatial form, 'the' city". First off, cities don't cease to exist just because you refer to them as "more precisely, zones of agglomeration" (19). Again, this conceptual precision doesn't mean that cities don't continue to operate in the circulation of ideas and identities and more material things like design/architecture, culture etc etc.. Secondly, if I learned one thing from Robinson's postcolonial urban studies, it was that ordinary was not a modifier of some more general city, 'the' city, but a fundamental reconceptualization of cities into a flat ontology. All cities are ordinary cities. Ordinary cities are not a subset of another city.-->
+                        <!-- Brenner discredits approaches which "use[] a modifying term" such as "ordinary, postcolonial and so forth" because they do so in order "to demarcate its research terrain as a subset of a putatively more general sociospatial form, 'the' city". First off, cities don't cease to exist just because you refer to them as "more precisely, zones of agglomeration" (19). Again, this conceptual precision doesn't mean that cities don't continue to operate in the circulation of ideas and identities and more material things like design/architecture, culture etc etc.. Secondly, if I learned one thing from Robinson's postcolonial urban studies, it was that ordinary was not a modifier of some more general city, 'the' city, but a fundamental reconceptualization of cities into a flat ontology. All cities are ordinary cities. Ordinary cities are not a subset of another city.-->
                         He then very pointedly lumps "ordinary" along with "postcolonial" into his write-off of modifiers. 
                         <!-- which, under planetary urbanization, is an obsolete form  -->
                         As I wrote in my <a href="#Robinson2006" target="_blank">reflection above on Jenny Robinson's <i>Ordinary Cities</i></a>, the argument for taking ever city as ordinary is not at all about creating a specific from the generic "city" but rather an ontological refiguring in service of dislocating modernity. Modernity, like eurocentrism in Ananya Roy's essay "Who's afraid of postcolonial theory", is a story the West tells itself (20). This particular Eurocentric story is narrated by none other than the host of authors (actors) Brenner (2000) repeatedly cites in his piece <a href="#Brenner2000" target="_blank">"The Urban Question: Reflections on Henri Lefebvre, Urban Theory and the Politics of Scale"</a>, which I read as a history of conceptualizations of urban spatiality under capitalist restructuring. While in this paper, Brenner follows the urban question as it becomes a scale question, in his <a href="theses-on-urbanization" target="_blank">"Theses on urbanization"</a>, reframes the site of the urban question—that is, "are there specific urban units"—entirely, asking: "Is there an urbanization process?" (197, emphasis in original). 
@@ -1637,7 +1654,7 @@ function openList(evt, listName) {
                             <!-- Is there any room for an urban political ecology (or, more accurately, a political ecology of urbanization) against methodological cityism to engage with the ideology of the city (the city-concept) as a category of practice that matters, so to speak? -->
 
                             <!--maybe Barua's critique is about this wish he fleshed it out... -->
-                            (I so wish Barua had fleshed out his critique of planetary urbanization and specifically the tendency to preemptively "derid[e] cerain forms of analyses as methodological cityism" (Barua 2023, 193).)
+                            (I so wish Barua had fleshed out his critique of planetary urbanization and specifically the tendency to preemptively "derid[e] certain forms of analyses as methodological cityism" (Barua 2023, 193).)
                         </p>
 
                         <!-- <p>
@@ -2562,7 +2579,7 @@ Though not discussed in his chapter, Hokowhitu (2013, 370) remarks that Indigeno
                            <span class="block">
                              "images of greatest value are those which most closely approach a strong total field: dense, rigid, and vivid; which make use of all elements types and form characteristics without narrow concentrations; and which can be put together either hierarchically or continuously, as occasion demands" (90). 
                            </span>
-                           Interference! Not one against the other. strong perceptual images are not about knowing where everyi- total noweledge of xyz but what suits personal needs - combination of different xyz here and there. pockets - adaptability. also about relating through different levels.See page 109 for the importance of common ties between scale levels. See 115 (and also 110) for Lynch on patterning of the total metropolis. about hierarchy, nodal point, network  - and then ideal, but no concrete examples come to mind. id say its by traversing via transport. different kinds of methods then. See 116 about interrelation of elements. then, use, reference between scales or from one place to another - either hierarchical or sequential. up and down or one point then continuity through.  
+                           Interference! Not one against the other. strong perceptual images are not about knowing where everyi- total knoweledge of xyz but what suits personal needs - combination of different xyz here and there. pockets - adaptability. also about relating through different levels. See page 109 for the importance of common ties between scale levels. See 115 (and also 110) for Lynch on patterning of the total metropolis. about hierarchy, nodal point, network  - and then ideal, but no concrete examples come to mind. id say its by traversing via transport. different kinds of methods then. See 116 about interrelation of elements. then, use, reference between scales or from one place to another - either hierarchical or sequential. up and down or one point then continuity through.  
                            
                          </p>
 
@@ -3302,7 +3319,7 @@ Though not discussed in his chapter, Hokowhitu (2013, 370) remarks that Indigeno
 
                        <span class="quote">
                             <span class="crayon-magenta">
-                                "...free access to the map, and even the capacity to customize it for personal use, does not conflict with Google's economic interest. In fact, it consolidates it" (McQuite 2019, 158).
+                                "...free access to the map, and even the capacity to customize it for personal use, does not conflict with Google's economic interest. In fact, it consolidates it" (McQuire 2019, 158).
                                 <br><Br>
                                  "the full value of Maps to Google is the way it is now entrenched in the broader digital eco-system...Most vitally for Google, the embedding of the Maps platform not only gives Google growing revenue from sites that make commercial use of its services but also access to huge volumes of user data...For Google, large-scale 'free' use of the Maps app not only provides the eyeballs to generate advertising revenue but also generates the user data has[sic]that has become critical to maintaining the accuracy and especially the timeliness of the map. This synergy is the lifeblood of data-based 'surveillance capitalism' (Zubuff, 2019) that Google has done so much to operationalize" (McQuite 2019, 155). 
 
@@ -3775,7 +3792,7 @@ Though not discussed in his chapter, Hokowhitu (2013, 370) remarks that Indigeno
 
 
              
-                <!--Big AI: Cloud Infrastructure Dependence and the Industrialisation of Artificial Intelligence-->
+                <!--Big AI: Cloud Infrastructure Dependence and the Industrialization of Artificial Intelligence-->
             <div>
                 <div>
                     <a name="VanderVlist-etal2024" id="VanderVlist-etal2024"></a>
@@ -3883,7 +3900,7 @@ Though not discussed in his chapter, Hokowhitu (2013, 370) remarks that Indigeno
                         makes me think of machine learning algorithms - creating their own truth - google truth - 
                         
 
-                        black box and erosion quote from Agraawal - 
+                        black box and erosion quote from Agrawaal - 
                         amoore its not about opening the black box. 
 
                         Participating yourself and the attributes of your spatial practice in such destination-oriented step  -->
@@ -3904,10 +3921,10 @@ Though not discussed in his chapter, Hokowhitu (2013, 370) remarks that Indigeno
                     <p>
                         This was such an excellent paper with rich citations, many coming from geography. It made me realize I need to explore more HCI to build my stakes out. To my reading question
                         <span class="block"><span class="reference">How are different disciplines and subdisciplines approaching ubiquitous use of mobile navigational platforms such as Google Maps? What kinds of studies are being conducted and how are they structured? What questions are being asked and to what ends? What concerns are foregrounded/backgrounded? Should I do a study, what questions might I ask and why and to whom might I talk?</span></span>
-                       <span class="crayon-magenta"> I am finding three major strands of writing on navigational technologies (in urban everyday use) from 1. Geography, 2. Arts, Media and Communication Studies, and 3. Human Computer Interaction (HCI).</span> I have not done enough reading in the latter category, and am still making sense of the different approaches; however, some things are becoming apparent. <span class="crayon-magenta">In general, Geography approaches tend to do a better job foregrounding <i>political economy</i> than do many Arts, Media, and Communication Studies, which, while drawing from geography literature, seem quite wedded to their own particular theories and theorists. These accounts emphasize platforms and navigational technologies as particular kinds of media. Human Computer Interaction (HCI) accounts, from what I've encountered directly and tangentially, are quite case study focused and empirics based, though can be richly citational with a strong conceptual backing. Contributions from both the latter categories seem aimed internally at their respective disciplines. This is of course exclusing literature on locative tourism (see Erin Lynch) and game design/Augmented Reality, which I think are tangentially related but for the purposes of my research I might need to bound my literature review somewhere. Indeed, I'm beginning to see how every section might have a literature review, or List 2 is my main questions etc. but the others really inform my ethos and project and what I can say (as a geographer) about my research. </span> 
+                       <span class="crayon-magenta"> I am finding three major strands of writing on navigational technologies (in urban everyday use) from 1. Geography, 2. Arts, Media and Communication Studies, and 3. Human Computer Interaction (HCI).</span> I have not done enough reading in the latter category, and am still making sense of the different approaches; however, some things are becoming apparent. <span class="crayon-magenta">In general, Geography approaches tend to do a better job foregrounding <i>political economy</i> than do many Arts, Media, and Communication Studies, which, while drawing from geography literature, seem quite wedded to their own particular theories and theorists. These accounts emphasize platforms and navigational technologies as particular kinds of media. Human Computer Interaction (HCI) accounts, from what I've encountered directly and tangentially, are quite case study focused and empirics based, though can be richly citational with a strong conceptual backing. Contributions from both the latter categories seem aimed internally at their respective disciplines. This is of course excluding literature on locative tourism (see Erin Lynch) and game design/Augmented Reality, which I think are tangentially related but for the purposes of my research I might need to bound my literature review somewhere. Indeed, I'm beginning to see how every section might have a literature review, or List 2 is my main questions etc. but the others really inform my ethos and project and what I can say (as a geographer) about my research. </span> 
                      
                          <!-- not just tracing uptake of critical praxes (geography inspired etc) in HCI, but also critiques and alternates put forth also in the field.... 
-                        "culctural probes " - situationsm detournement 4 -->
+                        "cultural probes " - situationism detournement 4 -->
 
                     </p>
                 </div>
@@ -3935,70 +3952,478 @@ Though not discussed in his chapter, Hokowhitu (2013, 370) remarks that Indigeno
                         Reading this paper got me fully into the SSHRC proposal drafting mindset, connecting and articulating thought that's been developing over the last handful of readings and List 2 in general.
                     </p>
                     <p>
-                        This paper was a useful read as it focused specifically on Google Street View (GSV). Gilge argues that GSV affords "approximations of the perceptual experience"(479) through interface-enabled "quasi-embodied movement" (479) that's significantly changing the way people engage the world off the screen. Indeed, Gilge speaks directly to the reshaping of our mental maps without constructing an opposition between mental maps developed over time by being <i>in</i> place — those "sensorially rich primary experiences of moving through the world" (475) — and mental maps shaped by "surrogate exposures" which "create[] an initial visual layer on which to build subsequent experience" (475).
+                        This paper was a useful read as it focused specifically on Google Street View (GSV). Gilge argues that GSV affords "approximations of the perceptual experience"(479) through interface-enabled "quasi-embodied movement" (479) that's significantly changing the way people engage the world off the screen. Indeed, Gilge speaks directly to the reshaping of our mental maps without constructing an opposition between mental maps developed over time by being <i>in</i> place — those "sensorially rich primary experiences of moving through the world" (475) — and <span class="crayon-yellow">mental maps shaped by "surrogate exposures" which "create[] an initial visual layer on which to build subsequent experience" (475).</span>
                         <span class="quote">
                             <span class="crayon-orange">
-                                "GSV's indexical nature engenders wayfinding confidence: Having a preformed image to draw on aids navigation. VSV's near concordance with the built world makes it suitable and efficient for frequent consultation...moving through the world with a preformed image prompt alters the cognitive processes form experiencing a new environment to recognizing the image...This is not to say that an original embodied experience should be privileged, but the process of building up layers of experience informs our sens of place and the mental map we construct in relation, made possible by habitual movement through space" (Gilge 2016, 480).
+                                "GSV's indexical nature engenders wayfinding confidence: Having a preformed image to draw on aids navigation. GSV's near concordance with the built world makes it suitable and efficient for frequent consultation...<b>moving through the world with a preformed image prompt alters the cognitive processes from experiencing a new environment to recognizing the image</b>...This is not to say that an original embodied experience should be privileged, but the process of building up layers of experience informs our sense of place and the mental map we construct in relation, made possible by habitual movement through space" (Gilge 2016, 480, emphasis mine).
                             </span>
                         </span> 
                        
-                        
-                        <!-- desensitivization (477) -->
-                        <!-- Think a lot about travel -->
                   
-                        Though published in GeoHumanities, Gilge is not (to my knowledge) a geographer per se and this reflected in the majority of supportive literature being from phenomenology, cognition, and the history of vision/photography. Though it seemed critical, the critique was moreso a call to attend to the shift from direct experience to the image standing in for an experience of place, deeply mediating and shaping the way we develop spatial awareness of a new place. It lacked, for me, a political economy analysis of Google's products and commodification of everyday spatial practices and attentions, as well as the broader danger and stakes of relating intimately, habitually, or giving over (attributes of) oneself to algorithms as outlined by Amoore.  However, this paper was full of excellent SSHRC-citable statements, and paired well with <code><a href="#Ortiz2016" target="_blank">Ortiz's (2016)</a></code> thesis above. 
+                        Though published in <i>GeoHumanities</i>, Gilge is not (to my knowledge) a geographer per se and this reflected in the majority of supportive literature being from phenomenology, cognition, and the history of vision/photography. Though it seemed critical, the critique was moreso a call to attend to the shift from direct experience to the image standing in for an experience of place, deeply mediating and shaping the way we develop spatial awareness of a new place. It lacked, for me, a political economy analysis of Google's products and commodification of everyday spatial practices and attentions, as well as the broader danger and stakes of relating intimately, habitually, or giving over (attributes of) oneself to algorithms as outlined by Amoore.  However, this paper was full of excellent SSHRC-citable statements, and paired well with <code><a href="#Ortiz2016" target="_blank">Ortiz's (2016)</a></code> thesis above. 
                        
+                        
 
 
 
      
                     </p>
+                    <p>
+                        <span class="crayon-magenta">"algorithmically synthesized perceptions" (Gilge 2016, 481)</span><br><br>
+                        also desensitivization (477) // connects to travel and notes below about <code><a href="#Hanchard2024" target="_blank">Hanchard (2024)</a></code>
+                    </p>
                     
                 </div>
                 <br><br>
             </div>
-    
-
- 
-
-
-
-
-            
+      
 
 
              
-           <!--Reading Here-->
+           <!--Engaging with Digital Maps-->
             <div>
                 <div>
-                    <a name="" id=""></a>
+                    <a name="Hanchard2024" id="Hanchard2024"></a>
                 </div>
                 <br><br>
                 <div>
                     <b>
-                       
+                       Hanchard, Matthew. 2024. <i>Engaging with Digital Maps: Our Knowledgeable Deferral to Rough Guides</i>. Palgrave Macmillan Singapore.
                     </b>
 
                 </div>
 
+                
                 <div>
+
+
+                    <!--ideas on book -->
+                    <div>
+                        <p>
+                        In this book, Matthew Hanchard address an argued <span class="crayon-yellow">lack of attention in cartography literature paid to <i>users</i> of digital maps</span>. Users have heretofore been largely backgrounded and/or figured as passive in accounts of digital maps, something I've definitely noticed in key readings on the subject such as <code><a href="#Dalton2012" target="_blank">Dalton (2012)</a></code>. Hanchard defines digital maps (what I've only known as 'web maps') as "slippy, spreadable, and emergent <i>media</i>" (eg 26, emphasis mine). Digital maps are taken both as <i>media</i> and as <i>stand alone technologies</i> that entangle and "incorporat[e] various datasets from elsewhere" (Hanchard 2024, 115) (leaving their nature as platforms unaddressed).
+                    </p>
+                        
                     <p>
+                        Drawing on practice theory, digital geographies, mobile media studies, and sociology, Hanchard develops an analytical and methodological framework he deems appropriate to studying how engaging digital maps in everyday life serves to anchor peoples "senses of place, senses of security, practice performances, and social positions" (Hanchard 2024, 270). He describes his analytical framework as "practice-oriented digital sociology", and his methodology, a qualitative approach drawing heavily from a modified constructivist grounded theory (159). Concretely, his methods are: a <i>scoping survey</i> to establish use cases, followed by 36 semi-structured interviews (2016-2019) and a handful of follow-up interviews "post-pandemic". From the scoping survey, Hanchard chose 3 contexts of engagement: <b>1.</b> Home choice (with participants being both prospective buyers and letting agents); <b>2.</b> Leisure-walking (which, in the UK, refers to long countryside walks often in groups (rambling)); and <b>3.</b> University life (participants being both students and their families, as well as faculty and university resource developers) (see, for instance, page 152). While no digital map in particular was asked about, nearly all participants (96%) referenced use of Google Maps (Hanchard 2024, 260). 
+                    </p>
+
+                    <p>
+                        Across 9 chapters (possibly overkill, definitely in need of extensive copyediting), Hanchard (2024) argues that digital maps are being engaged in everyday life as "rough guides" that "anchor" everyday practices. Hanchard chooses "engagement" over "use" so as to recognize intentional non-use as a form of engagement. Digital maps, he finds, are engaged in a variety of ways, both ahead of time and in-situ, iteratively and in a more one-off manner. For instance, participants reported looking at Google Street View (which to me is <i>part</i> of Google Maps if you assume Google Maps as a platform) to get a sense of place and decide whether to even walk through that part of town, to assuage anxieties for themselves and others around travel, or as a <span class="crayon-yellow">"postview" (189) after travel to serve as visual memory aid for places visited.</span> Significantly, Hanchard argues users' <i>deferral</i> to digital maps is often with the <i>knowledge</i> of digital maps' limitations and error. However, there remains a trust of the digital map, particularly in Google Maps, due to its straightforward interface, accurate time estimates, fast loading speeds, and "hypermediate" resources (linked websites, directions, reviews, hours, etc. all within the same platform) (see 218-224, 267-273). 
+                          <span class="crayon-purple">
+                            Additionally, Google Street View and satellite imagery infers an "indexical claim to legitimacy" (hanchard 34), much like what <code><a href="#Gilge2016" target="_blank">Cheryl Gilge (2016)</a></code> argued. Indeed, like Gilge (2016), Hanchard (2024) found people using Google Maps to develop their mental map of a place before even going to the place represented, and then using their representation-based mental map to reify their image of place  — or 'image of the city ' <code><a href="#Lynch1960" target="_blank">(see Lynch 1960)</a></code> — as developed through direct experience, "postview" (Hanchard 2024, 189). 
+                        </p>
+
+                        <p>
+                           <span class="crayon-purple">Digital maps, Hanchard's (2024) study found, were engaged  largely uncritically, taken for granted by users as mundane resources (Hanchard 2024, 168). This corroborates <code><a href="#GentzelWimmer2014" target="#blank">Gentzel and Wimmer (2014)</a></code>, who cite Google Maps' integrated multimedia information about places (see <code><a href="#TarrLeon2019" target="_blank">Tarr and Leon (2019)</a></code> for more on affective labor of Local Guides involved in writing location reviews) as "provid[ing] a sense of security and control for users that is not questioned further" <code><a href="#GentzelWimmer2014" target="_blank"></a>(Gentzel and Wimmer 2024, 1050).</a></code></span> Such integration, or what Hanchard (2024, 37) refers to as Google's "recursive reinforcement" of Search/Map "cross-platform referencing", is no mistake: as <code><a href="#GrahamDittus2022" target="_blank">Graham and  Dittus (2022, page)</a></code> explain, Google's self-referentially is part of its "cosmographic ambition" to enclose users' online activity. Of course, this project makes perfect sense when we recognize "the commodity Google sells is not Google services... but the users and their data" (<code><a href="#Wilken2022" target="_blank">Fuchs 2011 qtd in Wilken 2022, 183</a></code>).
+                    </p>
+
+
+                    <p>  
+                        <span class="crayon-yellow">Matthew Hanchard (2024) identifies 2 primary reasons participants engage digital maps, deferring to them as trustworthy guides: a  <b>"sense of place"</b> (e.g., 191) and a <b>"sense of security"</b> (e.g., 193).</span> 
+
+                            <ol>
+                                <li>
+                                    <span class="crayon-blue"><b>Sense of place</b></span> here refers to an ability to mentally orient oneself in relation to one's surroundings, either immediately (in-situ) or in a more distributed manner; for instance, being able to look back on a trip and identify where you were in relation to other features.
+                                    <span class="brmedium"></span>
+                                    <span class="crayon-magenta">Sense of place, to me, aligns with a mental map — it's spatial awareness of a surround cultivated through iterative exposure. Hanchard's study (2024, 237), along with others (<code><a href="#Gilge2016" target="_blank">Gilge 2016 </a></code>; <code><a href="#GentzelWimmer2014" target="_blank">Gentzel and Wimmer 2014</a></code>; <code><a href="#Ortiz2016" target="_blank">Ortiz 2016 </a></code>; others?), demonstrates that more and more, <b>digital maps serve  to <i>prefigure</i> our direct experience [of place, particularly the city].</b> It is the consequences of such a sense of place increasingly being shaped by digital maps—even prior to visit (Hanchard 2024, 237)—that concerns me and my research. As <code><a href="#Gilge2016" target="_blank">Gilge (2016)</a></code> highlights - the image is replacing experience, affording "algorithmically synthesized" (481)approximations of embodied perception (479), "surrogate exposures" (475) through which we create a mental map before direct, 4D experience. Writing on the Google Street View affordance of Google Maps, <code><a href="#Gilge2016" target="_blank">Gilge (2016, 480) </a></code> states:
+                                        <span class="quote">
+                                             "moving through the world with a preformed image prompt alters the cognitive processes from experiencing a new environment to recognizing the image...the process of building up layers of experience informs our sense of place and the mental map we construct in relation, made possible by habitual movement through space" (Gilge 2016, 480).
+                                        </span>
+                                       
+                                       <i> What is the significance of our deferral to Google's 'image of the city' as our own/as the substrate from which we form our own? </i> 
+                                       <BR>
+                                        OH - CONTINUATION OR EXTENSION OF DALTON'S GOOGLE DISCOURSE WOULD BE TO EXAMINE HOW GOOGLE'S NEW IMMERSIVE FEATRES ETC (SEE NOONE 2024) SPEAK TO A REPLICATION OF THE DIRECTNESS OF EXPERIENCE WITHIN THE INTERFACE. 
+                                       </span>
+                                        
+                        
+                                </li>
+                                <span class="brmedium"></span>
+                                <li>
+                                    <span class="crayon-blue"><b>Sense of security</b></span> here refers to the felt continuity of self and surroundings (Hanchard 2024, 193). Hanchard defines this as <span class="crayon-blue">"ontological security" (193)</span>. <span class="crayon-purple">Personal "security" is a motif throughout many of my readings on navigational platforms in everyday use.</span> As referenced above, numerous participants in <code><a href="#GentzelWimmer2014" target="_blank">Gentzel and Wimmer (2024)'s study</a></code> reported finding a sense of "security and control" (Gentzel and Wimmer 2024, 1050) in specifically Google Maps. <code><a href="#Dalton2012" target="_blank">Dalton (2012, 191)</a></code> mentions the "epistemological security" provided by being able to locate oneself on/by Google Maps. Citing the epistemological self-referencing of Google Maps and Google Search results, Dalton (2012, 191) asks: "Does Google’s view from above and users’ geographic epistemological security impart a sense of a safety?"  <span class="crayon-orange"> Dalton (2012) demonstrates that a burgeoning reliance, or deferral to Google Maps is in many ways recursively fomenting a need for ubiquitous access and a fear of getting lost (see Dalton 2012, 191-192). </span>
+                                    <span class="brmedium"></span>
+                                     To me, having a sense of place affords a sense of security in that being able to visualize oneself as continuous with one's surroundings requires knowing where in relation to familiar (and unfamiliar) territory one is. Put simply, spatial awareness (sense of place) affords both the knowledge of 'is this area safe for me' and an integrated sense of self and surroundings (ontological security, or sense of security). <span class="crayon-magenta">Increasingly, then, I'd argue the development of a spatial awareness, or sense of place, that affords "ontological security" is what's being deferred to digital maps which are then required to feel secure and safe when navigating the city. Herein to me lies some obvious stakes, particularly when Google Maps is the most used platform. Once in a place previewed, "ontological security" becomes entangled with a mental map generated from the digital map's representation:</span>
+                                    <span class="quote">
+                                        "although digital map preview can anchor people's sense of place, it often relies on past memory of the preview, with the preview comparing to the lived experience of being there—physically situated in the represented place" (Hanchard 2024, 237)
+                                    </span>
+                                    <span class="crayon-magenta"> <i> What is the consequence of our "ontological security" becoming entangled in all senses with a preview derived from Google[such that when we are in real life, we reference back to a recollection of a preview to judge veracity]? </i></span> 
+                                </li>
+                            </ol>
+                           
+                    </p>
+
+                        
+                    <p> 
+                        Although the majority (96%) of Hanchard's (2024)participants use Google Maps, and, in his own admittance, "Plantin (2018) asserts that Google Maps’ near monopoly is equal to a ‘knowledge infrastructure’—as both a platform and a service—in a way that other digital maps are not" (Hanchard 2024, 259), Hanchard maintains:
+                                <span class="quote">
+                                    "there remains a critical gap in cartographic thought in theorising how this came to be; or rather, how digital maps are selected. Instead, Google Maps is simply assumed to be the most engaged—and therefore imbued with having the greatest impact by proxy. The assumption, however, is not based on end-user figures, or critical consideration of how or why specific digital maps are selected over others. The scoping survey presented in earlier chapters does support the assumption, with 96% of its respondents having used Google Maps, but the question remains open. In addressing this shortfall, this book has demonstrated that rather than actively considering and selecting specific digital maps, people tend to be uncritical in their choice, opting instead to engage with the most common digital map for a specific context. That is, they defer to the digital map that has been established as a default..." (260)
+                                </span>
+                            This was the most critical Hanchard ever gets about Google. Though based on a PhD in human geography and in his own words drawing from digital geographies, a critique of Google Maps — engaged by the majority of participants — is entirely absent. Indeed, Hanchard even referred to Google as an "institution" (249). Furthermore, when discussing a participant's use of Google Maps' satellite view to make a claim to the UK (? British?) Land Registry that her property was misrepresented on their official map (250-, 270), Hanchard describes this as an altering of "state-citizen relations" (252) <i>with the tech giant Google entirely absent from the equation!!!!</i> This was made extra frustrating given the detailed history of the cartographic project laid out in chapters 2/3. For example, <code><a href="#Leszczynski2012" target="_blank">Leszczynski (2012)</a></code> situates the geoweb in the broader neoliberal political economy characterized by free labor, private/corporate ownership, and unaccountability. Critical of ahistorical, technologically determinist narratives that position the geoweb as merely an extension of Web 2.0, Leszczynski argues that participatory and user contributed geographic content must be understood in the context of "fundamentally new regimes of production that make the 'prosumption' [the fusing of production and consumption] of geographic information valuable" (Leszczynski 2012, 76). She draws on evidence from North America and Europe to demonstrate how the state's shifting role in the 'cartographic project' is consistent with 'roll-back'/'roll-out' measures aimed at political economic governance through policy, ideology, and governmentality.
+                        </p>
+
+                        <p> 
+                             I therefore found Hanchard's (2024) lack of attention to Google (Maps) in participant questioning or theorizing frustrating and disappointing. And, significant. Hanchard's whole read of digital maps as distinct from the data they in-gather and the code which renders them was a curious — if I've learned anything from digital geographies it's that you can't think the web map apart from the code that renders it, the datasets it draws in and produces, and the "algorithmic[] stitching" that creates a continuity of street view and satellite imagery (Hanchard 2024, 36) as well as the algorithmic identification of real-world objects through human-entangled learning like CAPTCHA (see Amoore 2020). 
+                             For example, Google owns CAPTCHA so every time you authenticate your being as human you are teaching a machine learning algorithm to identify things from street view imagery, likely going into Google Maps (see <code><a href="#Amoore2020" target="_blank">Amoore 2020</a></code>; <code><a href="#Noone2024" target="_blank">Noone 2024</a></code>). Writes Rebecca Noone:
+                             <span class="quote">
+                                "The way Google collects, distributes, and circulates its information means that the public is caught up in Google's systems regardless of whether one uses the platform...Google Maps' forms of data input thus produce an enclosure of online information access where one is brought into participating in its logistical imaginary of the total map even if one is not looking for directions" (<code><a href="#Noone2024" target="_blank">Noone 2024, 32</a></code>).
+
+                             </span>
+                             
+                             
+                                 This is all to say, Hanchard's account seemed more aligned with media studies than geography. I mean, he did define digital maps as "media", which I guess shouldn't leave the reader surprised the political economy of platforms isn't attended to. 
+                         <!-- this book doesn't attend to google as massive tech corporation  (strom) platform economies (see kenny and zysman; Srnicek) or consider what being on map means (luque ayala and neves maia; tarr and leon) or the commodification of location (tarr; tarr and leon; thatcher) doesn't cover a genealogy of Google Maps and the Google geo discourse as does <code><a href="#Dalton2012" target="_blank">Dalton (2012)</a></code>, or really do a proper history of other platforms (scott McQuire) such as MapQuest as does <code><a href="#Wilken2022" target="_blank">Wilken (2022)</a></code>, and uncritically forwards open-source alternatives as liberatory (see <code><a>Carraro for a critique</a></code>). (however this book does describe transfer protocol and history better than what dalton gets into.)  -->
+                            
+                        </p>
+
+                     <p>
+                           
+                         However, and without letting Hanchard's (2024) account off the hook, I wonder whether his decision NOT to attend to Google in either theory or practice was an effect of an admitted weakness of his analytic:
+                            <span class="quote">
+                             "One limitation of the [practice-oriented digital sociology] framework [developed and implemented by the book], however, is that it does not offer a direct way to analyse whether or when structural transformation to modes of social organisation have taken place...<span class="crayon-yellow">The analysis in this book, however, is not not directed towards macro-scale phenomena; instead, it focuses on micro-scale engagement with digital media...</span>and the extent to which that engagement contributes towards the anchoring or ordering of macro-scale phenomena aligning itself with constructivism." (Hanchard 2024, 124)
+                            </span>
+                        Yet how can the effects of "micro-scale engagement with digital media" on "macro-scale phenomena" be even studied if the framework cannot account for "structural transformation" is beyond me. Moreover, given the "end-user figures" <i>do</i> point to an overwhelming reliance on Google's geo services, why participants weren't asked about their mental maps is also beyond me. 
+                        <br><br>
+                        <!-- ANYWAY THIS IS WHERE I WOULD DISCUSS MY OWN PROJECT // JUMP POINT  -->
+                        <br>
+                        <br>
+
+                       
+                        <!-- AND lean platforms making shit we don't even want (srnicek)
+                        
+                        >> think subjectivities - so much agency to ppl 
+                        >relative agency of map hacking and mashing up (hanchard) actually product of new subjectivities generated by google geo discourse (dalton)
+
+
+                         and his anti media centrism staunch to me is stubborn unaccounted for how major google maps is -  -->
+                        
 
                     </p>
+
+                    </div>
+
+
+                    <!--IDEAS ON MY PROJECT-->
+                    <div>
+                         <p>
+                            <span class="crayon-magenta"><b>MY PROJECT</b></span>
+                            <span class="brmedium"></span>
+                        I'd argue that it is just this attention that my research project proposes cultivating through honing "urban everyday" as a diffractive apparatus or scale analytic. 
+                        <span class="brmedium"></span>
+
+                        In my proposed research I want to think about new Google Maps subjectivities created and maintained by google geo discourse, extending <code><a href="#Dalton2012" target="_blank">Dalton's (2012) study </a></code> to the present moment with a specific focus on <i>users</i> (which his study neglected). Asking questions like <i>What is the significance of our deferral to Google's 'image of the city' as our own?</i> and <i>What is the consequence of our "ontological security" becoming entangled in all senses with a preview derived from Google[such that when we are in real life, we reference back to a recollection of a preview to judge veracity]?</i>, my project will interrogate the consequences of epistemological/ontological security placed in Google's Map.     my project proposal rephrases my questions and objective from last year, looking now at the significance of Google's algorithm of routing and stitching — its basemap, data, user generated content etc — in directing, or shaping, or "commanding" deferance of everyday spatial practices. Dalton (2012) demonstrates that a burgeoning reliance, or deferral to Google Maps is in many ways recursively fomenting a need for ubiquitous access and a fear of getting lost (see Dalton 2012, 191-192). The app/platform makes itself a necessary part of the urban everyday, a normalization that is very much not innocuous as Google is a giant tech company profiting from your use as well as your data traces and data contributed directly to the map (connect to part of 24/7 book). 
+                         
+                    </p>
+                        
+                    <p>
+                        For example, an extension of Dalton's (2012) google geo discourse would be an examination of how google's new immersive features are marketed as replicating the directness of experience within the interface (see Noone 2024). I wonder also if the kind of self-sufficient user, described by <code><a href="#Noone2024" target="_blank">Rebecca Noone (2024)</a></code> and the kinds of municipal and even federal deals being made with Google for Google's geospatial services and cloud capabilities might articulate an expression of the neoliberalism <code><a href="#Leszczynski" target="_blank">Leszczynski (2012)</a></code> was describing and the <code><a href="#VanderVlist-etal2024" target="_blank">Van der Vlist et al. (2024)</a></code>, where the state giving over the cartographic project to private companies is read not so much as a radical break in the state's securitization and imperial ambitions but rather a neoliberal mode of governing/governance. 
+                        <span class="quote">
+                             "Through these repeated promises and processes of explore and experience, Google Maps produces an imaginary of self-sufficiency that frames access as a method of laying a personal claim on space...Google Maps organises space around a self-sufficient user at the expense of engaging with the relationality of space. <span class="crayon-yellow">Access to space is access to Google-mediated self-sufficiency</span>" (Noone 2024, 65) 
+                        </span>
+                        
+                        For example, as <code><a href="#LuqueAyala-NevesMaia2019" target="_blank">Luque-Ayala and Neves Maia (2019)</a></code> demonstrate, the putting of favelas in Rio on the map of Google Maps actually served state ends of economic incorporation — another contemporary expression of google's geo discourse. Here, Google is taking over role of state in spearheading economic incorporation; the cartographic project is still the state project, just with corporate interests. There is actually a lot more written on how the state and Google are interacting - see for instance Graham and Dittus and Carraro and Alvarez Leon and Dalton and McQuire - particularly see legal issues in France and lawsuit. 
+                    </p>
+
+                    <p>
+                        As mentioned above, personal "security" is a motif throughout many of my readings on navigational platforms in everyday use, and List 2 in general. I want to further explore the interplay between security and violence in terms of the platform's offering of a kind of locational security  — itself produced — and sense of safety (for example Hanchard and Noone both describe users looking at street view to identifies neighborhoods to avoid living in or traversing, while Google's air quality monitoring recommends avoiding some areas all together) all the while enacting violences of economic incorporation, whether that's through forcing people and places to be on the map (both mapping places but also for a business to survive it often finds it needs to be searchable on the dominant digital map) and also the montiziation of users data generated simply by using Google's free platform services. Security/securitization/surveillance definitely both cut both ways on/with? Google. Something for my study to consider would be: <i>What kinds of security are being produced and circulated by/through Google geo discourse? Are these narratives originating from Google alone? What about users and the state?</i> And, drawing form <code><a href="#Carraro2021" target="_blank">Carraro's (2021)</a></code> account, <i>how might an urban political ecology analytic serve to historicize, denaturalize, and politicize the kind of risk geographies Google geo discourse perpetuates so as to be the security solution (a wicked problem, as <code><a href="#Strom2017" target="_blank">Strom (2017)</a></code>> describes)?</i> In other words, it's the ontological security of knowing where you are in the city that is (figured to be) put at risk when you are habituated by using Google Maps - your risk assessment and sense of safety and security is "literally produced by your relationship to what is functionally a massive (commercial) surveillance apparatus" (as an interlocutor said). 
+                    </p>
+                         
+                    <p>
+                         To partially answer the question above, the kind of security being produced (by contemporary google geo discourse) is a kind of security making the world arguably more precarious for everyone. Google geo discourse now is creating users (subjectivies) whose ontological security is bound to locating themselves on the map, making google indispensable. This really is a recursive relationship as Dalton described, wherein google geo discourse makes subjects which maintain the discourse. 
+                    
+                    </p>
+
+                    <p>
+                        Obviously my project would then use Amoore's work on cloud ethics to build out my stakes and intervention(s). 
+                    </p>
+
+   
+                    </div>
+         
                 </div>
                 <br><br>
             </div>
             
           
 
-          <!--Reading Here-->
+          <!--Location Awareness in the Age of Google Maps-->
             <div>
                 <div>
-                    <a name="" id=""></a>
+                    <a name="Noone2024" id="Noone2024"></a>
                 </div>
                 <br><br>
                 <div>
                     <b>
+                       Noone, Rebecca. 2024. <i>Location Awareness in the Age of Google Maps</i>. Routledge.
+                    </b>
+
+                </div>
+
+              
+                <br><br>
+            </div>
+
+
+            
+             <!--Platforms and/as Urban Communication-->
+            <div>
+                <div>
+                    <a name="Leszczynski2023" id="Leszczynski2023"></a>
+                </div>
+                <br><br>
+                <div>
+                    <b>
+                       Leszczynski, Agnieszka. 2023. "Platforms and/as Urban Communication: Mediums, Content, Context." <i>Area</i> 55 (2): 284–94. 
+                    </b>
+                    <!-- <span class="brmedium"></span>
+                    <b>
+                        Leszczynski, Agnieszka, and Vivian Kong. 2023. “Walking (with) the Platform: Bikesharing and the Aesthetics of Gentrification in Vancouver.” <i>Urban Geography</i>, April 21. world. 
+                    </b> -->
+
+                </div>
+
+                <div>
+                    <p>
+                        <span>
+                            <span class="crayon-blue">
+                                "...platformisation designates processes by which everyday urban activities are increasingly captured as opportunities for algorithmic optimisation and data collection by platform entities..." (Leszczynski 2023, 285).
+                            </span>
+                        </span>
+
+                    </p>
+
+                    <p>
+                        In this compact intervention, geographer Agnieszka Leszczynski moves beyond engaging platforms as infrastructures (see <code><a href="#Plantin2018" target="_blank">Plantin 2018; Plantin et al. 2018</a></code>; <code><a href="#Srnicek2017" target="_blank">Srnicek 2017</a></code>) to consider the "platformised materialities" we observe and encounter in the urban everyday. Citing a lack of scholarship addressing the communicative capacities of urban platforms—as compared to social media platforms—she draws from urban communication studies' "tripartite heuristic" (see Aiello and Tosoni 2016) that recognizes "urban built environments as constituting the mediums, content, and contexts of communications by and about cities" (Leszczynski 2023, 285). 
+                        <!-- <span class="block">
+                                "In the same way that Tosoni and Aiello (2020) argue that the city is constituted by how it is communicated, I contend that the platformisation of city terrains — and the conditions of platform urbanism more broadly — are likewise constituted by how they communicate themselves in and through our encounters with their observable, (non-human)  physical forms in cities" (Leszczynski 2023, 289). 
+                            </span> -->
+                            
+
+                        </p>
+
+
+
+                        <p>
+                          To look at (the mediums, content, and context of) how platforms communicate themselves in the urban everyday, Leszczynski (2023)  "engag[es] with visually observable instances of platformisation on cityscapes as materialities that communicate the shifting material, structural, and relational conditions of platform urbanism" (286). She draws from a trove of images collected by herself and Vivian Kong across Vancouver and Toronto, citing these Canadian cities as understudied sites of platform urbanism (Leszczynski 2023, 286). 
+                       <ol>
+                        For example:
+                        <li>
+                            <b>Physical signs of platforms</b> delineate reserved parking space for ride-share cars only, indexing the "platformisation of mobility". 
+                            <span class="quote"> "These physical signs function as urban mediums of communication, expressing both platforms' hunger for space <i>and</i> their ability to mobilise and expend spatial capital" (Leszczynski 2023, 288).</span>
+                            Signs all around Vancouver mark Lime scooter and Mobi-Rogers bike shares. In the 99, I see advertisements for student-prorated bikeshares and platformized bike locks that urge you to "ditch the heavy u-lock". (Not sure if this is medium or content though...)
+                        </li>
+                        <li>
+                            As the <i>content</i> of communication, platforms appear visibly in the urban landscapes <b>as stickers</b> in restaurant windows signalling customers can order ahead online and receive delivery with Doordash, UberEats, etc. stickers index the "platformisation of last-mile logistics" (Leszczynski 2023). 
+                            <!--                         
+                            "anaestheticization of urban sociality" (289)"platformisation subsumes acts and practices of mundane consumption (a delivered meal) to swiping and clicking on digital screens, negating the need for emplaced, quotidian encounters with human others in the city" (290) -->
+                        </li>
+
+                        <li>
+                            Posters around Toronto hail gig food delivery workers to unionize. Here, the meaning of poster only communicated within the <i>context</i> of "platformisation of urban work".
+                             <!-- - also "communicates the shifting landscape of urban labour as ...transformed by urban platformisation" (291) -->
+                        </li>
+                       </ol>
+
+                       Leszczynski (2023) describes the exhaustive traversing of the street network in select neighborhoods as:  "<span class="crayon-blue">mobile-material methodology</span> centered on mobilities of walking and driving as a basis for pursuing intentional visual encounters with material instances of platformisation, accompanied by street-level observation of these physical presences, photography, in situ reflection, and notetaking" (Leszczynski 2023, 287). This is definitely something to draw on in my own research. 
+                    </p>
+
+                  
+                    
+                </div>
+                <br><br>
+            </div>
+
+
+            <!--the Commodification of Daily Life through ‘Location’-->
+            <div>
+                <div>
+                    <a name="Thatcher2017" id="Thatcher2017"></a>
+                </div>
+                <br><br>
+                <div>
+                    <b>
+                       Thatcher, Jim. 2017. “You Are Where You Go, the Commodification of Daily Life through ‘Location’.” <i>Environment and Planning A: Economy and Space</i> 49 (12): 2702–17.
+                    </b>
+
+                </div>
+
+                <div>
+                    <p>
+
+                    </p>
+                </div>
+                <br><br>
+            </div>
+
+
+
+
+
+
+            <!--Mapping the digital empire-->
+            <div>
+                <div>
+                    <a name="Farman2010" id="Farman2010"></a>
+                </div>
+                <br><br>
+                <div>
+                    <b>
+                       Farman, Jason. 2010. "Mapping the Digital Empire: Google Earth and the Process of Postmodern Cartography." New Media & Society 12 (6): 869–88. 
+                    </b>
+
+                </div>
+
+                <div>
+                    <p>
+
+                    </p>
+                </div>
+                <br><br>
+            </div>
+
+
+
+
+             <!--Walking in the City-->
+            <div>
+                <div>
+                    <a name="Middleton2010" id="Middleton2010"></a>
+                    <a name="Middleton2011" id="Middleton2011"></a>
+                </div>
+                <br><br>
+                <div>
+                    <b>
+                       Middleton, Jennie. 2010. "Sense and the City: Exploring the Embodied Geographies of Urban Walking." <i>Social & Cultural Geography</i> 11 (6): 575–96. 
+                       <span class="brmedium"></span>
+                        Middleton, Jennie. 2011. "Walking in the City: The Geographies of Everyday Pedestrian Practices." <i>Geography Compass</i> 5 (2): 90–105.
+
+                    </b>
+
+                </div>
+
+                <div>
+                    <p>
+
+                    </p>
+                </div>
+                <br><br>
+            </div>
+
+
+
+
+            <!--Walking and Performing 'the City'-->
+            <div>
+                <div>
+                    <a name="RossiterGibson2011" id="RossiterGibson2011"></a>
+                </div>
+                <br><br>
+                <div>
+                    <b>
+                        Rossiter, Benjamin, and Katherine Gibson. 2011. "Walking and Performing 'the City': A Melbourne Chronicle." In <i>The New Blackwell Companion to the City</i>. Blackwell Publishing Ltd.
+
+           
+                    </b>
+
+                </div>
+
+                <div>
+                    <p>
+
+                    </p>
+                </div>
+                <br><br>
+            </div>
+
+
+
+
+
+            <!--Seizing Affective Geographies in Toronto-->
+            <div>
+                <div>
+                    <a name="Buiani2020" id="Buiani2020"></a>
+                </div>
+                <br><br>
+                <div>
+                    <b>
+                       Buiani, Roberta. 2020. "Beyond Mapping: Seizing Affective Geographies in Toronto." <i>Space and Culture</i> 23 (4): 462–76. 
+
+                    </b>
+
+                </div>
+
+                <div>
+                    <p>
+
+                    </p>
+                </div>
+                <br><br>
+            </div>
+
+
+
+
+
+             <!--Practising Lively Geographies in the City-->
+            <div>
+                <div>
+                    <a name="Lobo-etal2020" id="Lobo-etal2020"></a>
+                </div>
+                <br><br>
+                <div>
+                    <b>
+                       Lobo, Michele, Michele Duffy, Andrea Witcomb, et al. 2020. "Practising Lively Geographies in the City: Encountering Melbourne through Experimental Field-Based Workshops." <i>Journal of Geography in Higher Education</i> 44 (3): 406–26. 
+
+                    </b>
+
+                </div>
+
+                <div>
+                    <p>
+
+                    </p>
+                </div>
+                <br><br>
+            </div>
+
+
+
+
+
+               <!--Researching and Representing the City through Everyday Encounters-->
+            <div>
+                <div>
+                    <a name="Moretti2011" id="Moretti2011"></a>
+                </div>
+                <br><br>
+                <div>
+                    <b>
+                          Moretti, Christina. 2011. "The Wandering Ethnographer: Researching and Representing the City through Everyday Encounters." <i>Anthropologica</i> 53 (January): 245–55.
+                    </b>
+
+                </div>
+
+                <div>
+                    <p>
+
+                    </p>
+                </div>
+                <br><br>
+            </div>
+
+
+
+
+
+
+         <!--Telling stories of the city-->
+            <div>
+                <div>
+                    <a name="Cheng2014" id="Cheng2014"></a>
+                </div>
+                <br><br>
+                <div>
+                    <b>
+                        Cheng, Yi'En. 2014. "Telling Stories of the City: Walking Ethnography, Affective Materialities, and Mobile Encounters." <i>Space and Culture</i> 17 (3): 211–23.
                        
                     </b>
 
@@ -4011,6 +4436,57 @@ Though not discussed in his chapter, Hokowhitu (2013, 370) remarks that Indigeno
                 </div>
                 <br><br>
             </div>
+
+
+
+            
+
+        <!--Palestinian Counter-Cartography on Google Earthe-->
+            <div>
+                <div>
+                    <a name="Quiquivix2014" id="Quiquivix2014"></a>
+                </div>
+                <br><br>
+                <div>
+                    <b>
+                       Quiquivix, Linda. 2014. "Art of War, Art of Resistance: Palestinian Counter-Cartography on Google Earth." <i>Annals of the Association of American Geographers</i> 104 (3): 444–59.
+                    </b>
+
+                </div>
+
+                <div>
+                    <p>
+
+                    </p>
+                </div>
+                <br><br>
+            </div>
+
+
+
+
+           <!--Indigenous Digital Counter-Mapping Practices-->
+            <div>
+                <div>
+                    <a name="HuntStevenson2017" id="HuntStevenson2017"></a>
+                </div>
+                <br><br>
+                <div>
+                    <b>
+                       Hunt, Dallas, and Shaun A. Stevenson. 2017. “Decolonizing Geographies of Power: Indigenous Digital Counter-Mapping Practices on Turtle Island.” <i>Settler Colonial Studies</i> 7 (3): 372–92.
+
+                    </b>
+
+                </div>
+
+                <div>
+                    <p>
+
+                    </p>
+                </div>
+                <br><br>
+            </div>
+
 
 
 
@@ -4038,9 +4514,30 @@ Though not discussed in his chapter, Hokowhitu (2013, 370) remarks that Indigeno
             </div>
 
 
+            <!--Reading Here-->
+            <div>
+                <div>
+                    <a name="" id=""></a>
+                </div>
+                <br><br>
+                <div>
+                    <b>
+                       
+                    </b>
+
+                </div>
+
+                <div>
+                    <p>
+
+                    </p>
+                </div>
+                <br><br>
+            </div>
 
             <br> <br> <br> <br><br>
             <br> <br> <br> <br><br>
+
 
             <!--other notes-->
             <div>
@@ -4127,21 +4624,15 @@ Though not discussed in his chapter, Hokowhitu (2013, 370) remarks that Indigeno
 
         </div>
 
-
-    
-
-
-
-
-
+        
 </div>
 
-    <br><br><br><br><br>
+
 
 
     <footer>
         <a class="footer" href="https://github.com/negative-spaces/the-middle-of-things/blob/main/reading.html"
-            target="_blank">CODE_SIDE </a>
+            target="_blank" style="padding-top:5px;">CODE_SIDE </a>
     </footer>
 
 </body>
