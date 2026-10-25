@@ -113,15 +113,23 @@ code {
 
 /*relevance to my research/project*/
 .crayon-magenta {
-  /* background-color: rgba(247, 170, 248, 0.394); */
-  background-color: rgba(208, 47, 219, 0.216);
-    /* background-color: rgba(210, 61, 220, 0.216); */
-  /* background-color:rgba(247, 170, 248, 0.482) */
+   background-color: rgba(208, 47, 219, 0.154);
+  /* background-color: rgba(208, 47, 219, 0.216); */
+   
+
 }
 
 /*definition*/
 .crayon-blue {
-  background-color: rgba(56, 165, 255, 0.231);
+  /* background-color: rgba(38, 129, 234, 0.181); */
+   background-color: rgba(18, 141, 241, 0.291);
+   /* text-decoration:underline; */
+   font-style:bold;
+}
+
+/*extended definition*/
+.crayon-skyblue {
+  background-color: rgba(98, 181, 249, 0.14);
   /* background-color: rgba(150, 180, 254, 0.27); */
 }
 
@@ -158,6 +166,11 @@ code {
   background-color: rgba(189, 228, 236, 0.482);
 }
 
+
+.underline {
+   text-decoration: underline;
+
+}
 
 
 /*RESPONSIVE PAGE ARCHITECTURE*/
